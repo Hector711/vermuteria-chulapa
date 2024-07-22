@@ -1,14 +1,10 @@
 :root {
-  font-family: 'Open Sans Variable', 'Onest Variable', 
-    Avenir, Helvetica, Arial;
-  background-color: var(--white-1);
-  color: var(--black-2);
-
   --white-0: #f3f3f3;
   --white-1: #e6e6e6;
   --black-1: #3a3a3a;
   --black-0: #000000;
   --blue: #076689;
+  --red: #ee0136;
 
   --border-s: 4px;
   --border-m: 8px;
@@ -23,3 +19,20 @@
   --pad-l: 1.2rem;
 }
 
+div#root{
+  padding: 1rem;
+  position: relative;
+}
+h2{
+  font-family: 'Antique Cherry', sans-serif;
+}
+h3 {
+  font-family: 'Glacial Indifference';
+}
+p {
+  color: var(--blue);
+  /* font-family: 'Futura'; */
+}
+span {
+  color: var(--red)
+}

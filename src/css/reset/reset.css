@@ -7,6 +7,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('@/css/fonts/glacial-indifference/GlacialIndifference-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Antique Cherry';
+  src: url('@/css/fonts/antique_cherry/antique-cherry.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Futura';
+  src: url('@/css/fonts/futura/FuturaPTBook.otf') format('opentype');
+  font-weight: normal;
+}
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
   margin: 0;
   padding: 0;
@@ -16,9 +31,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   border: 0px solid transparent !important;
   min-height: 100vh;
 }
-html {
-  position: relative;
-}
+
 html,
 body {
   /* kusa uno u otro dependiendo del contexto */
@@ -28,15 +41,10 @@ body {
 body {
   background-image: url('@/assets/background.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 2200px;
+  background-size: 100% 6200px;
 }
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/* body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-} */

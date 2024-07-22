@@ -11,6 +11,7 @@ export default function MenuBebidas() {
   const menuBebidas = Object.entries(menuBebidasJson);
 
   return menuBebidas.map((item, i) => (
+    
     <Accordion className='accordions' key={i} defaultExpanded>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon className='arrow-icons' />}

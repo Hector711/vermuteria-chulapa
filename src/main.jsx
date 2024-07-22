@@ -5,9 +5,8 @@ import App from './App.jsx';
 // CSS
 import '@/css/init.css';
 import '@/css/reset/reset.css';
-import '@/css/elements.css';
-import '@/css/nav.css';
-import '@/css/main.css';
+import '@/css/section-nav.css';
+import '@/css/section-main.css';
 
 // TYPOGRAPHY
 // Supports weights 300-800 : 'Open Sans Variable'
