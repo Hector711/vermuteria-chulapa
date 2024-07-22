@@ -1,0 +1,28 @@
+:root {
+  font-family: 'Nunito Sans Variable', 'Onest Variable', 
+    Avenir, Helvetica, Arial;
+  background-color: var(--white-1);
+  color: var(--black-2);
+
+  --width: 700px;
+
+  --white-0: #f3f3f3;
+  --white-1: #e6e6e6;
+  --white-2: #909090;
+  --black-2: #696969;
+  --black-1: #3a3a3a;
+  --black-0: #000000;
+
+  --border-s: 4px;
+  --border-m: 8px;
+  --border-l: 20px;
+
+  --gap-s: 8px;
+  --gap-m: 10px;
+  --gap-l: 15px;
+
+  --pad-s: 0.8rem;
+  --pad-m: 1rem;
+  --pad-l: 1.2rem;
+}
+
