@@ -1,15 +1,11 @@
 :root {
-  font-family: 'Nunito Sans Variable', 'Onest Variable', 
+  font-family: 'Open Sans Variable', 'Onest Variable', 
     Avenir, Helvetica, Arial;
   background-color: var(--white-1);
   color: var(--black-2);
 
-  --width: 700px;
-
   --white-0: #f3f3f3;
   --white-1: #e6e6e6;
-  --white-2: #909090;
-  --black-2: #696969;
   --black-1: #3a3a3a;
   --black-0: #000000;
 

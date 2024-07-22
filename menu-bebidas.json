@@ -1,0 +1,78 @@
+{
+  "Vermut": [
+    { "nombre": "Vermut de Grifo", "precio_salon": "3,50€", "precio_terraza": "3,80€" },
+    { "nombre": "Perucchi", "precio_salon": "4,30€", "precio_terraza": "4,50€" },
+    { "nombre": "Bendita Locura Rojo/Blanco (Zamora)", "precio_salon": "4,00€", "precio_terraza": "4,20€" },
+    { "nombre": "El Gato Orgulloso (Madrid)", "precio_salon": "4,00€", "precio_terraza": "4,20€" },
+    { "nombre": "Dabuti (Madrid)", "precio_salon": "4,00€", "precio_terraza": "4,20€" },
+    { "nombre": "Petroni Rojo/Blanco (Galicia)", "precio_salon": "4,00€", "precio_terraza": "4,20€" },
+    { "nombre": "Axta (Valencia)", "precio_salon": "4,00€", "precio_terraza": "4,20€" },
+    { "nombre": "Yzaguirre Blanco", "precio_salon": "4,00€", "precio_terraza": "4,20€" },
+    { "nombre": "Zecchini (Madrid)", "precio_salon": "4,00€", "precio_terraza": "4,20€" },
+    { "nombre": "Manhattan", "precio_salon": "6,00€", "precio_terraza": "6,50€" },
+    { "nombre": "Chulapa Spritz", "precio_salon": "6,50€", "precio_terraza": "7,00€" }
+  ],
+  "Cócteles": [
+    { "nombre": "Pisco Sour Clásico", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Pisco Sour Maracuyá", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Margarita", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Mojito", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Aperol Spritz", "precio_salon": "7,50€", "precio_terraza": "8,00€" }
+  ],
+  "Sangrías": [
+    { "nombre": "Tinto de Verano", "precio_salon": "4,00€", "precio_terraza": "4,30€" },
+    { "nombre": "Jarra Tinto de Verano", "precio_salon": "12,00€", "precio_terraza": "13,00€" },
+    { "nombre": "Sangría", "precio_salon": "4,00€", "precio_terraza": "4,30€" },
+    { "nombre": "Jarra de Sangría", "precio_salon": "15,00€", "precio_terraza": "16,00€" },
+    { "nombre": "Kalimotxo", "precio_salon": "4,00€", "precio_terraza": "4,30€" }
+  ],
+  "Cervezas": [
+    { "nombre": "Doble de Estrella / Turia", "precio_salon": "3,50€", "precio_terraza": "3,80€" },
+    { "nombre": "Tercio Cerveza Madrid", "precio_salon": "3,50€", "precio_terraza": "3,80€" },
+    { "nombre": "Tercio de Estrella Galicia", "precio_salon": "3,50€", "precio_terraza": "3,80€" },
+    { "nombre": "Tercio de Mahou", "precio_salon": "3,50€", "precio_terraza": "3,80€" },
+    { "nombre": "Jarra de Cerveza", "precio_salon": "5,00€", "precio_terraza": "5,50€" }
+  ],
+  "Copas": [
+    { "nombre": "Puerto de Indias", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Beefeater", "precio_salon": "8,00€", "precio_terraza": "8,50€" },
+    { "nombre": "Larios", "precio_salon": "8,00€", "precio_terraza": "8,50€" },
+    { "nombre": "Seagrams", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Tanqueray", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Bombay Sapphire", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Nordés", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Hendrick's", "precio_salon": "10,00€", "precio_terraza": "10,50€" },
+    { "nombre": "Red Label", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Ballantines", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Absolut", "precio_salon": "9,00€", "precio_terraza": "9,50€" },
+    { "nombre": "Barceló", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Brugal", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Chupito", "precio_salon": "3,00€", "precio_terraza": "3,50€" }
+  ],
+  "Vinos": [
+    { "nombre": "Rioja Crianza", "precio_salon": "3,50€", "precio_terraza": "3,80€" },
+    { "nombre": "Ribera del Duero Crianza", "precio_salon": "3,50€", "precio_terraza": "3,80€" },
+    { "nombre": "Rioja Ramón Bilbao", "precio_salon": "4,00€", "precio_terraza": "4,30€" },
+    { "nombre": "Blanco Rueda", "precio_salon": "3,50€", "precio_terraza": "3,80€" },
+    { "nombre": "Blanco Albariño", "precio_salon": "3,70€", "precio_terraza": "4,00€" },
+    { "nombre": "Botella Vino Tinto Ribera", "precio_salon": "18,00€", "precio_terraza": "20,00€" },
+    { "nombre": "Botella Vino Tinto Rioja Ramón Bilbao", "precio_salon": "21,00€", "precio_terraza": "23,00€" },
+    { "nombre": "Botella Vino Blanco Albariño", "precio_salon": "21,00€", "precio_terraza": "23,00€" },
+    { "nombre": "Botella Vino Blanco Rueda", "precio_salon": "18,00€", "precio_terraza": "20,00€" }
+  ],
+  "Refrescos": [
+    { "nombre": "Mosto", "precio_salon": "3,00€", "precio_terraza": "3,50€" },
+    { "nombre": "Zumo de Melocotón | Piña", "precio_salon": "3,00€", "precio_terraza": "3,50€" },
+    { "nombre": "Coca Cola | Aquarius | Varios", "precio_salon": "3,00€", "precio_terraza": "3,50€" },
+    { "nombre": "Agua con Gas", "precio_salon": "2,00€", "precio_terraza": "2,30€" },
+    { "nombre": "Agua", "precio_salon": "2,00€", "precio_terraza": "2,30€" }
+  ],
+  "Cafés": [
+    { "nombre": "Café con Leche", "precio_salon": "1,70€", "precio_terraza": "1,80€" },
+    { "nombre": "Café Solo | Café Cortado", "precio_salon": "1,50€", "precio_terraza": "1,60€" },
+    { "nombre": "Café con Leche y Baileys", "precio_salon": "2,40€", "precio_terraza": "2,60€" },
+    { "nombre": "Carajillo", "precio_salon": "2,00€", "precio_terraza": "2,20€" },
+    { "nombre": "Infusiones (té verde, manzanilla, etc.)", "precio_salon": "1,70€", "precio_terraza": "1,80€" },
+    { "nombre": "Tarta (cada fin de semana novedad)", "precio_salon": "4,00€", "precio_terraza": "4,00€" }
+  ]
+}

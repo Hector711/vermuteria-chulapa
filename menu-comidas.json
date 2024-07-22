@@ -1,0 +1,51 @@
+{
+  "Pa' Picar": [
+    { "nombre": "Torreznos", "precio_salon": "9,00€", "precio_terraza": "9,50€" },
+    { "nombre": "Patatas Bravas", "precio_salon": "7,00€", "precio_terraza": "7,50€" },
+    { "nombre": "Braviolis", "precio_salon": "8,00€", "precio_terraza": "8,50€" },
+    { "nombre": "Ensaladilla Rusa", "precio_salon": "8,00€", "precio_terraza": "8,50€" },
+    { "nombre": "Huevos Rotos con Jamón", "precio_salon": "10,50€", "precio_terraza": "11,00€" },
+    { "nombre": "Croquetas Caseras de Jamón", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Croquetas de Setas Trufadas", "precio_salon": "9,00€", "precio_terraza": "9,50€" },
+    { "nombre": "Croquetas Mixtas", "precio_salon": "9,50€", "precio_terraza": "10,00€" },
+    { "nombre": "Croquetas Bacalao", "precio_salon": "8,50€", "precio_terraza": "9,00€" },
+    { "nombre": "Albóndigas \"Chulapa\"", "precio_salon": "8,00€", "precio_terraza": "8,50€" },
+    { "nombre": "Tabla de Quesos", "precio_salon": "14,00€", "precio_terraza": "14,90€" },
+    { "nombre": "Portobellos Rellenos de Aguacate", "precio_salon": "7,00€", "precio_terraza": "7,50€" }
+  ],
+  "Tostas Chulapa": [
+    { "nombre": "Tosta de Tartar de Atún", "precio_salon": "9,00€", "precio_terraza": "9,50€" },
+    { "nombre": "Tosta de Brandada de Bacalao", "precio_salon": "8,00€", "precio_terraza": "8,50€" },
+    { "nombre": "Tosta de Jamón con Tomate", "precio_salon": "9,00€", "precio_terraza": "9,50€" },
+    { "nombre": "Tosta de Queso Brie y Cebolla Caramelizada", "precio_salon": "8,00€", "precio_terraza": "8,50€" }
+  ],
+  "Del Mar a tu Plato": [
+    { "nombre": "Fish & Chips \"Chulapa\"", "precio_salon": "7,50€", "precio_terraza": "8,00€" },
+    { "nombre": "Calamares a la Andaluza", "precio_salon": "12,90€", "precio_terraza": "13,50€" },
+    { "nombre": "Rejos a la Andaluza", "precio_salon": "9,50€", "precio_terraza": "10,00€" }
+  ],
+  "Acompaña tu Vermut": [
+    { "nombre": "Gildas", "precio_salon": "1,20€", "precio_terraza": "1,20€" },
+    { "nombre": "Combo Chulapa: 3 Croquetas (Bacalao, Trufadas y de Jamón) y 1 Vermut Grifo", "precio_salon": "6,00€", "precio_terraza": "6,50€" }
+  ],
+  "Marchando una de Tortilla": [
+    { "nombre": "Tortilla de Patata con/sin Cebolla", "precio_mediana_salon": "8,00€", "precio_entera_salon": "14,00€", "precio_mediana_terraza": "8,50€", "precio_entera_terraza": "14,50€" },
+    { "nombre": "Tortilla de Patata con Cebolla Caramelizada", "precio_mediana_salon": "8,00€", "precio_entera_salon": "15,00€", "precio_mediana_terraza": "8,50€", "precio_entera_terraza": "15,50€" }
+  ],
+  "Delicias Chulapa": [
+    { "nombre": "Albóndigas \"Chulapa\"", "precio_salon": "12,00€", "precio_terraza": "12,90€" },
+    { "nombre": "Pollo Asado con Muselina", "precio_salon": "12,00€", "precio_terraza": "12,90€" },
+    { "nombre": "Solomillo Wellington con Verduras Caramelizadas", "precio_salon": "13,00€", "precio_terraza": "13,90€" }
+  ],
+  "Bocadillos": [
+    { "nombre": "Lomo con Queso y Tomate", "precio_salon": "7,00€", "precio_terraza": "7,50€" },
+    { "nombre": "Bacon con Queso", "precio_salon": "7,00€", "precio_terraza": "7,50€" },
+    { "nombre": "Chorizo", "precio_salon": "6,00€", "precio_terraza": "6,50€" },
+    { "nombre": "Jamón con Tomate Natural", "precio_salon": "7,00€", "precio_terraza": "7,50€" },
+    { "nombre": "Calamares", "precio_salon": "7,00€", "precio_terraza": "7,50€" }
+  ],
+  "Extras": [
+    { "nombre": "Tomate natural, queso, salsas", "precio": "0,50€" },
+    { "nombre": "Patatas fritas", "precio": "1,50€" }
+  ]
+}

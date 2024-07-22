@@ -1,0 +1,23 @@
+div.grid-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  gap: var(--gap-m);
+}
+.accordions {
+  background-color: #bb151500 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  h3{
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .accordion-summary {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .list-items {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
