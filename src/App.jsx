@@ -7,7 +7,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-function App() {
+export default function App() {
   const [menu, setMenu] = useState('bebidas');
   const menuComidas = Object.entries(menuJsonComidas);
   const menuBebidas = Object.entries(menuJsonBebidas);
@@ -67,5 +67,3 @@ function App() {
     </>
   );
 }
-
-export default App;
