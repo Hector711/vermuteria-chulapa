@@ -1,23 +1,114 @@
-div.grid-container {
-  display: grid;
-  grid-template-columns: 4fr 1fr 1fr;
-  gap: var(--gap-m);
-}
 .accordions {
   background-color: #bb151500 !important;
   margin: 0 !important;
   padding: 0 !important;
-  h3{
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+  box-shadow: none !important;
+  height: max-content !important;
 
   .accordion-summary {
     margin: 0 !important;
     padding: 0 !important;
+    height: max-content !important;
   }
   .list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     margin: 0 !important;
     padding: 0 !important;
+    height: max-content !important;
+
+    div.row {
+      display: grid;
+      grid-template-columns: 4fr 1fr 1fr;
+      p,
+      span {
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: center;
+      }
+      h6 {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--blue);
+      }
+    }
   }
 }
+
+/* .MuiAccordionSummary-content,
+.Mui-expanded,
+.MuiAccordionSummary-contentGutters,
+.css-eqpfi5-MuiAccordionSummary-content,
+.MuiButtonBase-root,
+.MuiAccordionSummary-root,
+.Mui-expanded,
+.MuiAccordionSummary-gutters,
+.accordion-summary,
+.css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root,
+.MuiPaper-root,
+.MuiPaper-elevation,
+.MuiPaper-rounded,
+.MuiPaper-elevation1,
+.MuiAccordion-root,
+.MuiAccordion-rounded,
+.Mui-expanded,
+.MuiAccordion-gutters,
+.accordions,
+.css-1086bdv-MuiPaper-root-MuiAccordion-root,
+.MuiButtonBase-root,
+.MuiAccordionSummary-root,
+.Mui-expanded,
+.MuiAccordionSummary-gutters,
+.accordion-summary,
+.css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root,
+.MuiAccordionSummary-content,
+.Mui-expanded,
+.MuiAccordionSummary-contentGutters,
+.css-eqpfi5-MuiAccordionSummary-content,
+.MuiAccordionSummary-expandIconWrapper,
+.css-yw020d-MuiAccordionSummary-expandIconWrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: red;
+}
+.MuiPaper-root,
+.MuiPaper-elevation,
+.MuiPaper-rounded,
+.MuiPaper-elevation1,
+.MuiAccordion-root,
+.MuiAccordion-rounded,
+.Mui-expanded,
+.MuiAccordion-gutters,
+.accordions,
+.css-1086bdv-MuiPaper-root-MuiAccordion-root,
+.MuiButtonBase-root,
+.MuiAccordionSummary-root,
+.accordion-summary,
+.css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root {
+}
+.MuiButtonBase-root,
+.MuiAccordionSummary-root,
+.MuiAccordionSummary-gutters,
+.accordion-summary,
+.css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.MuiPaper-root,
+.MuiPaper-elevation,
+.MuiPaper-rounded,
+.MuiPaper-elevation1,
+.MuiAccordion-root,
+.MuiAccordion-rounded,
+.MuiAccordion-gutters,
+.accordions,
+.css-1086bdv-MuiPaper-root-MuiAccordion-root {
+  background-color: blue;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 3rem !important;
+}
+.Mui-expanded {
+  height: max-content !important;
+} */

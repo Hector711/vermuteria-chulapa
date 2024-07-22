@@ -6,6 +6,9 @@ div#root{
   padding: 1rem;
   position: relative;
 }
+h2{
+  font-family: 'Josefin Sans Variable', sans-serif;
+}
 
 label {
   padding: 6px 12px;
@@ -17,5 +20,5 @@ span {
   color: #ee0136
 }
 p {
-  color: #076689;
+  color: var(--blue)
 }

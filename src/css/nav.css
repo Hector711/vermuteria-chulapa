@@ -1,12 +1,20 @@
 nav {
   display: flex;
-  gap: 3rem;
+  justify-content: center;
+  width: 100%;
+  gap: 4rem;
   button {
-    background-color: white;
-    border-radius: 5px;
-    padding: 2px 10px;
-    font-size: 1.2rem;
-    font-weight: 700;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: white; */
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 2px 10px 0px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Josefin Sans Variable', sans-serif;
+    text-transform: uppercase;
   }
 }
 

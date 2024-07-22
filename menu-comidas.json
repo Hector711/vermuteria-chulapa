@@ -25,8 +25,10 @@
     { "nombre": "Rejos a la Andaluza", "precio_salon": "9,50€", "precio_terraza": "10,00€" }
   ],
   "Acompaña tu Vermut": [
-    { "nombre": "Gildas", "precio_salon": "1,20€", "precio_terraza": "1,20€" },
-    { "nombre": "Combo Chulapa: 3 Croquetas (Bacalao, Trufadas y de Jamón) y 1 Vermut Grifo", "precio_salon": "6,00€", "precio_terraza": "6,50€" }
+    { "nombre": "Gildas", "precio_salon": "1,20€", "precio_terraza": "1,20€" }
+  ],
+  "Combo Chulapa": [ 
+    { "nombre": "3 Croquetas (Bacalao, Trufadas y de Jamón) y 1 Vermut Grifo", "precio_salon": "6,00€", "precio_terraza": "6,50€"}
   ],
   "Marchando una de Tortilla": [
     { "nombre": "Tortilla de Patata con/sin Cebolla", "precio_mediana_salon": "8,00€", "precio_entera_salon": "14,00€", "precio_mediana_terraza": "8,50€", "precio_entera_terraza": "14,50€" },
