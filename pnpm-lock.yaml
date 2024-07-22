@@ -38,6 +38,9 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
+      react-router-dom:
+        specifier: ^6.25.1
+        version: 6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       styled-components:
         specifier: ^6.1.12
         version: 6.1.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -574,6 +577,10 @@ packages:
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+
+  '@remix-run/router@1.18.0':
+    resolution: {integrity: sha512-L3jkqmqoSVBVKHfpGZmLrex0lxR5SucGA0sUfFzGctehw+S/ggL9L/0NnC5mw6P8HUWpFZ3nQw3cRApjjWx9Sw==}
+    engines: {node: '>=14.0.0'}
 
   '@rollup/rollup-android-arm-eabi@4.19.0':
     resolution: {integrity: sha512-JlPfZ/C7yn5S5p0yKk7uhHTTnFlvTgLetl2VxqE518QgyM7C9bSfFTYvB/Q/ftkq0RIPY4ySxTz+/wKJ/dXC0w==}
@@ -1646,6 +1653,19 @@ packages:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
     engines: {node: '>=0.10.0'}
 
+  react-router-dom@6.25.1:
+    resolution: {integrity: sha512-0tUDpbFvk35iv+N89dWNrJp+afLgd+y4VtorJZuOCXK0kkCWjEvb3vTJM++SYvMEpbVwXKf3FjeVveVEb6JpDQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+
+  react-router@6.25.1:
+    resolution: {integrity: sha512-u8ELFr5Z6g02nUtpPAggP73Jigj1mRePSwhS/2nkTrlPU5yEkH1vYzWNyvSnSzeeE2DNqWdH+P8OhIh9wuXhTw==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: '>=16.8'
+
   react-transition-group@4.4.5:
     resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
     peerDependencies:
@@ -2459,6 +2479,8 @@ snapshots:
     optional: true
 
   '@popperjs/core@2.11.8': {}
+
+  '@remix-run/router@1.18.0': {}
 
   '@rollup/rollup-android-arm-eabi@4.19.0':
     optional: true
@@ -3626,6 +3648,18 @@ snapshots:
   react-is@18.3.1: {}
 
   react-refresh@0.14.2: {}
+
+  react-router-dom@6.25.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      '@remix-run/router': 1.18.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-router: 6.25.1(react@18.3.1)
+
+  react-router@6.25.1(react@18.3.1):
+    dependencies:
+      '@remix-run/router': 1.18.0
+      react: 18.3.1
 
   react-transition-group@4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:

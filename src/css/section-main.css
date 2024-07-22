@@ -1,35 +1,19 @@
-.accordions {
-  background-color: #bb151500 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  height: max-content !important;
-  .accordion-summary {
-    margin: 0 !important;
-    padding: 0 !important;
-    height: max-content !important;
-  }
-  .list-items {
+ul.accordions {
+  li.row {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin: 0 !important;
-    padding: 0 !important;
-    height: max-content !important;
-
-    div.row {
-      display: grid;
-      grid-template-columns: 4fr 1fr 1fr;
-      p,
-      span {
-        text-transform: uppercase;
-        text-align: center;
-      }
-      h6 {
-        text-transform: uppercase;
-        font-weight: 600;
-        color: var(--blue);
-      }
+  }
+  li.row {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    p,
+    span {
+      text-transform: uppercase;
+      text-align: center;
+    }
+    h6 {
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--blue);
     }
   }
 }
