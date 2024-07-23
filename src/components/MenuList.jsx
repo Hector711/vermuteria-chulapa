@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function MenuList({menu}) {
   return menu.map((item, i) => (
-    <ul id='menu-list' key={i}>
+    <ul className='section-menu' key={i}>
       <li className='row'>
         <h3 className='text-[1.1rem] font-bold uppercase'>{item[0]}</h3>
         <p className='red'>Terraza</p>

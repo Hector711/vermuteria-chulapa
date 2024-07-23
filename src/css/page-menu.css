@@ -27,16 +27,22 @@ nav {
 
 
 
-#menu-list {
+.section-menu {
+  margin-bottom: 1rem;
   * {
     /* border: 1px solid ; */
   }
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   li.row {
     display: flex;
   }
   li.row {
     display: grid;
     grid-template-columns: minmax(30px, 400px) var(--width-col) var(--width-col);
+    border-bottom: 1px solid var(--black-1);
+
     h6, p {
       text-transform: uppercase;
       font-family: 'Futura';
