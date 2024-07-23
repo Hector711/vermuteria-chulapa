@@ -33,25 +33,22 @@ h3 {
 span {
   /* color: var(--red) */
 }
-p.glacial {
+.glacial {
   font-family: 'Glacial Indifference';
 }
-p.josefin {
+.josefin {
   font-family: 'Josefin Sans Variable';
   font-weight: 600;
 }
-p.futura {
+.futura {
   font-family: 'Futura';
 }
 #input {
   color: blue !important
 }
-#inputs-container {
+#checkboxs-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  span {
-
-  }
 }
 main {
   min-height: 30vh;

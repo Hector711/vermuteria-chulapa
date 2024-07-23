@@ -15,9 +15,9 @@ export default function FiltersPage() {
   };
   return (
     <>
-      <h3>Marca las intolerancias</h3>
-      <div>
-        <FormGroup id='inputs-container'>
+      <div className='flex flex-col px-4 gap-4 items-center'>
+      <h4 className='josefin text-center uppercase'>Marque las intolerancias</h4>
+        <FormGroup id='checkboxs-container'>
           <FormControlLabel 
           control={<Checkbox sx={sx}  />} label='Huevo' />
           <FormControlLabel control={<Checkbox sx={sx} />} label='Mostaza' />
@@ -31,8 +31,8 @@ export default function FiltersPage() {
             label='Frutos Secos'
           />
         </FormGroup>
-      </div>
       <button onClick={() => navigate('/menu')}>Siguiente</button>
+      </div>
     </>
   );
 }
