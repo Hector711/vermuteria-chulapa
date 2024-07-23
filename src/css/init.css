@@ -60,6 +60,7 @@ main {
 button {
   border-radius: var(--border-s);
   padding: 4px 14px !important;
-  background-color: var(--black-1);
-  color: var(--white-0);
+  background-color: var(--black-1) !important;
+  color: var(--white-0) !important;
+  padding: 5px 10px 2px !important;
 }
