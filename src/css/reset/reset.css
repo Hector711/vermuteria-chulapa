@@ -8,11 +8,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
-  font-family: 'Glacial Indifference';
-  src: url('@/css/fonts/glacial-indifference/GlacialIndifference-Bold.otf') format('opentype');
-  font-weight: normal;
-}
-@font-face {
   font-family: 'Antique Cherry';
   src: url('@/css/fonts/antique_cherry/antique-cherry.ttf') format('truetype');
   font-weight: normal;

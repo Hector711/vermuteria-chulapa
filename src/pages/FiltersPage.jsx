@@ -31,7 +31,12 @@ export default function FiltersPage() {
             label='Frutos Secos'
           />
         </FormGroup>
-      <button onClick={() => navigate('/menu')}>Siguiente</button>
+      <button className='m-2' onClick={() => navigate('/menu')}>
+        <p className='josefin uppercase'>
+
+        Siguiente
+        </p>
+        </button>
       </div>
     </>
   );
