@@ -55,7 +55,7 @@ h3 {
   }
 }
 main {
-  min-height: 30vh;
+  min-height: 45vh;
 }
 button {
   border-radius: var(--border-s);

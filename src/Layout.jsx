@@ -13,9 +13,9 @@ export default function Layout() {
         <p className='uppercase text-center text-[0.65rem]'>
           {mainInfo.location}
         </p>
-        <h2 className='text-center text-[3rem] mt-2'>Nuestra Carta</h2>
+        {/* <h2 className='text-center text-[3rem] mt-2'>Nuestra Carta</h2> */}
       </header>
-      <main className='flex flex-col gap-4  justify-center my-4'>
+      <main className='flex flex-col gap-4 justify-center items-center my-4'>
         <Outlet />
       </main>
     </>
