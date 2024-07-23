@@ -2,7 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import FirstPage from '@/pages/FirstPage';
 import FiltersPage from '@/pages/FiltersPage';
 import MenuPage from '@/pages/MenuPage';
-import Layout from '@/Layout';
+import FirstLayout from '@/pages/FirstLayout';
+import MiniLayout from '@/pages/MiniLayout';
 import { MenuProvider } from '@/context/MenuContext';
 
 export default function App() {
@@ -10,11 +11,13 @@ export default function App() {
     <MenuProvider>
       <BrowserRouter>
         <Routes>
-          <Route element={<Layout />}>
+          <Route element={<FirstLayout />}>
             <Route path='/' element={<FirstPage />} />
             <Route path='/filtros' element={<FiltersPage />} />
           </Route>
-          <Route path='/menu' element={<MenuPage />} />
+          <Route element={<MiniLayout />}>
+            <Route path='/menu' element={<MenuPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </MenuProvider>

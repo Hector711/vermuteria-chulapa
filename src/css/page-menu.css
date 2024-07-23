@@ -26,3 +26,26 @@ nav {
 }
 
 
+
+#menu-list {
+  * {
+    /* border: 1px solid ; */
+  }
+  li.row {
+    display: flex;
+  }
+  li.row {
+    display: grid;
+    grid-template-columns: minmax(30px, 400px) var(--width-col) var(--width-col);
+    h6, p {
+      text-transform: uppercase;
+      font-family: 'Futura';
+    }
+    h6, h3 {
+      width: 100%;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

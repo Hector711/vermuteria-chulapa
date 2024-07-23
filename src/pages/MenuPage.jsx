@@ -10,7 +10,6 @@ export default function MenuPage() {
   const { menu, filter, setMenu } = useMenu();
   return (
     <>
-      <h2 className='text-center text-[3rem]'>Nuestra Carta</h2>
       <nav>
         <div>
           <button onClick={() => setMenu('bebidas')}>Bebidas</button>

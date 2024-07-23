@@ -11,6 +11,8 @@
   --border-m: 4px;
   --border-l: 10px;
 
+  --width-col: 65px;
+
   --gap-s: 8px;
   --gap-m: 10px;
   --gap-l: 15px;
@@ -63,4 +65,10 @@ button {
   background-color: var(--black-1) !important;
   color: var(--white-0) !important;
   padding: 5px 10px 2px !important;
+}
+.blue {
+  color: var(--blue);
+}
+.red {
+  color: var(--red);
 }
