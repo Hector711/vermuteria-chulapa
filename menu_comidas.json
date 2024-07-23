@@ -1,0 +1,318 @@
+{
+    "Pa' Picar": [
+        {
+            "nombre": "Torreznos",
+            "ingredientes": [],
+            "precio_salon": "9.00",
+            "precio_terraza": "9.50"
+        },
+        {
+            "nombre": "Patatas bravas",
+            "ingredientes": [],
+            "precio_salon": "7.00",
+            "precio_terraza": "7.50"
+        },
+        {
+            "nombre": "Braviolis",
+            "ingredientes": [
+                "Lácteos",
+                "Gluten",
+                "Huevo"
+            ],
+            "precio_salon": "7.50",
+            "precio_terraza": "8.00"
+        },
+        {
+            "nombre": "Ensaladilla rusa",
+            "ingredientes": [
+                "Huevo",
+                "Pescado",
+                "Lácteos"
+            ],
+            "precio_salon": "8.00",
+            "precio_terraza": "8.50"
+        },
+        {
+            "nombre": "Huevos rotos con jamón",
+            "ingredientes": [
+                "Huevo"
+            ],
+            "precio_salon": "10.50",
+            "precio_terraza": "11.00"
+        },
+        {
+            "nombre": "Croquetas caseras de jamón",
+            "ingredientes": [
+                "Gluten",
+                "Lácteos",
+                "Huevo"
+            ],
+            "precio_salon": "8.50",
+            "precio_terraza": "9.00"
+        },
+        {
+            "nombre": "Croquetas de setas trufadas",
+            "ingredientes": [
+                "Gluten",
+                "Lácteos",
+                "Huevo"
+            ],
+            "precio_salon": "9.00",
+            "precio_terraza": "9.50"
+        },
+        {
+            "nombre": "Croquetas mixtas",
+            "ingredientes": [
+                "Gluten",
+                "Lácteos",
+                "Huevo"
+            ],
+            "precio_salon": "9.50",
+            "precio_terraza": "10.00"
+        },
+        {
+            "nombre": "Croquetas bacalao",
+            "ingredientes": [
+                "Gluten",
+                "Lácteos",
+                "Huevo",
+                "Pescado"
+            ],
+            "precio_salon": "8.50",
+            "precio_terraza": "9.00"
+        },
+        {
+            "nombre": "Albóndigas 'Chulapa'",
+            "ingredientes": [
+                "Gluten",
+                "Huevo",
+                "Apio",
+                "Lácteos",
+                "Mostaza"
+            ],
+            "precio_salon": "8.00",
+            "precio_terraza": "8.50"
+        },
+        {
+            "nombre": "Tabla de quesos",
+            "ingredientes": [
+                "Lácteos",
+                "Gluten",
+                "Frutos secos"
+            ],
+            "precio_salon": "14.00",
+            "precio_terraza": "14.90"
+        },
+        {
+            "nombre": "Portobellos rellenos de aguacate",
+            "ingredientes": [],
+            "precio_salon": "7.00",
+            "precio_terraza": "7.50"
+        }
+    ],
+    "Tostas Chulapa": [
+        {
+            "nombre": "Tosta de tartar de atún",
+            "ingredientes": [
+                "Gluten",
+                "Pescado"
+            ],
+            "precio_salon": "9.00",
+            "precio_terraza": "9.50"
+        },
+        {
+            "nombre": "Tosta de brandada de bacalao",
+            "ingredientes": [
+                "Gluten",
+                "Pescado"
+            ],
+            "precio_salon": "8.00",
+            "precio_terraza": "8.50"
+        },
+        {
+            "nombre": "Tosta de jamón con tomate",
+            "ingredientes": [
+                "Gluten"
+            ],
+            "precio_salon": "9.00",
+            "precio_terraza": "9.50"
+        },
+        {
+            "nombre": "Tosta de queso brie y cebolla caramelizada",
+            "ingredientes": [
+                "Gluten",
+                "Lácteos"
+            ],
+            "precio_salon": "8.00",
+            "precio_terraza": "8.50"
+        }
+    ],
+    "Del mar a tu plato": [
+        {
+            "nombre": "Fish & Chips 'Chulapa'",
+            "ingredientes": [
+                "Huevo",
+                "Gluten",
+                "Pescado",
+                "Apio",
+                "Lácteos",
+                "Mostaza"
+            ],
+            "precio_salon": "7.50",
+            "precio_terraza": "8.00"
+        },
+        {
+            "nombre": "Calamares a la andaluza",
+            "ingredientes": [
+                "Molusco",
+                "Gluten",
+                "Huevo",
+                "Apio",
+                "Lácteos",
+                "Mostaza"
+            ],
+            "precio_salon": "12.90",
+            "precio_terraza": "13.50"
+        },
+        {
+            "nombre": "Rejos a la andaluza",
+            "ingredientes": [
+                "Molusco",
+                "Gluten",
+                "Huevo",
+                "Apio",
+                "Lácteos",
+                "Mostaza"
+            ],
+            "precio_salon": "9.50",
+            "precio_terraza": "10.00"
+        }
+    ],
+    "Acompaña tu vermut": [
+        {
+            "nombre": "Gildas",
+            "ingredientes": [],
+            "precio_salon": "1.20",
+            "precio_terraza": "1.20"
+        }
+    ],
+    "Combo Chulapa": [
+        {
+            "nombre": "3 Croquetas: Bacalao, Trufadas y de Jamón",
+            "ingredientes": [],
+            "precio_salon": "6.00",
+            "precio_terraza": "6.50"
+        },
+        {
+            "nombre": "1 Vermut Grifo",
+            "ingredientes": [],
+            "precio_salon": "6.00",
+            "precio_terraza": "6.50"
+        }
+    ],
+    "Marchando una de tortilla": [
+        {
+            "nombre": "Tortilla de patata con/sin cebolla",
+            "ingredientes": [
+                "Huevo"
+            ],
+            "price_salón_mediana": "8.00",
+            "price_salón_entera": "14.00",
+            "price_terraza_mediana": "8.50",
+            "price_terraza_entera": "14.50"
+        },
+        {
+            "nombre": "Tortilla de patata con cebolla caramelizada",
+            "ingredientes": [
+                "Huevo"
+            ],
+            "price_salón_mediana": "8.00",
+            "price_salón_entera": "15.00",
+            "price_terraza_mediana": "8.50",
+            "price_terraza_entera": "15.50"
+        }
+    ],
+    "Delicias Chulapa": [
+        {
+            "nombre": "Albóndigas 'Chulapa'",
+            "ingredientes": [
+                "Gluten",
+                "Huevo",
+                "Apio",
+                "Lácteos",
+                "Mostaza"
+            ],
+            "precio_salon": "12.00",
+            "precio_terraza": "12.90"
+        },
+        {
+            "nombre": "Pollo asado con muselina",
+            "ingredientes": [
+                "Apio",
+                "Lácteos"
+            ],
+            "precio_salon": "12.00",
+            "precio_terraza": "12.90"
+        },
+        {
+            "nombre": "Solomillo Wellington con verduras caramelizadas",
+            "ingredientes": [
+                "Gluten",
+                "Huevo",
+                "Apio",
+                "Lácteos",
+                "Mostaza"
+            ],
+            "precio_salon": "13.00",
+            "precio_terraza": "13.90"
+        }
+    ],
+    "Bocadillos": [
+        {
+            "nombre": "Lomo con queso y tomate",
+            "ingredientes": [
+                "Lácteos",
+                "Gluten"
+            ],
+            "precio_salon": "7.00",
+            "precio_terraza": "7.50"
+        },
+        {
+            "nombre": "Bacon con queso",
+            "ingredientes": [
+                "Lácteos",
+                "Gluten"
+            ],
+            "precio_salon": "6.00",
+            "precio_terraza": "6.50"
+        },
+        {
+            "nombre": "Chorizo",
+            "ingredientes": [
+                "Gluten"
+            ],
+            "precio_salon": "6.00",
+            "precio_terraza": "6.50"
+        },
+        {
+            "nombre": "Jamón con tomate natural",
+            "ingredientes": [
+                "Gluten"
+            ],
+            "precio_salon": "7.00",
+            "precio_terraza": "7.50"
+        },
+        {
+            "nombre": "Calamares",
+            "ingredientes": [
+                "Huevo",
+                "Gluten",
+                "Apio",
+                "Lácteos",
+                "Mostaza"
+            ],
+            "precio_salon": "7.00",
+            "precio_terraza": "7.50"
+        }
+    ]
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useMenu } from '@/context/MenuContext';
 import MenuList from '@/components/MenuList';
-import menuComidasJson from '@/../menu-comidas.json';
-import menuBebidasJson from '@/../menu-bebidas.json';
+import menuComidasJson from '@/../menu_comidas.json';
+import menuBebidasJson from '@/../menu_bebidas.json';
 
 export default function MenuPage() {
   const menuComidas = Object.entries(menuComidasJson);

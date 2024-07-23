@@ -11,8 +11,8 @@ export default function MenuList({menu}) {
       {item[1].map((item, i) => (
         <li key={i} className='row'>
           <h6 className='blue'>{item.nombre}</h6>
-          <p className='blue'>{item.precio_salon}</p>
-          <p className='blue'>{item.precio_terraza}</p>
+          <p className='blue'>{item.precio_salon}€</p>
+          <p className='blue'>{item.precio_terraza}€</p>
         </li>
       ))}
     </ul>
