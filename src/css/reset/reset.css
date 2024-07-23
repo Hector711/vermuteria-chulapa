@@ -9,7 +9,7 @@
 }
 @font-face {
   font-family: 'Glacial Indifference';
-  src: url('@/css/fonts/glacial-indifference/GlacialIndifference-Regular.otf') format('opentype');
+  src: url('@/css/fonts/glacial-indifference/GlacialIndifference-Bold.otf') format('opentype');
   font-weight: normal;
 }
 @font-face {
@@ -31,7 +31,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   border: 0px solid transparent !important;
   min-height: 100vh;
 }
-
 html,
 body {
   /* kusa uno u otro dependiendo del contexto */

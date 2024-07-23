@@ -7,9 +7,9 @@
   --blue: #076689;
   --red: #ee0136;
 
-  --border-s: 4px;
-  --border-m: 8px;
-  --border-l: 20px;
+  --border-s: 2px;
+  --border-m: 4px;
+  --border-l: 10px;
 
   --gap-s: 8px;
   --gap-m: 10px;
@@ -19,25 +19,30 @@
   --pad-m: 1rem;
   --pad-l: 1.2rem;
 }
-
 div#root{
-  padding: 1rem;
+  padding: 2rem 1rem;
   position: relative;
 }
 h2{
   font-family: 'Antique Cherry', sans-serif;
 }
 h3 {
-  font-family: 'Glacial Indifference';
-}
-p {
-  color: var(--blue);
-  /* font-family: 'Futura'; */
+  font-family: 'Josefin Sans Variable';
+  font-weight: 600;
 }
 span {
   /* color: var(--red) */
 }
-
+p.glacial {
+  font-family: 'Glacial Indifference';
+}
+p.josefin {
+  font-family: 'Josefin Sans Variable';
+  font-weight: 600;
+}
+p.futura {
+  font-family: 'Futura';
+}
 #input {
   color: blue !important
 }
@@ -47,4 +52,12 @@ span {
   span {
 
   }
+}
+main {
+  min-height: 30vh;
+}
+button {
+  border: 1px solid ;
+  border-radius: var(--border-s);
+  padding: 4px 14px !important;
 }
