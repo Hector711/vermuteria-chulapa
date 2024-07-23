@@ -9,7 +9,7 @@ export default function HomePage() {
         <h3 className='text-center'>¿Alguna intolerancia?</h3>
         <div className='flex justify-center gap-4 '>
           <button onClick={() => {navigate('/filtros')}}>Si</button>
-          <button onClick={() => {navigate('/carta')}}>No</button>
+          <button onClick={() => {navigate('/menu')}}>No</button>
         </div>
       </main>
     </>

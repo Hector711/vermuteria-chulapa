@@ -4,7 +4,7 @@ import MenuList from '@/components/MenuList';
 import menuComidasJson from '@/../menu-comidas.json';
 import menuBebidasJson from '@/../menu-bebidas.json';
 
-export default function CartaPage() {
+export default function MenuPage() {
   const menuComidas = Object.entries(menuComidasJson);
   const menuBebidas = Object.entries(menuBebidasJson);
   const { menu, filter, setMenu } = useMenu();

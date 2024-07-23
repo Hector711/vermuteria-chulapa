@@ -10,7 +10,7 @@ export default function Layout() {
         <figure className='w-full flex justify-center h-[200px] '>
           <img src={logo} alt='' className='h-auto scale-150' />
         </figure>
-        <p className='uppercase text-center'>{mainInfo.location}</p>
+        <p className='uppercase text-center '>{mainInfo.location}</p>
       </header>
       <Outlet />
     </>

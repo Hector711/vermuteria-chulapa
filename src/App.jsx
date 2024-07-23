@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from '@/pages/HomePage';
-import CartaPage from '@/pages/CartaPage';
+import FirstPage from '@/pages/FirstPage';
+import FiltersPage from '@/pages/FiltersPage';
+import MenuPage from '@/pages/MenuPage';
 import Layout from '@/Layout';
 import { MenuProvider } from '@/context/MenuContext';
 
@@ -10,9 +11,10 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path='/' element={<HomePage />} />
+            <Route path='/' element={<FirstPage />} />
+            <Route path='/filtros' element={<FiltersPage />} />
           </Route>
-          <Route path='/carta' element={<CartaPage />} />
+          <Route path='/menu' element={<MenuPage />} />
         </Routes>
       </BrowserRouter>
     </MenuProvider>

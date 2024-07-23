@@ -34,5 +34,16 @@ p {
   /* font-family: 'Futura'; */
 }
 span {
-  color: var(--red)
+  /* color: var(--red) */
+}
+
+#input {
+  color: blue !important
+}
+#inputs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  span {
+
+  }
 }
