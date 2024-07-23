@@ -4,7 +4,7 @@ export default function MenuList({menu}) {
   return menu.map((item, i) => (
     <ul className='section-menu' key={i}>
       <li className='row'>
-        <h3 className='text-[1.1rem] font-bold uppercase'>{item[0]}</h3>
+        <h3>{item[0]}</h3>
         <p className='red'>Terraza</p>
         <p className='red'>Salón</p>
       </li>

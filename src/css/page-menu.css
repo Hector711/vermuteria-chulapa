@@ -29,12 +29,14 @@ nav {
 
 .section-menu {
   margin-bottom: 1rem;
-  * {
-    /* border: 1px solid ; */
-  }
   display: flex;
   flex-direction: column;
   gap: 8px;
+  h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
   li.row {
     display: flex;
   }
