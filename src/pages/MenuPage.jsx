@@ -12,8 +12,11 @@ export default function MenuPage() {
     <>
       <h2 className='text-center text-[3rem]'>Nuestra Carta</h2>
       <nav>
-        <button onClick={() => setMenu('bebidas')}>Bebidas</button>
-        <button onClick={() => setMenu('comidas')}>Comidas</button>
+        <div>
+          <button onClick={() => setMenu('bebidas')}>Bebidas</button>
+          <button onClick={() => setMenu('comidas')}>Comidas</button>
+        </div>
+        {/* <button>Filtro de intolerancias</button> */}
       </nav>
       {menu === 'bebidas' ? (
         <MenuList menu={menuBebidas} />

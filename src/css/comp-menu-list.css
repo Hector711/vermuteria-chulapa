@@ -1,4 +1,4 @@
-ul.accordions {
+#menu-list {
   li.row {
     display: flex;
   }
@@ -12,8 +12,14 @@ ul.accordions {
     }
     h6 {
       text-transform: uppercase;
-      font-weight: 600;
+      /* font-weight: 600; */
       color: var(--blue);
+    }
+    h6,
+    p {
+      /* font-family: 'Josefin Sans Variable'; */
+      font-family: 'Futura';
+      font-weight: 600;
     }
   }
 }

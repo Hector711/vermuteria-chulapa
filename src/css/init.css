@@ -23,6 +23,7 @@ div#root{
   padding: 2rem 1rem;
   position: relative;
 }
+/* "Nuestra Carta" */
 h2{
   font-family: 'Antique Cherry', sans-serif;
 }
@@ -30,9 +31,7 @@ h3 {
   font-family: 'Josefin Sans Variable';
   font-weight: 600;
 }
-span {
-  /* color: var(--red) */
-}
+/* 'Open Sans Variable' */
 .josefin {
   font-family: 'Josefin Sans Variable';
   font-weight: 600;
@@ -59,7 +58,8 @@ main {
   min-height: 30vh;
 }
 button {
-  border: 1px solid ;
   border-radius: var(--border-s);
   padding: 4px 14px !important;
+  background-color: var(--black-1);
+  color: var(--white-0);
 }
