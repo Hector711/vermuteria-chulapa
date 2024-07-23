@@ -15,7 +15,7 @@ export default function FiltersPage() {
   };
   return (
     <>
-      <div className='flex flex-col px-4 gap-4 items-center'>
+      <div className='flex flex-col px-4 gap-1 justify-center items-center'>
       <h4 className='josefin text-center uppercase'>Marque las intolerancias</h4>
         <FormGroup id='checkboxs-container'>
           <FormControlLabel 

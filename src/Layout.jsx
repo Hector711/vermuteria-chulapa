@@ -15,7 +15,7 @@ export default function Layout() {
         </p>
         <h2 className='text-center text-[3rem] mt-2'>Nuestra Carta</h2>
       </header>
-      <main className='flex flex-col gap-4 justify-center my-4'>
+      <main className='flex flex-col gap-4  justify-center my-4'>
         <Outlet />
       </main>
     </>
