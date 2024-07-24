@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Suspense } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import FirstPage from '@/pages/FirstPage';
 import FiltersPage from '@/pages/FiltersPage';
 import MenuPage from '@/pages/MenuPage';
