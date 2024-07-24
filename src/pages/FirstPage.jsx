@@ -5,7 +5,7 @@ export default function HomePage() {
   const navigate = useNavigate();
   return (
     <>
-      <h3 className='text-center '>¿TIENE ALGUNA INTOLERANCIA?</h3>
+      <h3 className='text-center animate-blink'>¿TIENE ALGUNA INTOLERANCIA?</h3>
       <div className='flex justify-center gap-14 p-5'>
         <button
           onClick={() => {

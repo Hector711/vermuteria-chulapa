@@ -6,7 +6,7 @@ import logo from '@/assets/logo.png';
 export default function MainLayout() {
   return (
     <>
-      <header id='layout'>
+      <header id='layout' className='animate-blink'>
         <figure className='w-[50vw] justify-center h-[200px] '>
           <img src={logo} alt='' className='h-auto scale-150' />
         </figure>
@@ -14,7 +14,7 @@ export default function MainLayout() {
           {mainInfo.location}
         </p>
       </header>
-      <main>
+      <main className='animate-blink'>
         <Outlet />
       </main>
     </>
