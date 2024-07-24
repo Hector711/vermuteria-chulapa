@@ -13,8 +13,9 @@ nav.menu {
     border-radius: 4px 4px 0px 0px;
     padding: 10px 10px;
     text-transform: uppercase;
-    font-family: "Futura";
+    font-family: 'Josefin Sans Variable';
     font-weight: 600;
+    background-color: rgba(143, 142, 142, 0.23);
   }
   button.active {
     background-color: var(--color-menu);
