@@ -1,28 +1,29 @@
-nav {
+div.menu {
   display: flex;
   flex-direction: column;
+}
+nav.menu {
+  display: flex;
   justify-content: center;
-  width: 100%;  
-  /* gap: 1rem; */
-  /* margin-block: 1rem; */
-  div {
-    display: flex;
-    gap: 1rem;
-  }
+  width: 100%; 
+  gap: 5px;
   button {
+    /* border: 1px solid; */
     width: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 2px;
-    padding: 5px 10px 2px !important;
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: 'Josefin Sans Variable', sans-serif;
+    border-radius: 4px 4px 0px 0px;
+    padding: 5px 10px;
     text-transform: uppercase;
-    justify-content: center;
-    background-color: var(--black-1);
-    color: white;
+    font-family: "Futura";
+    font-weight: 600;
   }
+  button.active {
+    background-color: var(--color-menu);
+  }
+}
+section.menu {
+  /* border: 1px solid; */
+  padding: 10px;
+  background-color: var(--color-menu);
 }
 
 
@@ -43,8 +44,8 @@ nav {
   li.row {
     display: grid;
     grid-template-columns: minmax(30px, 400px) var(--width-col) var(--width-col);
-    border-bottom: 1px solid var(--black-1);
-
+    border-bottom: 1px solid #666666a6;
+    
     h6, p {
       text-transform: uppercase;
       font-family: 'Futura';
@@ -56,4 +57,7 @@ nav {
       text-align: center;
     }
   }
+}
+.borderr {
+  /* border-top: 1px solid #666666a6; */
 }

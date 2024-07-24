@@ -10,20 +10,27 @@ export default function MenuPage() {
   const { menu, setMenu, platosOrdenados } = useMenu();
   // console.log('MenuComidas:', menuComidas)
   // console.log('platosOrdenados:', platosOrdenados)
+
+  const isActiveBebidas = menu === 'bebidas' ? 'active' : '' 
+  const isActiveComidas = menu === 'comidas' ? 'active' : '' 
   return (
     <>
-      <nav>
-        <button onClick={() => setMenu('bebidas')}>Bebidas</button>
-        <button onClick={() => setMenu('comidas')}>Comidas</button>
-        <button>Filtro Intolerancias</button>
-      </nav>
-      {menu === 'bebidas' ? (
-        <MenuList menu={menuBebidas} />
-      ) : (
-        <>
-          <MenuList menu={platosOrdenados} />
-        </>
-      )}
+      <button>Filtro Intolerancias</button>
+      <div className='menu'>
+        <nav className='menu'>
+          <button onClick={() => setMenu('bebidas')} className={isActiveBebidas}>Bebidas</button>
+          <button onClick={() => setMenu('comidas')} className={isActiveComidas}>Comidas</button>
+        </nav>
+        <section className='menu'>
+          {menu === 'bebidas' ? (
+            <MenuList menu={menuBebidas} />
+          ) : (
+            <>
+              <MenuList menu={platosOrdenados} />
+            </>
+          )}
+        </section>
+      </div>
     </>
   );
 }

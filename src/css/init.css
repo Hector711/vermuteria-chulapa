@@ -6,24 +6,27 @@
   --black-0: #000000;
   --blue: #076689;
   --red: #ee0136;
+  --color-menu: #e1e1e198;
 
   --border-s: 2px;
-  --border-m: 4px;
-  --border-l: 10px;
 
   --width-col: 62px;
 
-  --gap-s: 8px;
-  --gap-m: 10px;
-  --gap-l: 15px;
+  --gap-s: 9px;
 
-  --pad-s: 0.8rem;
-  --pad-m: 1rem;
-  --pad-l: 1.2rem;
+
+  --pad-s: 7px;
 }
-div#root{
-  padding: 2rem 1rem;
-  position: relative;
+#root { 
+  border: 0px solid transparent !important;
+  min-height: 100vh;
+  padding: 2rem var(--pad-s);
+}
+html,
+body {
+  /* kusa uno u otro dependiendo del contexto */
+  min-height: max-content;
+  min-height: 100%;
 }
 /* "Nuestra Carta" */
 h2{
@@ -58,13 +61,13 @@ h3 {
 main {
   min-height: 45vh;
 }
-button {
+/* button {
   border-radius: var(--border-s);
   padding: 4px 14px !important;
   background-color: var(--black-1) !important;
   color: var(--white-0) !important;
   padding: 5px 10px 2px !important;
-}
+} */
 .blue {
   color: var(--blue);
 }
