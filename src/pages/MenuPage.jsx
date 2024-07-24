@@ -1,11 +1,11 @@
 import React from 'react';
 import { useMenu } from '@/context/MenuContext';
 import MenuList from '@/components/MenuList';
-import menuComidasJson from '@/../menu_comidas.json';
+// import menuComidasJson from '@/../menu_comidas.json';
 import menuBebidasJson from '@/../menu_bebidas.json';
 
 export default function MenuPage() {
-  const menuComidas = Object.entries(menuComidasJson);
+  // const menuComidas = Object.entries(menuComidasJson);
   const menuBebidas = Object.entries(menuBebidasJson);
   const { menu, setMenu, platosOrdenados } = useMenu();
   // console.log('MenuComidas:', menuComidas)
@@ -13,17 +13,15 @@ export default function MenuPage() {
   return (
     <>
       <nav>
-        <div>
-          <button onClick={() => setMenu('bebidas')}>Bebidas</button>
-          <button onClick={() => setMenu('comidas')}>Comidas</button>
-        </div>
-        {/* <button>Filtro de intolerancias</button> */}
+        <button onClick={() => setMenu('bebidas')}>Bebidas</button>
+        <button onClick={() => setMenu('comidas')}>Comidas</button>
+        <button>Filtro Intolerancias</button>
       </nav>
       {menu === 'bebidas' ? (
         <MenuList menu={menuBebidas} />
       ) : (
         <>
-        <MenuList menu={platosOrdenados} />       
+          <MenuList menu={platosOrdenados} />
         </>
       )}
     </>
