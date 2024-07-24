@@ -1,14 +1,16 @@
 import React from 'react';
 
-export default function MenuList({menu}) {
-  return menu.map((item, i) => (
+const selectedFilters = ['Lacteos', 'Huevo'];
+
+export default function MenuList({ menu }) {
+  return menu.map((section, i) => (
     <ul className='section-menu' key={i}>
       <li className='row'>
-        <h3>{item[0]}</h3>
+        <h3>{section[0]}</h3>
         <p className='red'>Terraza</p>
         <p className='red'>Salón</p>
       </li>
-      {item[1].map((item, i) => (
+      {section[1].map((item, i) => (
         <li key={i} className='row'>
           <h6 className='blue'>{item.nombre}</h6>
           <p className='blue'>{item.precio_salon}€</p>
@@ -18,4 +20,3 @@ export default function MenuList({menu}) {
     </ul>
   ));
 }
-

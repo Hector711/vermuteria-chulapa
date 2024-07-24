@@ -7,7 +7,9 @@ import menuBebidasJson from '@/../menu_bebidas.json';
 export default function MenuPage() {
   const menuComidas = Object.entries(menuComidasJson);
   const menuBebidas = Object.entries(menuBebidasJson);
-  const { menu, filter, setMenu } = useMenu();
+  const { menu, setMenu, platosOrdenados } = useMenu();
+  // console.log('MenuComidas:', menuComidas)
+  // console.log('platosOrdenados:', platosOrdenados)
   return (
     <>
       <nav>
@@ -20,7 +22,9 @@ export default function MenuPage() {
       {menu === 'bebidas' ? (
         <MenuList menu={menuBebidas} />
       ) : (
-        <MenuList menu={menuComidas} />
+        <>
+        <MenuList menu={platosOrdenados} />       
+        </>
       )}
     </>
   );

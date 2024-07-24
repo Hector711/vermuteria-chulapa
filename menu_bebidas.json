@@ -3,316 +3,436 @@
         {
             "nombre": "Vermut de Grifo",
             "precio_salon": "3.50",
-            "precio_terraza": "3.80"
+            "precio_terraza": "3.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Perucchi",
             "precio_salon": "4.30",
-            "precio_terraza": "4.50"
+            "precio_terraza": "4.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Bendita Locura Rojo/Blanco (Zamora)",
             "precio_salon": "4.00",
-            "precio_terraza": "4.20"
+            "precio_terraza": "4.20",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "El Gato Orgulloso (Madrid)",
             "precio_salon": "4.00",
-            "precio_terraza": "4.20"
+            "precio_terraza": "4.20",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Dabuti (Madrid)",
             "precio_salon": "4.00",
-            "precio_terraza": "4.20"
+            "precio_terraza": "4.20",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Petroni Rojo/Blanco (Galicia)",
             "precio_salon": "4.00",
-            "precio_terraza": "4.20"
+            "precio_terraza": "4.20",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Axta (Valencia)",
             "precio_salon": "4.00",
-            "precio_terraza": "4.20"
+            "precio_terraza": "4.20",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Yzaguirre Blanco",
             "precio_salon": "4.00",
-            "precio_terraza": "4.20"
+            "precio_terraza": "4.20",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Zecchini (Madrid)",
             "precio_salon": "4.00",
-            "precio_terraza": "4.20"
+            "precio_terraza": "4.20",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Manhattan",
             "precio_salon": "6.00",
-            "precio_terraza": "6.50"
+            "precio_terraza": "6.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Chulapa Spritz",
             "precio_salon": "6.50",
-            "precio_terraza": "7.00"
+            "precio_terraza": "7.00",
+            "descripción": "...",
+            "ingredientes": []
         }
     ],
     "Cócteles": [
         {
             "nombre": "Pisco Sour Clásico",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Pisco Sour Maracuyá",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Margarita",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Mojito",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Aperol Spritz",
             "precio_salon": "7.50",
-            "precio_terraza": "8.00"
+            "precio_terraza": "8.00",
+            "descripción": "...",
+            "ingredientes": []
         }
     ],
     "Sangrías": [
         {
             "nombre": "Tinto de Verano",
             "precio_salon": "4.00",
-            "precio_terraza": "4.30"
+            "precio_terraza": "4.30",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Jarra Tinto de Verano",
             "precio_salon": "12.00",
-            "precio_terraza": "13.00"
+            "precio_terraza": "13.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Sangría",
             "precio_salon": "4.00",
-            "precio_terraza": "4.30"
+            "precio_terraza": "4.30",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Jarra de Sangría",
             "precio_salon": "15.00",
-            "precio_terraza": "16.00"
+            "precio_terraza": "16.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Kalimotxo",
             "precio_salon": "4.00",
-            "precio_terraza": "4.30"
+            "precio_terraza": "4.30",
+            "descripción": "...",
+            "ingredientes": []
         }
     ],
     "Cervezas": [
         {
             "nombre": "Doble de Estrella / Turia",
             "precio_salon": "3.50",
-            "precio_terraza": "3.80"
+            "precio_terraza": "3.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Tercio Cerveza Madrid",
             "precio_salon": "3.50",
-            "precio_terraza": "3.80"
+            "precio_terraza": "3.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Tercio de Estrella Galicia",
             "precio_salon": "3.50",
-            "precio_terraza": "3.80"
+            "precio_terraza": "3.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Tercio de Mahou",
             "precio_salon": "3.50",
-            "precio_terraza": "3.80"
+            "precio_terraza": "3.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Jarra de Cerveza",
             "precio_salon": "5.00",
-            "precio_terraza": "5.50"
+            "precio_terraza": "5.50",
+            "descripción": "...",
+            "ingredientes": []
         }
     ],
     "Copas": [
         {
             "nombre": "Puerto de Indias",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Beefeater",
             "precio_salon": "8.00",
-            "precio_terraza": "8.50"
+            "precio_terraza": "8.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Larios",
             "precio_salon": "8.00",
-            "precio_terraza": "8.50"
+            "precio_terraza": "8.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Seagrams",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Tanqueray",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Bombay Sapphire",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Nordés",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Hendrick's",
             "precio_salon": "10.00",
-            "precio_terraza": "10.50"
+            "precio_terraza": "10.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Red Label",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Ballantines",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Absolut",
             "precio_salon": "9.00",
-            "precio_terraza": "9.50"
+            "precio_terraza": "9.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Barceló",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Brugal",
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Chupito",
             "precio_salon": "3.00",
-            "precio_terraza": "3.50"
+            "precio_terraza": "3.50",
+            "descripción": "...",
+            "ingredientes": []
         }
     ],
     "Vinos": [
         {
             "nombre": "Rioja Crianza",
             "precio_salon": "3.50",
-            "precio_terraza": "3.80"
+            "precio_terraza": "3.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Ribera del Duero Crianza",
             "precio_salon": "3.50",
-            "precio_terraza": "3.80"
+            "precio_terraza": "3.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Rioja Ramón Bilbao",
             "precio_salon": "4.00",
-            "precio_terraza": "4.30"
+            "precio_terraza": "4.30",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Blanco Rueda",
             "precio_salon": "3.50",
-            "precio_terraza": "3.80"
+            "precio_terraza": "3.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Blanco Albariño",
             "precio_salon": "3.70",
-            "precio_terraza": "4.00"
+            "precio_terraza": "4.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Botella Vino Tinto Ribera",
             "precio_salon": "18.00",
-            "precio_terraza": "20.00"
+            "precio_terraza": "20.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Botella Vino Tinto Rioja Ramón Bilbao",
             "precio_salon": "21.00",
-            "precio_terraza": "23.00"
+            "precio_terraza": "23.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Botella Vino Blanco Albariño",
             "precio_salon": "21.00",
-            "precio_terraza": "23.00"
+            "precio_terraza": "23.00",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Botella Vino Blanco Rueda",
             "precio_salon": "18.00",
-            "precio_terraza": "20.00"
+            "precio_terraza": "20.00",
+            "descripción": "...",
+            "ingredientes": []
         }
     ],
     "Refrescos": [
         {
             "nombre": "Mosto",
             "precio_salon": "3.00",
-            "precio_terraza": "3.50"
+            "precio_terraza": "3.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Zumo de Melocotón | Piña",
             "precio_salon": "3.00",
-            "precio_terraza": "3.50"
+            "precio_terraza": "3.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Coca Cola | Aquarius | Varios",
             "precio_salon": "3.00",
-            "precio_terraza": "3.50"
+            "precio_terraza": "3.50",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Agua con Gas",
             "precio_salon": "2.00",
-            "precio_terraza": "2.30"
+            "precio_terraza": "2.30",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Agua",
             "precio_salon": "2.00",
-            "precio_terraza": "2.30"
+            "precio_terraza": "2.30",
+            "descripción": "...",
+            "ingredientes": []
         }
     ],
     "Cafés": [
         {
             "nombre": "Café con Leche",
             "precio_salon": "1.70",
-            "precio_terraza": "1.80"
+            "precio_terraza": "1.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Café Solo | Café Cortado",
             "precio_salon": "1.50",
-            "precio_terraza": "1.60"
+            "precio_terraza": "1.60",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Café con Leche y Baileys",
             "precio_salon": "2.40",
-            "precio_terraza": "2.60"
+            "precio_terraza": "2.60",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Carajillo",
             "precio_salon": "2.00",
-            "precio_terraza": "2.20"
+            "precio_terraza": "2.20",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Infusiones (té verde, manzanilla, etc.)",
             "precio_salon": "1.70",
-            "precio_terraza": "1.80"
+            "precio_terraza": "1.80",
+            "descripción": "...",
+            "ingredientes": []
         },
         {
             "nombre": "Tarta (cada fin de semana novedad)",
             "precio_salon": "4.00",
-            "precio_terraza": "4.00"
+            "precio_terraza": "4.00",
+            "descripción": "...",
+            "ingredientes": []
         }
     ]
 }

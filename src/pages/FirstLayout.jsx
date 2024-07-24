@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import mainInfo from '@/../main-info.json';
+import mainInfo from '@/../informacion_principal.json';
 import logo from '@/assets/logo.png';
 
 export default function MainLayout() {

@@ -4,13 +4,15 @@
             "nombre": "Torreznos",
             "ingredientes": [],
             "precio_salon": "9.00",
-            "precio_terraza": "9.50"
+            "precio_terraza": "9.50",
+            "descripción": "..."
         },
         {
             "nombre": "Patatas bravas",
             "ingredientes": [],
             "precio_salon": "7.00",
-            "precio_terraza": "7.50"
+            "precio_terraza": "7.50",
+            "descripción": "..."
         },
         {
             "nombre": "Braviolis",
@@ -20,7 +22,8 @@
                 "Huevo"
             ],
             "precio_salon": "7.50",
-            "precio_terraza": "8.00"
+            "precio_terraza": "8.00",
+            "descripción": "..."
         },
         {
             "nombre": "Ensaladilla rusa",
@@ -30,7 +33,8 @@
                 "Lácteos"
             ],
             "precio_salon": "8.00",
-            "precio_terraza": "8.50"
+            "precio_terraza": "8.50",
+            "descripción": "..."
         },
         {
             "nombre": "Huevos rotos con jamón",
@@ -38,7 +42,8 @@
                 "Huevo"
             ],
             "precio_salon": "10.50",
-            "precio_terraza": "11.00"
+            "precio_terraza": "11.00",
+            "descripción": "..."
         },
         {
             "nombre": "Croquetas caseras de jamón",
@@ -48,7 +53,8 @@
                 "Huevo"
             ],
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "..."
         },
         {
             "nombre": "Croquetas de setas trufadas",
@@ -58,7 +64,8 @@
                 "Huevo"
             ],
             "precio_salon": "9.00",
-            "precio_terraza": "9.50"
+            "precio_terraza": "9.50",
+            "descripción": "..."
         },
         {
             "nombre": "Croquetas mixtas",
@@ -68,7 +75,8 @@
                 "Huevo"
             ],
             "precio_salon": "9.50",
-            "precio_terraza": "10.00"
+            "precio_terraza": "10.00",
+            "descripción": "..."
         },
         {
             "nombre": "Croquetas bacalao",
@@ -79,7 +87,8 @@
                 "Pescado"
             ],
             "precio_salon": "8.50",
-            "precio_terraza": "9.00"
+            "precio_terraza": "9.00",
+            "descripción": "..."
         },
         {
             "nombre": "Albóndigas 'Chulapa'",
@@ -91,7 +100,8 @@
                 "Mostaza"
             ],
             "precio_salon": "8.00",
-            "precio_terraza": "8.50"
+            "precio_terraza": "8.50",
+            "descripción": "..."
         },
         {
             "nombre": "Tabla de quesos",
@@ -101,13 +111,15 @@
                 "Frutos secos"
             ],
             "precio_salon": "14.00",
-            "precio_terraza": "14.90"
+            "precio_terraza": "14.90",
+            "descripción": "..."
         },
         {
             "nombre": "Portobellos rellenos de aguacate",
             "ingredientes": [],
             "precio_salon": "7.00",
-            "precio_terraza": "7.50"
+            "precio_terraza": "7.50",
+            "descripción": "..."
         }
     ],
     "Tostas Chulapa": [
@@ -118,7 +130,8 @@
                 "Pescado"
             ],
             "precio_salon": "9.00",
-            "precio_terraza": "9.50"
+            "precio_terraza": "9.50",
+            "descripción": "..."
         },
         {
             "nombre": "Tosta de brandada de bacalao",
@@ -127,7 +140,8 @@
                 "Pescado"
             ],
             "precio_salon": "8.00",
-            "precio_terraza": "8.50"
+            "precio_terraza": "8.50",
+            "descripción": "..."
         },
         {
             "nombre": "Tosta de jamón con tomate",
@@ -135,7 +149,8 @@
                 "Gluten"
             ],
             "precio_salon": "9.00",
-            "precio_terraza": "9.50"
+            "precio_terraza": "9.50",
+            "descripción": "..."
         },
         {
             "nombre": "Tosta de queso brie y cebolla caramelizada",
@@ -144,7 +159,8 @@
                 "Lácteos"
             ],
             "precio_salon": "8.00",
-            "precio_terraza": "8.50"
+            "precio_terraza": "8.50",
+            "descripción": "..."
         }
     ],
     "Del mar a tu plato": [
@@ -159,7 +175,8 @@
                 "Mostaza"
             ],
             "precio_salon": "7.50",
-            "precio_terraza": "8.00"
+            "precio_terraza": "8.00",
+            "descripción": "..."
         },
         {
             "nombre": "Calamares a la andaluza",
@@ -172,7 +189,8 @@
                 "Mostaza"
             ],
             "precio_salon": "12.90",
-            "precio_terraza": "13.50"
+            "precio_terraza": "13.50",
+            "descripción": "..."
         },
         {
             "nombre": "Rejos a la andaluza",
@@ -185,7 +203,8 @@
                 "Mostaza"
             ],
             "precio_salon": "9.50",
-            "precio_terraza": "10.00"
+            "precio_terraza": "10.00",
+            "descripción": "..."
         }
     ],
     "Acompaña tu vermut": [
@@ -193,7 +212,8 @@
             "nombre": "Gildas",
             "ingredientes": [],
             "precio_salon": "1.20",
-            "precio_terraza": "1.20"
+            "precio_terraza": "1.20",
+            "descripción": "..."
         }
     ],
     "Combo Chulapa": [
@@ -201,13 +221,15 @@
             "nombre": "3 Croquetas: Bacalao, Trufadas y de Jamón",
             "ingredientes": [],
             "precio_salon": "6.00",
-            "precio_terraza": "6.50"
+            "precio_terraza": "6.50",
+            "descripción": "..."
         },
         {
             "nombre": "1 Vermut Grifo",
             "ingredientes": [],
             "precio_salon": "6.00",
-            "precio_terraza": "6.50"
+            "precio_terraza": "6.50",
+            "descripción": "..."
         }
     ],
     "Tortillas Chulapa": [
@@ -219,7 +241,8 @@
             "price_salón_mediana": "8.00",
             "price_salón_entera": "14.00",
             "price_terraza_mediana": "8.50",
-            "price_terraza_entera": "14.50"
+            "price_terraza_entera": "14.50",
+            "descripción": "..."
         },
         {
             "nombre": "Tortilla de patata con cebolla caramelizada",
@@ -229,7 +252,8 @@
             "price_salón_mediana": "8.00",
             "price_salón_entera": "15.00",
             "price_terraza_mediana": "8.50",
-            "price_terraza_entera": "15.50"
+            "price_terraza_entera": "15.50",
+            "descripción": "..."
         }
     ],
     "Delicias Chulapa": [
@@ -243,7 +267,8 @@
                 "Mostaza"
             ],
             "precio_salon": "12.00",
-            "precio_terraza": "12.90"
+            "precio_terraza": "12.90",
+            "descripción": "..."
         },
         {
             "nombre": "Pollo asado con muselina",
@@ -252,7 +277,8 @@
                 "Lácteos"
             ],
             "precio_salon": "12.00",
-            "precio_terraza": "12.90"
+            "precio_terraza": "12.90",
+            "descripción": "..."
         },
         {
             "nombre": "Solomillo Wellington con verduras caramelizadas",
@@ -264,7 +290,8 @@
                 "Mostaza"
             ],
             "precio_salon": "13.00",
-            "precio_terraza": "13.90"
+            "precio_terraza": "13.90",
+            "descripción": "..."
         }
     ],
     "Bocadillos": [
@@ -275,7 +302,8 @@
                 "Gluten"
             ],
             "precio_salon": "7.00",
-            "precio_terraza": "7.50"
+            "precio_terraza": "7.50",
+            "descripción": "..."
         },
         {
             "nombre": "Bacon con queso",
@@ -284,7 +312,8 @@
                 "Gluten"
             ],
             "precio_salon": "6.00",
-            "precio_terraza": "6.50"
+            "precio_terraza": "6.50",
+            "descripción": "..."
         },
         {
             "nombre": "Chorizo",
@@ -292,7 +321,8 @@
                 "Gluten"
             ],
             "precio_salon": "6.00",
-            "precio_terraza": "6.50"
+            "precio_terraza": "6.50",
+            "descripción": "..."
         },
         {
             "nombre": "Jamón con tomate natural",
@@ -300,7 +330,8 @@
                 "Gluten"
             ],
             "precio_salon": "7.00",
-            "precio_terraza": "7.50"
+            "precio_terraza": "7.50",
+            "descripción": "..."
         },
         {
             "nombre": "Calamares",
@@ -312,7 +343,8 @@
                 "Mostaza"
             ],
             "precio_salon": "7.00",
-            "precio_terraza": "7.50"
+            "precio_terraza": "7.50",
+            "descripción": "..."
         }
     ]
 }

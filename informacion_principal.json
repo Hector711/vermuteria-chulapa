@@ -1,0 +1,20 @@
+{
+  "name": "Chulapa",
+  "location": "La Latina | Calle de la Cebada 3",
+  "location_description": "A 2 minutos de la estación de metro de La Latina, en un ambiente acogedor y tranquilo, con una amplia terraza.",
+  "url_menu": "https://chulapa-web.vercel.app",
+  "phone": "911 67 23 39",
+  "horarios": {
+    "lunes": "17:00-24:00",
+    "martes": "17:00-24:00",
+    "miércoles": "17:00-24:00",
+    "jueves": "12:00-24:00",
+    "viernes": "12:00-24:00",
+    "sábado": "12:00-24:00",
+    "domingo": "11:30-24:00"
+  },
+  "profiles": {
+    "instagram": "https://www.instagram.com/chulapa_lalatina",
+    "facebook": "https://www.facebook.com/CHULAPALALATINA"
+  }
+}
