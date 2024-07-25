@@ -1,6 +1,6 @@
 :root {
   background: linear-gradient(to bottom, #fcafaf, #efdd79);
-  --width: 500px;
+  --width: 600px;
   --width-col: 62px;
   
   --white-0: #f3f3f3;
@@ -13,18 +13,10 @@
 
   --border-s: 2px;
 
-
   --gap-s: 9px;
 
 
   --pad-s: 7px;
-}
-#root { 
-  border: 0px solid transparent !important;
-  min-height: 100vh;
-  padding: 2rem var(--pad-s);
-  width: 100%;
-  max-width: var(--width);
 }
 html,
 body {
@@ -32,14 +24,21 @@ body {
   min-height: max-content;
   min-height: 100%;
 }
-/* "Nuestra Carta" */
-h2{
-  font-family: 'Antique Cherry', sans-serif;
-}
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+div#root { 
+  border: 0px solid transparent !important;
+  min-height: 100vh;
+  padding: 2rem var(--pad-s);
+  width: 100%;
+  max-width: var(--width);
+}
+/* "Nuestra Carta" */
+h2{
+  font-family: 'Antique Cherry', sans-serif;
 }
 h3 {
   font-family: 'Josefin Sans Variable';
