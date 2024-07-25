@@ -1,5 +1,8 @@
 :root {
   background: linear-gradient(to bottom, #fcafaf, #efdd79);
+  --width: 500px;
+  --width-col: 62px;
+  
   --white-0: #f3f3f3;
   --white-1: #e6e6e6;
   --black-1: #3a3a3a;
@@ -10,7 +13,6 @@
 
   --border-s: 2px;
 
-  --width-col: 62px;
 
   --gap-s: 9px;
 
@@ -21,6 +23,8 @@
   border: 0px solid transparent !important;
   min-height: 100vh;
   padding: 2rem var(--pad-s);
+  width: 100%;
+  max-width: var(--width);
 }
 html,
 body {
