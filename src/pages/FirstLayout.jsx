@@ -1,9 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import mainInfo from '@/../informacion_principal.json';
+import { useMenu } from '@/context/MenuContext';
+
 import logo from '@/assets/logo.png';
 
 export default function MainLayout() {
+  const { info } = useMenu();
+  const location = info && info[0].location 
+  console.log(location)
   return (
     <>
       <header id='layout' className='animate-blink'>
@@ -11,7 +15,7 @@ export default function MainLayout() {
           <img src={logo} alt='' className='h-auto scale-150' />
         </figure>
         <p className='uppercase text-center text-[0.65rem]'>
-          {mainInfo.location}
+          {location}
         </p>
       </header>
       <main className='animate-blink'>
