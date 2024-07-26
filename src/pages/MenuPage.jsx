@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useMenu } from '@/context/MenuContext';
 import MenuList from '@/components/MenuList';
-import menuBebidasJson from '@/../menu_bebidas.json';
 import Filter from '@/components/Filter';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -9,12 +8,10 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function MenuPage() {
-  const menuBebidas = Object.entries(menuBebidasJson);
-  const { menu, setMenu, platosOrdenados, selectedFilters } = useMenu();
+  const { menu, setMenu, platosOrdenados, selectedFilters, bebidasOrdenadas } =
+    useMenu();
 
-  useEffect(() => {
-    console.log(selectedFilters);
-  }, [selectedFilters]);
+  useEffect(() => {}, [selectedFilters]);
 
   const isActiveBebidas = menu === 'bebidas' ? 'active' : '';
   const isActiveComidas = menu === 'comidas' ? 'active' : '';
@@ -50,7 +47,13 @@ export default function MenuPage() {
         </nav>
         <section className='menu'>
           {menu === 'bebidas' ? (
-            <MenuList menu={menuBebidas} />
+            <>
+              {bebidasOrdenadas ? (
+                <MenuList menu={bebidasOrdenadas} />
+              ) : (
+                <p>Cargando bebidas...</p>
+              )}
+            </>
           ) : (
             <>
               <MenuList menu={platosOrdenados} />

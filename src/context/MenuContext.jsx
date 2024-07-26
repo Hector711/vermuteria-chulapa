@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import { createContext, useContext, useState } from 'react';
-import menuComidasJson from '@/../menu_comidas.json';
-import menuBebidasJson from '@/../menu_bebidas.json';
-
+import { getMenuComidas, getMenuBebidas, getInfo } from '@/api/supabaseClient';
+import { useQuery } from '@tanstack/react-query';
 const MenuContext = createContext();
 
 export const useMenu = () => {
@@ -26,6 +25,13 @@ export function MenuProvider({ children }) {
     'Frutos Secos': false,
   });
 
+  const handleCheckboxChange = event => {
+    setSelectedFilters({
+      ...selectedFilters,
+      [event.target.name]: event.target.checked,
+    });
+  };
+
   const arrayIngredientes = [];
   const crearArrayIngredientes = objeto => {
     for (const ingrediente in objeto) {
@@ -36,18 +42,48 @@ export function MenuProvider({ children }) {
   };
   crearArrayIngredientes(selectedFilters);
 
-  const todosLosPlatos = [];
-  const crearTodosLosPlatos = objeto => {
-    for (const categoria in objeto) {
-      objeto[categoria].forEach(plato => {
-        todosLosPlatos.push({
-          ...plato,
-          categoria: categoria,
-        });
-      });
-    }
-  };
-  crearTodosLosPlatos(menuComidasJson);
+  const {
+    isLoading: isLoadingComidas,
+    data: menuComidas,
+    error: errorComidas,
+  } = useQuery({
+    queryKey: ['menu_comidas'],
+    queryFn: getMenuComidas,
+  });
+
+  const {
+    isLoading: isLoadingBebidas,
+    data: menuBebidas,
+    error: errorBebidas,
+  } = useQuery({
+    queryKey: ['menu_bebidas'],
+    queryFn: getMenuBebidas
+  })
+
+  const {
+    isLoading: isLoadingInfo,
+    data: info,
+    error: errorInfo,
+  } = useQuery({
+    queryKey: ['info'],
+    queryFn: getInfo
+  })
+
+  if (isLoadingComidas) {
+    console.log('Cargando menu_comidas...');
+  } else if (errorComidas) {
+    console.error('Error al obtener menu_comidas:', errorComidas);
+  }
+  if (isLoadingBebidas) {
+    console.log('Cargando menu_bebidas...');
+  } else if (errorBebidas) {
+    console.error('Error al obtener menu_bebidas:', errorBebidas);
+  }
+  if (isLoadingInfo) {
+    console.log('Cargando info...');
+  } else if (errorInfo) {
+    console.error('Error al obtener info:', errorInfo);
+  }
 
   const platosFiltrados = [];
   const crearPlatosFiltrados = array => {
@@ -61,36 +97,33 @@ export function MenuProvider({ children }) {
       }
     });
   };
-  crearPlatosFiltrados(todosLosPlatos);
+  menuComidas && crearPlatosFiltrados(menuComidas);
+  menuBebidas && console.log('menuBebidas:',menuBebidas)
+  // menuComidas && console.log('menuComidas:',menuComidas)
 
-  const ordenarPorCategoria = platos => {
+  const ordenarPorCategoria = productos => {
+    if (!productos || !Array.isArray(productos)) {
+      return [];
+    }
     const categorias = {};
-    platos.forEach(plato => {
-      if (!categorias[plato.categoria]) {
-        categorias[plato.categoria] = [];
+    productos.forEach(prod => {
+      if (!categorias[prod.categoria]) {
+        categorias[prod.categoria] = [];
       }
-      categorias[plato.categoria].push(plato);
+      categorias[prod.categoria].push(prod);
     });
 
-    return Object.entries(categorias).map(([categoria, platos]) => [
+    return Object.entries(categorias).map(([categoria, productos]) => [
       categoria,
-      platos,
+      productos,
     ]);
   };
-
   const platosOrdenados = ordenarPorCategoria(platosFiltrados);
-  // console.log('platosOrdenados:', platosOrdenados);
+  const bebidasOrdenadas = ordenarPorCategoria(menuBebidas)
+  menuBebidas && bebidasOrdenadas 
 
-  const handleCheckboxChange = event => {
-    setSelectedFilters({
-      ...selectedFilters,
-      [event.target.name]: event.target.checked,
-    });
-  };
-
-  useEffect(() => {
-    // console.log('Selected Filters:', selectedFilters);
-  }, [selectedFilters]);
+ 
+  useEffect(() => {}, [selectedFilters]);
   return (
     <MenuContext.Provider
       value={{
@@ -98,7 +131,9 @@ export function MenuProvider({ children }) {
         handleCheckboxChange,
         selectedFilters,
         setMenu,
-        platosOrdenados
+        platosOrdenados,
+        bebidasOrdenadas,
+        info
       }}
     >
       {children}

@@ -7,6 +7,8 @@ import FirstLayout from '@/pages/FirstLayout';
 import MiniLayout from '@/pages/MiniLayout';
 import { MenuProvider } from '@/context/MenuContext';
 
+
+
 export default function App() {
   return (
     <MenuProvider>
@@ -25,3 +27,4 @@ export default function App() {
     </MenuProvider>
   );
 }
+
