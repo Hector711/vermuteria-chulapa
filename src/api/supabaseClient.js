@@ -6,7 +6,7 @@ const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseKey = import.meta.env.VITE_SUPABASE_SERVICE_KEY;
 // const supabaseKey = import.meta.env.VITE_SUPABASE_SERVICE_KEY
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 export const getMenuComidas = async () => {
   try {
@@ -28,7 +28,6 @@ export const getMenuBebidas = async () => {
     const { data, error } = await supabase
       .from('menu_bebidas')
       .select('*');
-
     if (error) {
       console.error('Error al obtener menu_bebidas:', error);
     }
