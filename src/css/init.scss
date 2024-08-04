@@ -1,26 +1,8 @@
 :root {
-  background: linear-gradient(to bottom, #fcafaf, #efdd79);
-  --width: 600px;
-  --width-col: 62px;
-  
-  --white-0: #f3f3f3;
-  --white-1: #e6e6e6;
-  --black-1: #3a3a3a;
-  --black-0: #000000;
-  --blue: #076689;
-  --red: #ee0136;
-  --color-menu: #e1e1e198;
-
-  --border-s: 2px;
-
-  --gap-s: 9px;
-
-
-  --pad-s: 7px;
+  background: linear-gradient(to bottom,  $background-color-1, $background-color-2);
 }
 html,
 body {
-  /* kusa uno u otro dependiendo del contexto */
   min-height: max-content;
   min-height: 100%;
 }
@@ -32,9 +14,9 @@ body {
 div#root { 
   border: 0px solid transparent !important;
   min-height: 100vh;
-  padding: 2rem var(--pad-s);
+  padding: 2rem $pad-s;
   width: 100%;
-  max-width: var(--width);
+  max-width: $width;
 }
 /* "Nuestra Carta" */
 h2{
@@ -69,16 +51,9 @@ h3 {
 main {
   min-height: 45vh;
 }
-/* button {
-  border-radius: var(--border-s);
-  padding: 4px 14px !important;
-  background-color: var(--black-1) !important;
-  color: var(--white-0) !important;
-  padding: 5px 10px 2px !important;
-} */
 .blue {
-  color: var(--blue);
+  color: $blue;
 }
 .red {
-  color: var(--red);
+  color: $red;
 }

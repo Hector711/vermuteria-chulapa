@@ -1,11 +1,10 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-export default function FirstLayout() {
+export default function MenuLayout() {
   return (
     <>
       <header id='layout' className='animate-blink'>
-        <h2 className='text-center text-[3rem]'>Nuestra Carta</h2>
+        <h2 >Nuestra Carta</h2>
       </header>
       <main className='animate-blink'>
         <Outlet />

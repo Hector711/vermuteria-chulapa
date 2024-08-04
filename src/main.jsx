@@ -4,10 +4,14 @@ import App from './App.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // CSS
-import '@/css/init.css';
-import '@/css/reset/reset.css';
-import '@/css/comp-layout.css';
-import '@/css/page-menu.css';
+import '@/css/init.scss';
+import '@/css/reset/reset.scss';
+// LAYOUTS
+import '@/css/layout_home.scss';
+import '@/css/layout_menu.scss';
+// PAGES
+import '@/css/page_menu.scss';
+import '@/css/page_home.scss';
 
 // TYPOGRAPHY
 // Supports weights 300-800 : 'Open Sans Variable'

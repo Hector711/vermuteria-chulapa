@@ -1,24 +1,22 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { useMenu } from '@/context/MenuContext';
 
 import logo from '@/assets/logo.png';
 
-export default function MainLayout() {
+export default function HomeLayout() {
   const { info } = useMenu();
   const location = info && info[0].location 
-  console.log(location)
   return (
     <>
-      <header id='layout' className='animate-blink'>
-        <figure className='w-[50vw] justify-center h-[200px] '>
-          <img src={logo} alt='' className='h-auto scale-150' />
+      <header className='animate-blink home-page'>
+        <figure >
+          <img src={logo} alt='' />
         </figure>
         <p className='uppercase text-center text-[0.65rem]'>
           {location}
         </p>
       </header>
-      <main className='animate-blink'>
+      <main className='animate-blink home-page'>
         <Outlet />
       </main>
     </>
