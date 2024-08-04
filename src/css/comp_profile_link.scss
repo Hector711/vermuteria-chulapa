@@ -1,0 +1,16 @@
+a.profile-link-component{
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  .icons {
+    width: 34px;
+    height: 34px;
+    fill: $white-0;
+    filter: drop-shadow(2px 2px 2px #06060680);
+  }
+}
+a.profile-link-component:hover {
+  .icons{
+    fill: $black-0;
+  }
+}

@@ -18,7 +18,7 @@ export default function App() {
           </Route>
           <Route element={<MenuLayout />}>
             <Route path='/menu' element={<MenuPage />} />
-            {/* <Route path='/menu2' element={<MenuPage2 />} /> */}
+            <Route path='/menu/:id' element={<MenuPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

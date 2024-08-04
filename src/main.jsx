@@ -13,6 +13,10 @@ import '@/css/layout_menu.scss';
 import '@/css/page_menu.scss';
 import '@/css/page_home.scss';
 
+// COMPONENTS
+import '@/css/comp_button.scss';
+import '@/css/comp_profile_link.scss';
+
 // TYPOGRAPHY
 // Supports weights 300-800 : 'Open Sans Variable'
 import '@fontsource-variable/open-sans';

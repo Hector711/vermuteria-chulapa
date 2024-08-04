@@ -2,6 +2,9 @@ div.menu {
   display: flex;
   flex-direction: column;
 }
+.filter-accordion{
+  background-color: $color-menu !important;
+}
 
 nav.menu {
   display: flex;

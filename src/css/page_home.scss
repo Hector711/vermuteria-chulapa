@@ -1,23 +1,16 @@
 section.home-page {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   gap: 14px;
   padding: 5px;
+
 }
 
 footer.home-page {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: auto;
-  a {
-    border: 2px solid $white-0;
-    padding: 0.5rem;
-    border-radius: 10px;
-  }
-  .icons {
-    width: 24px;
-    height: 24px;
-    fill: $white-0;
-  }
+  
 }

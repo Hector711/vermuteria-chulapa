@@ -6,7 +6,7 @@ export default function MenuLayout() {
       <header id='layout' className='animate-blink'>
         <h2 >Nuestra Carta</h2>
       </header>
-      <main className='animate-blink'>
+      <main className='animate-blink menu-page'>
         <Outlet />
       </main>
     </>

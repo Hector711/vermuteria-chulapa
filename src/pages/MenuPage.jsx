@@ -11,7 +11,7 @@ export default function MenuPage() {
   const { menu, setMenu, platosOrdenados, selectedFilters, bebidasOrdenadas } =
     useMenu();
 
-    console.log(platosOrdenados)
+  console.log(platosOrdenados);
 
   useEffect(() => {}, [selectedFilters]);
 
@@ -24,11 +24,14 @@ export default function MenuPage() {
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls='panel2-content'
-          id='panel2-header'
+          className='filter-accordion'
         >
-          Filtro de intolerancias
+          {/* Filtro de intolerancias */}
+          <h4 className='josefin text-center uppercase'>
+            Marque las intolerancias
+          </h4>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className='filter-accordion'>
           <Filter />
         </AccordionDetails>
       </Accordion>

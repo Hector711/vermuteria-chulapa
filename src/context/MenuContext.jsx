@@ -98,7 +98,7 @@ export function MenuProvider({ children }) {
     });
   };
   menuComidas && crearPlatosFiltrados(menuComidas);
-  menuBebidas && console.log('menuBebidas:',menuBebidas)
+  // menuBebidas && console.log('menuBebidas:',menuBebidas)
   // menuComidas && console.log('menuComidas:',menuComidas)
 
   const ordenarPorCategoria = productos => {

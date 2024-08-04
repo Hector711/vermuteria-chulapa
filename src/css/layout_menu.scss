@@ -5,3 +5,11 @@ header#layout {
     text-align: center;
   }
 }
+
+main.menu-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
