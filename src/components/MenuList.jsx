@@ -11,7 +11,7 @@ export default function MenuList({ menu }) {
       </li>
       {section[1].map((item, i) => (
         <li key={i} className='row borderr'>
-          <Link to={`/${item.id}`}>
+          <Link to={`/menu/${item.id}`}>
           <h6 className='blue'>{item.nombre}</h6>
           </Link>
           <p className='blue'>{item.precio_salon}€</p>

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { createContext, useContext, useState } from 'react';
-import { getMenuComidas, getMenuBebidas, getInfo } from '@/api/supabaseClient';
+import { getMenuComidas, getMenuBebidas, getInfo, supabase } from '@/api/supabaseClient';
 import { useQuery } from '@tanstack/react-query';
 const MenuContext = createContext();
 
@@ -14,6 +14,7 @@ export const useMenu = () => {
 
 export function MenuProvider({ children }) {
   const [menu, setMenu] = useState('bebidas');
+  const [item, setItem] = useState(null);
   const [selectedFilters, setSelectedFilters] = useState({
     Huevo: false,
     Mostaza: false,
@@ -24,24 +25,6 @@ export function MenuProvider({ children }) {
     Lacteos: false,
     'Frutos Secos': false,
   });
-
-  const handleCheckboxChange = event => {
-    setSelectedFilters({
-      ...selectedFilters,
-      [event.target.name]: event.target.checked,
-    });
-  };
-
-  const arrayIngredientes = [];
-  const crearArrayIngredientes = objeto => {
-    for (const ingrediente in objeto) {
-      if (objeto[ingrediente]) {
-        arrayIngredientes.push(ingrediente);
-      }
-    }
-  };
-  crearArrayIngredientes(selectedFilters);
-
   const {
     isLoading: isLoadingComidas,
     data: menuComidas,
@@ -57,8 +40,10 @@ export function MenuProvider({ children }) {
     error: errorBebidas,
   } = useQuery({
     queryKey: ['menu_bebidas'],
-    queryFn: getMenuBebidas
-  })
+    queryFn: getMenuBebidas,
+  });
+
+
 
   const {
     isLoading: isLoadingInfo,
@@ -66,8 +51,26 @@ export function MenuProvider({ children }) {
     error: errorInfo,
   } = useQuery({
     queryKey: ['info'],
-    queryFn: getInfo
-  })
+    queryFn: getInfo,
+  });
+
+  const handleCheckboxChange = event => {
+    setSelectedFilters({
+      ...selectedFilters,
+      [event.target.name]: event.target.checked,
+    });
+  };
+
+
+  const arrayIngredientes = [];
+  const crearArrayIngredientes = objeto => {
+    for (const ingrediente in objeto) {
+      if (objeto[ingrediente]) {
+        arrayIngredientes.push(ingrediente);
+      }
+    }
+  };
+  crearArrayIngredientes(selectedFilters);
 
   if (isLoadingComidas) {
     console.log('Cargando menu_comidas...');
@@ -98,8 +101,6 @@ export function MenuProvider({ children }) {
     });
   };
   menuComidas && crearPlatosFiltrados(menuComidas);
-  // menuBebidas && console.log('menuBebidas:',menuBebidas)
-  // menuComidas && console.log('menuComidas:',menuComidas)
 
   const ordenarPorCategoria = productos => {
     if (!productos || !Array.isArray(productos)) {
@@ -119,10 +120,38 @@ export function MenuProvider({ children }) {
     ]);
   };
   const platosOrdenados = ordenarPorCategoria(platosFiltrados);
-  const bebidasOrdenadas = ordenarPorCategoria(menuBebidas)
-  menuBebidas && bebidasOrdenadas 
+  const bebidasOrdenadas = ordenarPorCategoria(menuBebidas);
+  menuBebidas && bebidasOrdenadas;
 
- 
+  const obtenerItem = async itemId => {
+    console.log('Obteniendo item con ID:', itemId); // Para depuración
+    try {
+      // Primero intenta obtener el item de menu_comidas
+      let { data, error } = await supabase
+        .from('menu_comidas')
+        .select('*')
+        .eq('id', itemId)
+        .single();
+
+      // Si no se encuentra, intenta obtenerlo de menu_bebidas
+      if (!data) {
+        ({ data, error } = await supabase
+          .from('menu_bebidas')
+          .select('*')
+          .eq('id', itemId)
+          .single());
+      }
+
+      if (error) {
+        console.error('Error al obtener el item:', error);
+        return;
+      }
+      setItem(data); // Guardar el item en el estado
+    } catch (error) {
+      console.error('Error al obtener el item:', error);
+    }
+  }
+
   useEffect(() => {}, [selectedFilters]);
   return (
     <MenuContext.Provider
@@ -133,7 +162,12 @@ export function MenuProvider({ children }) {
         setMenu,
         platosOrdenados,
         bebidasOrdenadas,
-        info
+        info,
+        item,
+        setItem,
+        obtenerItem,
+        menuComidas,
+        menuBebidas,
       }}
     >
       {children}

@@ -5,6 +5,9 @@ header.home-page {
   figure {
     width: 100%;
     max-width: 200px;
+    img {
+      filter: drop-shadow(2px 2px 2px #06060680);
+    }
   }
   p {
     color: $white-0;

@@ -7,6 +7,7 @@ import MenuLayout from '@/layouts/MenuLayout';
 // PAGES
 import HomePage from '@/pages/HomePage';
 import MenuPage from '@/pages/MenuPage';
+import ItemPage from '@/pages/ItemPage';
 
 export default function App() {
   return (
@@ -18,8 +19,8 @@ export default function App() {
           </Route>
           <Route element={<MenuLayout />}>
             <Route path='/menu' element={<MenuPage />} />
-            <Route path='/menu/:id' element={<MenuPage />} />
           </Route>
+            <Route path='/menu/:itemId' element={<ItemPage />} />
         </Routes>
       </BrowserRouter>
     </MenuProvider>

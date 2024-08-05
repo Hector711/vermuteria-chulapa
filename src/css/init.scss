@@ -57,3 +57,16 @@ main {
 .red {
   color: $red;
 }
+
+#item-card {
+  margin-top: 2rem;
+  #buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;;
+  }
+  
+}
+.card-item {
+  background-color: $color-menu;
+}

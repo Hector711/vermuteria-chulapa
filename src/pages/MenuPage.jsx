@@ -10,9 +10,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 export default function MenuPage() {
   const { menu, setMenu, platosOrdenados, selectedFilters, bebidasOrdenadas } =
     useMenu();
-
-  console.log(platosOrdenados);
-
   useEffect(() => {}, [selectedFilters]);
 
   const isActiveBebidas = menu === 'bebidas' ? 'active' : '';
