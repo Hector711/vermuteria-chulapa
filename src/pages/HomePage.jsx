@@ -19,11 +19,9 @@ export default function HomePage() {
           onClick={() => {
             navigate('/menu');
           }}
-        >
-          Ver Carta
-        </WideButton>
-        <WideButton>Reservas</WideButton>
-        <WideButton>Contacto</WideButton>
+          title='Ver Carta'
+        />
+        <WideButton title='Chatbot AI' subtitle='Reservas, horarios, preguntas, etc.' />
       </section>
       <footer className='home-page'>
         {info && (
