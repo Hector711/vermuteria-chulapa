@@ -21,7 +21,12 @@ export default function HomePage() {
           }}
           title='Ver Carta'
         />
-        <WideButton title='Chatbot AI' subtitle='Reservas, horarios, preguntas, etc.' />
+        <WideButton
+          title='Chatbot AI'
+          subtitle='Reservas, horarios, preguntas, etc.'
+          link='https://wa.me/447453921177'
+          target="_blank"
+        />
       </section>
       <footer className='home-page'>
         {info && (
