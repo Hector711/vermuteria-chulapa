@@ -24,7 +24,7 @@ export default function HomePage() {
         <WideButton
           title='Chatbot AI'
           subtitle='Reservas, horarios, preguntas, etc.'
-          link='https://wa.me/447453921177'
+          link='https://wa.me/message/CCNHZSUT7LIDE1'
           target="_blank"
         />
       </section>
