@@ -14,9 +14,9 @@ export default function Filter() {
   };
   return (
     <>
-      <h4 className='josefin text-center uppercase'>
+      {/* <h4 className='josefin text-center uppercase'>
         Filtro de intolerancias
-      </h4>
+      </h4> */}
       <FormGroup id='checkboxs-container'>
         <FormControlLabel
           control={

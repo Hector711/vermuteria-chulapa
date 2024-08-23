@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import InstagramIcon from '../icons/InstagramIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 import WideButton from '@/components/WideButton';
 import { useMenu } from '@/context/MenuContext';
 import ProfileLink from '@/components/ProfileLink';
+import ChatbotIcon from '@/icons/ChatbotIcon';
+import MenuIcon from '@/icons/MenuIcon';
 
 export default function HomePage() {
-  const navigate = useNavigate();
   const { info } = useMenu();
   console.log('info:', info);
   const social = info && info[0].profiles_rrss;
@@ -18,19 +18,21 @@ export default function HomePage() {
         <WideButton
           to='/menu'
           title='Ver Carta'
+          icon={<MenuIcon />}
         />
         <WideButton
           title='Chatbot AI'
           subtitle='Reservas, horarios, preguntas, etc.'
           href='https://wa.me/message/CCNHZSUT7LIDE1'
           target='_blank'
+          icon={<ChatbotIcon />}
+
         />
       </section>
       <section className='home-page'>
         <WideButton
           subtitle='Prueba nuestra nueva hamburguesa'
-          to='https://wa.me/message/CCNHZSUT7LIDE1'
-          target='_blank'
+          to='/menu'
         />
       </section>
       <footer className='home-page'>

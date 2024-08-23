@@ -15,7 +15,6 @@ import '@/css/page_home.scss';
 
 // COMPONENTS
 import '@/css/comp_button.scss';
-import '@/css/comp_profile_link.scss';
 
 // TYPOGRAPHY
 // Supports weights 300-800 : 'Open Sans Variable'

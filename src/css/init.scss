@@ -1,5 +1,5 @@
 :root {
-  background: linear-gradient(to bottom,  $background-color-1, $background-color-2);
+  background: $black-1;
 }
 html,
 body {
@@ -19,7 +19,7 @@ div#root {
   max-width: $width;
 }
 /* "Nuestra Carta" */
-h2{
+h2 {
   font-family: 'Antique Cherry', sans-serif;
 }
 h3 {
