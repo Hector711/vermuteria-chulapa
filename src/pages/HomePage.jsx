@@ -26,10 +26,10 @@ export default function HomePage() {
           href='https://wa.me/message/CCNHZSUT7LIDE1'
           target='_blank'
           icon={<ChatbotIcon />}
-
         />
       </section>
       <section className='home-page'>
+        <h3>NOVEDADES</h3>
         <WideButton
           subtitle='Prueba nuestra nueva hamburguesa'
           to='/menu'
