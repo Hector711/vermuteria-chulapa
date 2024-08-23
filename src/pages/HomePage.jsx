@@ -16,11 +16,13 @@ export default function HomePage() {
     <>
       <section className='home-page'>
         <WideButton
+          type='link'
           to='/menu'
           title='Ver Carta'
           icon={<MenuIcon />}
         />
         <WideButton
+          type='a'
           title='Chatbot AI'
           subtitle='Reservas, horarios, preguntas, etc.'
           href='https://wa.me/message/CCNHZSUT7LIDE1'
@@ -31,7 +33,8 @@ export default function HomePage() {
       <section className='home-page'>
         <h3>NOVEDADES</h3>
         <WideButton
-          subtitle='Prueba nuestra nueva hamburguesa'
+          type='novedad'
+          title='Hamburguesa con guacamole'
           to='/menu'
           img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
         />

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function WideButton(props) {
-  if (props.href) {
+  if (props.type === 'a') {
     return (
       <a className='wide-button-component' {...props} href={props.href}>
         <header>
@@ -11,29 +11,28 @@ export default function WideButton(props) {
         {props.subtitle && <p>{props.subtitle}</p>}
       </a>
     );
-  } else if (props.to) {
+  } else if (props.type === 'link') {
     return (
       <Link className='wide-button-component' {...props} to={props.to}>
         <header>
           {props.icon && props.icon}
           <h4>{props.title}</h4>
         </header>
-        <footer>
-          {props.img && <img src={props.img} />}
-        {props.subtitle && <p>{props.subtitle}</p>}
-        </footer>
+        <footer>{props.subtitle && <p>{props.subtitle}</p>}</footer>
       </Link>
     );
-  } 
-  // else {
-  //   return (
-  //     <button className='wide-button-component' {...props}>
-  //       <header>
-  //         {props.icon && props.icon}
-  //         <h4>{props.title}</h4>
-  //       </header>
-  //       {props.subtitle && <p>{props.subtitle}</p>}
-  //     </button>
-  //   );
-  // }
+  } else if (props.type === 'novedad') {
+    return (
+      <Link className='wide-button-component novedad' {...props} to={props.to}>
+        <header>
+          {props.icon && props.icon}
+          <h4>{props.title}</h4>
+        </header>
+        <figure>
+          <img src={props.img} />
+          {props.subtitle && <p>{props.subtitle}</p>}
+        </figure>
+      </Link>
+    );
+  }
 }
