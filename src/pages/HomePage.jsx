@@ -16,22 +16,27 @@ export default function HomePage() {
     <>
       <section className='home-page'>
         <WideButton
-          onClick={() => {
-            navigate('/menu');
-          }}
+          to='/menu'
           title='Ver Carta'
         />
         <WideButton
           title='Chatbot AI'
           subtitle='Reservas, horarios, preguntas, etc.'
-          link='https://wa.me/message/CCNHZSUT7LIDE1'
-          target="_blank"
+          href='https://wa.me/message/CCNHZSUT7LIDE1'
+          target='_blank'
+        />
+      </section>
+      <section className='home-page'>
+        <WideButton
+          subtitle='Prueba nuestra nueva hamburguesa'
+          to='https://wa.me/message/CCNHZSUT7LIDE1'
+          target='_blank'
         />
       </section>
       <footer className='home-page'>
         {info && (
           <>
-            <ProfileLink href={social.instagram}>
+            <ProfileLink href={social.instagram} >
               <InstagramIcon />
             </ProfileLink>
             <ProfileLink href={social.instagram}>

@@ -5,13 +5,12 @@
   font-family: 'Josefin Sans Variable';
   box-shadow: 0px 1px 3px 0px black;
   color: white;
-  background-color: #696969;
+  background-color: $color-button;
   text-align: center;
   h4 {
     font-weight: 600;
     font-size: 1.3rem;
     text-transform: uppercase;
-
   }
   p {
     font-size: 1.2rem;

@@ -9,8 +9,8 @@ export default function HomeLayout() {
   return (
     <>
       <header className='animate-blink home-page'>
-        <figure >
-          <img src={logo} alt='' />
+        <figure>
+          <img src={logo} alt='' className='shadoww'/>
         </figure>
         <p className='uppercase text-center text-[0.65rem]'>
           {location}
