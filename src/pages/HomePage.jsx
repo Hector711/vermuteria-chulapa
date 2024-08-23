@@ -33,6 +33,7 @@ export default function HomePage() {
         <WideButton
           subtitle='Prueba nuestra nueva hamburguesa'
           to='/menu'
+          img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
         />
       </section>
       <footer className='home-page'>

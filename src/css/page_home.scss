@@ -12,14 +12,14 @@ footer.home-page {
   justify-content: center;
   gap: 2rem;
   margin-top: auto;
-
+ 
   a.profile-link-component{
-    color: white;
+    color: $white-0;
     text-decoration: none;
     transition: background-color 0.3s;
     .icons {
-      width: 34px;
-      height: 34px;
+      width: 30px;
+      height: 30px;
       fill: $white-0;
     }
   }

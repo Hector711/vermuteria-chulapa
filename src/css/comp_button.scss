@@ -11,13 +11,24 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    h4 {
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
   }
-  h4 {
-    font-weight: 600;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-  }
-  p {
-    font-size: 1.2rem;
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 1.2rem;
+    }
+    img {
+      width: 250px;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

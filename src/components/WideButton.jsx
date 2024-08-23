@@ -19,7 +19,7 @@ export default function WideButton(props) {
           <h4>{props.title}</h4>
         </header>
         <footer>
-          
+          {props.img && <img src={props.img} />}
         {props.subtitle && <p>{props.subtitle}</p>}
         </footer>
       </Link>
