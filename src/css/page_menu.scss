@@ -76,10 +76,21 @@ section.menu {
   background-color: #212121;
 }
 
-
+#item-background {
+  position: fixed;
+  z-index: 9999;
+  backdrop-filter: blur(1px);
+  background-color: #000000d8;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
 
 #item-card {
-  margin-top: 2rem;
+ 
+
+  margin-top: 10rem;
   #buttons-container {
     display: flex;
     justify-content: flex-end;

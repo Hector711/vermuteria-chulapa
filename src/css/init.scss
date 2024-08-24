@@ -11,13 +11,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
+
 div#root { 
   border: 0px solid transparent !important;
   min-height: 100vh;
   padding: 1rem $pad-s;
   width: 100%;
   max-width: $width;
+  position: relative;
+
 }
 main {
   min-height: 70vh;

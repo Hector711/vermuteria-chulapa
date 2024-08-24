@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start:ide": "pnpm i && pnpm run dev",
+    "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -24,6 +25,8 @@
     "@supabase/supabase-js": "^2.44.4",
     "@tanstack/react-query": "^5.51.15",
     "axios": "^1.7.2",
+    "flowbite": "^2.5.1",
+    "flowbite-react": "^0.10.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",

@@ -6,6 +6,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Outlet } from 'react-router-dom';
 
 export default function MenuPage() {
   const { menu, setMenu, platosOrdenados, selectedFilters, bebidasOrdenadas } =
@@ -32,6 +33,8 @@ export default function MenuPage() {
           <Filter />
         </AccordionDetails>
       </Accordion>
+  
+      <Outlet />
       <div className='menu'>
         <nav className='menu'>
           <button
