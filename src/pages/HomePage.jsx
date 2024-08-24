@@ -6,6 +6,7 @@ import { useMenu } from '@/context/MenuContext';
 import ProfileLink from '@/components/ProfileLink';
 import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
+import NovedadButton from '@/components/NovedadButton';
 
 export default function HomePage() {
   const { info } = useMenu();
@@ -34,25 +35,21 @@ export default function HomePage() {
       <section className='home-page novedades-section'>
         <h3>NOVEDADES</h3>
         <div className='novedades-container'>
-          <WideButton
-            type='novedad'
+          <NovedadButton
             title='Hamburguesa con guacamole'
             to='/menu'
             img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
           />
-          <WideButton
-            type='novedad'
+          <NovedadButton
             title='Hamburguesa con guacamole'
             to='/menu'
             img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
           />
-          <WideButton
-            type='novedad'
+          <NovedadButton
             title='Hamburguesa con guacamole'
             to='/menu'
             img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
           />
-          
         </div>
       </section>
       <footer className='home-page'>
@@ -61,7 +58,7 @@ export default function HomePage() {
             <ProfileLink href={social.instagram}>
               <InstagramIcon />
             </ProfileLink>
-            <ProfileLink href={social.instagram}>
+            <ProfileLink href={social.facebook}>
               <FacebookIcon />
             </ProfileLink>
           </>

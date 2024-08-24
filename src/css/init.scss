@@ -11,6 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  *{
+  }
 }
 div#root { 
   border: 0px solid transparent !important;
@@ -50,7 +52,7 @@ h3 {
   }
 }
 main {
-  min-height: 45vh;
+  min-height: 70vh;
 }
 .blue {
   color: $blue;

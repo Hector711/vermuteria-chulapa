@@ -21,18 +21,5 @@ export default function WideButton(props) {
         <footer>{props.subtitle && <p>{props.subtitle}</p>}</footer>
       </Link>
     );
-  } else if (props.type === 'novedad') {
-    return (
-      <Link className='wide-button-component novedad' {...props} to={props.to}>
-        <header>
-          {props.icon && props.icon}
-          <h4>{props.title}</h4>
-        </header>
-        <figure>
-          <img src={props.img} />
-          {props.subtitle && <p>{props.subtitle}</p>}
-        </figure>
-      </Link>
-    );
-  }
+  } 
 }
