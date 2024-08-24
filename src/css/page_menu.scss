@@ -3,7 +3,19 @@ div.menu {
   flex-direction: column;
 }
 .filter-accordion{
-  background-color: $color-menu !important;
+  background-color: $black-2 !important;
+  color: $font-color !important;
+}
+#checkboxs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  span {
+    font-family: 
+    'Futura';
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
 }
 
 nav.menu {
@@ -18,34 +30,31 @@ nav.menu {
     text-transform: uppercase;
     font-family: 'Josefin Sans Variable';
     font-weight: 600;
-    background-color: #8f8e8e3b;
+    background-color: $black-1;
   }
   button.active {
-    background-color: $color-menu;
+    background-color: $black-2;
   }
 }
 section.menu {
   padding: 10px;
-  background-color: $color-menu;
+  background-color: $black-2;
 }
 
 .section-menu {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   h3 {
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
   }
-  li.row {
-    display: flex;
-  }
-  li.row {
+  .row {
     display: grid;
     grid-template-columns: minmax(30px, 400px) $width-col $width-col;
-    border-bottom: 1px solid #666666a6;
+    
     h6, p {
       text-transform: uppercase;
       font-family: 'Futura';
@@ -55,6 +64,29 @@ section.menu {
     }
     p {
       text-align: center;
+      text-wrap: pretty;
     }
   }
+}
+
+.item-menu {
+  padding: 3px 5px;
+  border-radius: $border-s;
+  box-shadow: 1px 1px 1px 0px #000000;
+  background-color: #212121;
+}
+
+
+
+#item-card {
+  margin-top: 2rem;
+  #buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;;
+  }
+}
+.card-item {
+  background-color: $black-2;
+  color: $font-color;
 }

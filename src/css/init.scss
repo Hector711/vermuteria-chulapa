@@ -11,8 +11,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  *{
-  }
 }
 div#root { 
   border: 0px solid transparent !important;
@@ -21,6 +19,11 @@ div#root {
   width: 100%;
   max-width: $width;
 }
+main {
+  min-height: 70vh;
+}
+// 
+// 
 /* "Nuestra Carta" */
 h2 {
   font-family: 'Antique Cherry', sans-serif;
@@ -37,42 +40,8 @@ h3 {
 .futura {
   font-family: 'Futura';
 }
-#input {
-  color: blue !important
-}
-#checkboxs-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  span {
-    font-family: 
-    'Futura';
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
-}
-main {
-  min-height: 70vh;
-}
-.blue {
-  color: $blue;
-}
-.red {
-  color: $red;
-}
 
-#item-card {
-  margin-top: 2rem;
-  #buttons-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;;
-  }
-  
-}
-.card-item {
-  background-color: $color-menu;
-}
+
 
 .shadoww {
   filter: drop-shadow(2px 2px 2px #06060680);

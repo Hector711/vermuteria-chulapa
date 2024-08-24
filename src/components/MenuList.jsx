@@ -6,16 +6,17 @@ export default function MenuList({ menu }) {
     <ul className='section-menu' key={i}>
       <li className='row'>
         <h3>{section[0]}</h3>
-        <p className='red'>Terraza</p>
-        <p className='red'>Salón</p>
+        <p>Terraza</p>
+        <p>Salón</p>
       </li>
+      <hr />
       {section[1].map((item, i) => (
-        <li key={i} className='row borderr'>
-          <Link to={`/menu/${item.id}`}>
-          <h6 className='blue'>{item.nombre}</h6>
+        <li key={i} >
+          <Link to={`/menu/${item.id}`} className='row item-menu'>
+            <h6>{item.nombre}</h6>
+            <p>{item.precio_salon.toFixed(2)}€</p>
+            <p>{item.precio_terraza.toFixed(2)}€</p>
           </Link>
-          <p className='blue'>{item.precio_salon}€</p>
-          <p className='blue'>{item.precio_terraza}€</p>
         </li>
       ))}
     </ul>

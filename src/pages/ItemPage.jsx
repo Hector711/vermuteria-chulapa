@@ -31,12 +31,11 @@ function ItemCard({item}) {
       <CardMedia component='img' alt='green iguana'  image='https://picsum.photos/800/400' className='card-item'/>
       <CardContent className='card-item'>
         <h3 className='uppercase'>{item.nombre}</h3>
-        <p>{item.descripcion}</p>  
-        <p>Precio:</p>
+        <p>{item.descripcion}</p>
         <div className='flex gap-10'>
-        <p>Terraza:</p>
+        <p>Precio Terraza:</p>
         <p>{item.precio_terraza}</p>
-        <p>Salón:</p>
+        <p>Precio Salón:</p>
         <p>{item.precio_salon}</p>
         </div>
       </CardContent>
