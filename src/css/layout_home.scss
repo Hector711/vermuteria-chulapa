@@ -3,9 +3,10 @@ header.home-page {
   flex-direction: column;
   align-items: center;
   padding-bottom: 1rem;
+  gap: 0.5rem;
   figure {
     width: 100%;
-    max-width: 120px;
+    max-width: 110px;
   }
   p {
     color: $white-0;

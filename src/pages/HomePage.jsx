@@ -30,19 +30,35 @@ export default function HomePage() {
           icon={<ChatbotIcon />}
         />
       </section>
-      <section className='home-page'>
+      <hr />
+      <section className='home-page novedades-section'>
         <h3>NOVEDADES</h3>
-        <WideButton
-          type='novedad'
-          title='Hamburguesa con guacamole'
-          to='/menu'
-          img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
-        />
+        <div className='novedades-container'>
+          <WideButton
+            type='novedad'
+            title='Hamburguesa con guacamole'
+            to='/menu'
+            img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
+          />
+          <WideButton
+            type='novedad'
+            title='Hamburguesa con guacamole'
+            to='/menu'
+            img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
+          />
+          <WideButton
+            type='novedad'
+            title='Hamburguesa con guacamole'
+            to='/menu'
+            img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
+          />
+          
+        </div>
       </section>
       <footer className='home-page'>
         {info && (
           <>
-            <ProfileLink href={social.instagram} >
+            <ProfileLink href={social.instagram}>
               <InstagramIcon />
             </ProfileLink>
             <ProfileLink href={social.instagram}>
