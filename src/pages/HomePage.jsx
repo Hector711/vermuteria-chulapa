@@ -10,9 +10,9 @@ import NovedadButton from '@/components/NovedadButton';
 
 export default function HomePage() {
   const { info } = useMenu();
-  console.log('info:', info);
+  // console.log('info:', info);
   const social = info && info[0].profiles_rrss;
-  console.log('social:', social);
+  // console.log('social:', social);
   return (
     <>
       <section className='home-page'>

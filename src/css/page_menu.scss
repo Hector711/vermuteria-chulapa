@@ -85,19 +85,20 @@ section.menu {
   height: 100vh;
   top: 0;
   left: 0;
-}
-
-#item-card {
- 
-
-  margin-top: 10rem;
-  #buttons-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1rem;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #item-card {
+    width: 80%;
+    // margin-top: 10rem;
+    #buttons-container {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem;;
+    }
   }
-}
-.card-item {
-  background-color: $black-2;
-  color: $font-color;
+  .card-item {
+    background-color: $black-2;
+    color: $font-color;
+  }
 }

@@ -19,7 +19,7 @@ export default function ItemPage() {
   return (
     <>
       <MenuPage />
-      <div id='item-background'>
+      <div id='item-background' className='animate-blink'>
         {item ? <ItemCard item={item} /> : <p>Cargando...</p>}
       </div>
     </>
@@ -28,11 +28,10 @@ export default function ItemPage() {
 
 function ItemCard({ item }) {
   return (
-    <Card id='item-card'>
+    <Card id='item-card' >
       <CardActions className='card-item' id='buttons-container'>
-        <Button size='small'>Cerrar</Button>
         <Link to='/menu'>
-          <Button size='small'>Volver</Button>
+          <Button size='small'>Cerrar</Button>
         </Link>
       </CardActions>
       <CardMedia
