@@ -5,9 +5,9 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import MenuPage from '@/pages/MenuPage';
 import { Link } from 'react-router-dom';
+
 export default function ItemPage() {
   const { obtenerItem, item } = useMenu();
   const { itemId } = useParams();
@@ -28,11 +28,9 @@ export default function ItemPage() {
 
 function ItemCard({ item }) {
   return (
-    <Card id='item-card' >
+    <Card id='item-card'>
       <CardActions className='card-item' id='buttons-container'>
-        <Link to='/menu'>
-          <Button size='small'>Cerrar</Button>
-        </Link>
+        <Link to='/menu'>Cerrar</Link>
       </CardActions>
       <CardMedia
         component='img'

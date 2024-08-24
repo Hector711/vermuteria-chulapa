@@ -1,8 +1,15 @@
 header#layout {
+  display: flex;
+  justify-content: center;
+
   h2 {
-    color: $red;
+    // color: $red;
     font-size: 3rem;
     text-align: center;
+    max-width: max-content;
+    background: linear-gradient(45deg, #e1c006, #ff0707);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 

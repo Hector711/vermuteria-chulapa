@@ -1,7 +1,3 @@
-div.menu {
-  display: flex;
-  flex-direction: column;
-}
 .filter-accordion{
   background-color: $black-2 !important;
   color: $font-color !important;
@@ -18,6 +14,10 @@ div.menu {
   }
 }
 
+div.menu {
+  display: flex;
+  flex-direction: column;
+}
 nav.menu {
   display: flex;
   justify-content: center;
@@ -25,36 +25,43 @@ nav.menu {
   gap: 5px;
   button {
     width: 100%;
-    border-radius: 4px 4px 0px 0px;
-    padding: 10px 10px;
+    border-radius: 10px;
+    padding: 8px;
     text-transform: uppercase;
     font-family: 'Josefin Sans Variable';
     font-weight: 600;
     background-color: $black-1;
+    color: #5b5b5b;
   }
   button.active {
     background-color: $black-2;
+    color: $font-color;
   }
 }
 section.menu {
-  padding: 10px;
-  background-color: $black-2;
+  padding: 10px 0;
+  // background-color: $black-2;
 }
 
-.section-menu {
-  margin-bottom: 1rem;
+ul.section-menu {
+
+  margin-block: 1rem;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  h3 {
+  h3.section-title {
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
+    max-width: max-content;
+    background: linear-gradient(45deg, #e1c006, #ff0707);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .row {
     display: grid;
     grid-template-columns: minmax(30px, 400px) $width-col $width-col;
-    
+
     h6, p {
       text-transform: uppercase;
       font-family: 'Futura';
@@ -67,13 +74,16 @@ section.menu {
       text-wrap: pretty;
     }
   }
+  .title-row {
+    padding: 0 5px;
+  }
 }
 
 .item-menu {
-  padding: 3px 5px;
   border-radius: $border-s;
   box-shadow: 1px 1px 1px 0px #000000;
-  background-color: #212121;
+  background-color: $black-2;
+  padding: 3px 5px;
 }
 
 #item-background {
@@ -90,6 +100,7 @@ section.menu {
   align-items: center;
   #item-card {
     width: 80%;
+    max-width: $width;
     // margin-top: 10rem;
     #buttons-container {
       display: flex;

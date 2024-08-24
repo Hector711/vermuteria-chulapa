@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 export default function MenuList({ menu }) {
   return menu.map((section, i) => (
     <ul className='section-menu' key={i}>
-      <li className='row'>
-        <h3>{section[0]}</h3>
+      <li className='row title-row'>
+        <h3 className='section-title'>{section[0]}</h3>
         <p>Terraza</p>
         <p>Salón</p>
       </li>
