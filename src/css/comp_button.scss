@@ -11,10 +11,13 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    // border: 1px solid $white-0;
     h4 {
       font-weight: 600;
       font-size: 1.1rem;
       text-transform: uppercase;
+      line-height: 1.6;
+      // padding-bottom: 1px;
     }
   }
   footer {
@@ -37,7 +40,6 @@
   border-radius: $border-m;
   gap: 5px;
   header {
-
     h4 {
       font-size: 0.9rem !important;
       text-align: center;

@@ -9,15 +9,14 @@ export default function CarouselNovedades({ images }) {
     <Swiper
       slidesPerView={1.5}
       spaceBetween={30}
-      speed={5000}
+      speed={1000}
       centeredSlides={true}
-
       pagination={{
         clickable: true,
       }}
       loop={true}
       autoplay={{
-        delay: 100,
+        delay: 1000,
         disableOnInteraction: true,
       }}
       modules={[Autoplay, Navigation]}

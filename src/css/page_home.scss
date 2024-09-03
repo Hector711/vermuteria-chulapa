@@ -19,18 +19,15 @@ section.home-page.novedades-section {
       color: $white-0;
       text-align: center;
     }
+    .icons {
+      width: 25px;
+      height: 25px;
+      fill: $white-0;
+    }
   }
   div.novedades-container {
     display: flex;
-    overflow: hidden;
-    overflow-x: auto;
-    gap: 10px;
     width: 100%;
-    padding: 10px;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 }
 

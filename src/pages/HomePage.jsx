@@ -42,7 +42,7 @@ export default function HomePage() {
         <WideButton
           type='link'
           to='/menu'
-          title='Ver Carta'
+          title='Ver Toda La Carta'
           icon={<MenuIcon />}
         />
         <WideButton
