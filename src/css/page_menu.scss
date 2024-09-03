@@ -49,15 +49,7 @@ ul.section-menu {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  h3.section-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    max-width: max-content;
-    background: linear-gradient(45deg, #e1c006, #ff0707);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+ 
   .row {
     display: grid;
     grid-template-columns: minmax(30px, 400px) $width-col $width-col;
@@ -112,4 +104,15 @@ ul.section-menu {
     background-color: $black-2;
     color: $font-color;
   }
+}
+
+h3.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: max-content;
+  // width: 100%;
+  background: linear-gradient(45deg, #e1c006, #ff0707);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

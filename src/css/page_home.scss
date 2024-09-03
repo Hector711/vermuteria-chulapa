@@ -1,4 +1,4 @@
-section.home-page {
+section.home-page.main-buttons {
   display: flex;
   justify-content: center;
   gap: 14px;
@@ -9,11 +9,16 @@ hr {
   border: 0.5px solid $white-2;
 }
 section.home-page.novedades-section {
-  h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: $white-0;
-    text-align: center;
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      font-size: 1.4rem;
+      color: $white-0;
+      text-align: center;
+    }
   }
   div.novedades-container {
     display: flex;

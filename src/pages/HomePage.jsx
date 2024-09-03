@@ -6,7 +6,32 @@ import { useMenu } from '@/context/MenuContext';
 import ProfileLink from '@/components/ProfileLink';
 import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
-import NovedadButton from '@/components/NovedadButton';
+import CarouselNovedades from '@/components/CarouselNovedades';
+
+const OPTIONS = { loop: true };
+
+const SLIDES_NOVEDADES = [
+  {
+    title: 'Hamburguesa con guacamole',
+    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    to: '/menu',
+  },
+  {
+    title: 'Hamburguesa con guacamole',
+    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    to: '/menu',
+  },
+  {
+    title: 'Hamburguesa con guacamole',
+    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    to: '/menu',
+  },
+  {
+    title: 'Hamburguesa con guacamole',
+    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    to: '/menu',
+  },
+];
 
 export default function HomePage() {
   const { info } = useMenu();
@@ -15,7 +40,7 @@ export default function HomePage() {
   // console.log('social:', social);
   return (
     <>
-      <section className='home-page'>
+      <section className='home-page main-buttons'>
         <WideButton
           type='link'
           to='/menu'
@@ -33,23 +58,11 @@ export default function HomePage() {
       </section>
       <hr />
       <section className='home-page novedades-section'>
-        <h3>NOVEDADES</h3>
+        <header>
+          <h3 className='section-title'>NOVEDADES</h3>
+        </header>
         <div className='novedades-container'>
-          <NovedadButton
-            title='Hamburguesa con guacamole'
-            to='/menu'
-            img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
-          />
-          <NovedadButton
-            title='Hamburguesa con guacamole'
-            to='/menu'
-            img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
-          />
-          <NovedadButton
-            title='Hamburguesa con guacamole'
-            to='/menu'
-            img='https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg'
-          />
+          <CarouselNovedades images={SLIDES_NOVEDADES} />
         </div>
       </section>
       <footer className='home-page'>
