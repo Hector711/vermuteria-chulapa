@@ -8,8 +8,6 @@ import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
 import CarouselNovedades from '@/components/CarouselNovedades';
 
-const OPTIONS = { loop: true };
-
 const SLIDES_NOVEDADES = [
   {
     title: 'Hamburguesa con guacamole',
