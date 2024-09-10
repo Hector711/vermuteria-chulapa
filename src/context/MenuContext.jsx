@@ -28,9 +28,9 @@ export function MenuProvider({ children }) {
   });
 
   useEffect(() => {
+    getInfo();
     comidasOrdenadoFiltrado();
     bebidasOrdenadoFiltrado();
-    getInfo();
   }, [selectedFilters]);
   
   // ORDENAR Y FILTRAR PLATOS
