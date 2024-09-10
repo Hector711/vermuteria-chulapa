@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import InstagramIcon from '../icons/InstagramIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 import WideButton from '@/components/WideButton';
@@ -36,10 +36,9 @@ const SLIDES_NOVEDADES = [
 
 export default function HomePage() {
   const { info } = useMenu();
-  // console.log(info);
   const social = info && info.profiles_rrss;
   const location = info && info.location;
-  
+
   return (
     <>
       <header className='animate-blink home-page'>
@@ -56,14 +55,16 @@ export default function HomePage() {
             title='Ver Toda La Carta'
             icon={<MenuIcon />}
           />
-          <WideButton
-            type='a'
+          {info.whatsapp_url && (
+            <WideButton
+              type='a'
             title='Chatbot AI'
             subtitle='Reservas, horarios, preguntas, etc.'
-            href='https://wa.me/message/CCNHZSUT7LIDE1'
+            href={info.whatsapp_url}
             target='_blank'
-            icon={<ChatbotIcon />}
-          />
+              icon={<ChatbotIcon />}
+            />
+          )}
         </section>
         <hr />
         <section className='home-page novedades-section'>
