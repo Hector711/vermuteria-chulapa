@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMenu } from '@/context/MenuContext';
 import MenuList from '@/components/MenuList';
 import Filter from '@/components/Filter';
@@ -9,9 +9,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Outlet } from 'react-router-dom';
 
 export default function MenuPage() {
-  const { menu, setMenu, platosOrdenados, selectedFilters, bebidasOrdenadas } =
-    useMenu();
-  useEffect(() => {}, [selectedFilters]);
+  const [menu, setMenu] = useState('bebidas');
+  const { selectedFilters, menuBebidas, menuComidas } = useMenu();
+  useEffect(() => {}, [selectedFilters, menu]);
 
   const isActiveBebidas = menu === 'bebidas' ? 'active' : '';
   const isActiveComidas = menu === 'comidas' ? 'active' : '';
@@ -53,15 +53,15 @@ export default function MenuPage() {
         <section className='menu'>
           {menu === 'bebidas' ? (
             <>
-              {bebidasOrdenadas ? (
-                <MenuList menu={bebidasOrdenadas} />
+              {menuBebidas ? (
+                <MenuList menu={menuBebidas} />
               ) : (
                 <p>Cargando bebidas...</p>
               )}
             </>
           ) : (
             <>
-              <MenuList menu={platosOrdenados} />
+              <MenuList menu={menuComidas} />
             </>
           )}
         </section>
