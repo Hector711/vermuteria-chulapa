@@ -16,7 +16,7 @@ export default function CarouselNovedades({ images }) {
       }}
       loop={true}
       autoplay={{
-        delay: 1000,
+        delay: 4000,
         disableOnInteraction: true,
       }}
       modules={[Autoplay, Navigation]}

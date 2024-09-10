@@ -68,13 +68,13 @@ export default function HomePage() {
         </section>
         <hr />
         <section className='home-page novedades-section'>
-          {/* <header className='novedades-section'>
+          <header className='novedades-section'>
             <StarIcon />
             <h3 className='novedades-section'>Lo mejor de Chulapa</h3>
           </header>
           <div className='novedades-container'>
             <CarouselNovedades images={SLIDES_NOVEDADES} />
-          </div> */}
+          </div>
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>

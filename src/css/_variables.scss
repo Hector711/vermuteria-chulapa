@@ -25,3 +25,6 @@ $pad-s: 7px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@mixin gradient-stroke {
+  stroke: url(#gradient);
+}
