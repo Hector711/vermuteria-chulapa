@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { createContext, useContext, useState } from 'react';
-import { getMenuComidas, getMenuBebidas, getInfo, supabase } from '@/api/supabaseClient';
-import { useQuery } from '@tanstack/react-query';
+import { supabase } from '@/api/supabaseClient';
+
 const MenuContext = createContext();
 
 export const useMenu = () => {
@@ -13,8 +13,9 @@ export const useMenu = () => {
 };
 
 export function MenuProvider({ children }) {
-  const [menu, setMenu] = useState('bebidas');
-  const [item, setItem] = useState(null);
+  const [menuBebidas, setMenuBebidas] = useState([]);
+  const [menuComidas, setMenuComidas] = useState([]);
+  const [info, setInfo] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({
     Huevo: false,
     Mostaza: false,
@@ -25,35 +26,75 @@ export function MenuProvider({ children }) {
     Lacteos: false,
     'Frutos Secos': false,
   });
-  const {
-    isLoading: isLoadingComidas,
-    data: menuComidas,
-    error: errorComidas,
-  } = useQuery({
-    queryKey: ['menu_comidas'],
-    queryFn: getMenuComidas,
-  });
 
-  const {
-    isLoading: isLoadingBebidas,
-    data: menuBebidas,
-    error: errorBebidas,
-  } = useQuery({
-    queryKey: ['menu_bebidas'],
-    queryFn: getMenuBebidas,
-  });
+  useEffect(() => {
+    comidasOrdenadoFiltrado();
+    bebidasOrdenadoFiltrado();
+    getInfo();
+  }, [selectedFilters]);
+  
+  // ORDENAR Y FILTRAR PLATOS
+  const comidasOrdenadoFiltrado = async () => {
+    const data = await getMenuComidas();
+    const itemsFiltrados = filtradoItems(data);
+    setMenuComidas(ordenarPorCategoria(itemsFiltrados));
+  };
+  const bebidasOrdenadoFiltrado = async () => {
+    const data = await getMenuBebidas();
+    const itemsFiltrados = filtradoItems(data); 
+    setMenuBebidas(ordenarPorCategoria(itemsFiltrados)); 
+  };
 
+  // OBTENCION DE COMIDAS
+  const getMenuComidas = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('menu_comidas')
+        .select('*');
+      if (error) {
+        console.error('Error al obtener menu_comidas:', error);
+      }
+      return data;
+    } catch (error) {
+      console.error('Error al obtener menu_comidas:', error);
+      return [];
+    }
+  };
 
+  // OBTENCION DE BEBIDAS
+  const getMenuBebidas = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('menu_bebidas')
+        .select('*');
+      if (error) {
+        console.error('Error al obtener menu_bebidas:', error);
+      }
+      return data;
+    } catch (error) {
+      console.error('Error al obtener menu_bebidas:', error);
+      return [];
+    }
+  };
 
-  const {
-    isLoading: isLoadingInfo,
-    data: info,
-    error: errorInfo,
-  } = useQuery({
-    queryKey: ['info'],
-    queryFn: getInfo,
-  });
+  // OBTENENCIÓN DE INFORMACION PRINCIPAL
+  const getInfo = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('informacion_principal')
+        .select('*');
+      if (error) {
+        console.error('Error al obtener informacion_principal:', error);
+      }
+      // console.log(data);
+      return setInfo(data[0]);
+    } catch (error) {
+      console.error('Error al obtener informacion_principal:', error);
+      return [];
+    }
+  };
 
+  // FILTRACION DE PLATOS
   const handleCheckboxChange = event => {
     setSelectedFilters({
       ...selectedFilters,
@@ -61,48 +102,27 @@ export function MenuProvider({ children }) {
     });
   };
 
-
-  const arrayIngredientes = [];
   const crearArrayIngredientes = objeto => {
+    const arrayIngredientes = [];
     for (const ingrediente in objeto) {
       if (objeto[ingrediente]) {
         arrayIngredientes.push(ingrediente);
       }
     }
+    return arrayIngredientes; 
   };
-  crearArrayIngredientes(selectedFilters);
 
-  if (isLoadingComidas) {
-    console.log('Cargando menu_comidas...');
-  } else if (errorComidas) {
-    console.error('Error al obtener menu_comidas:', errorComidas);
-  }
-  if (isLoadingBebidas) {
-    console.log('Cargando menu_bebidas...');
-  } else if (errorBebidas) {
-    console.error('Error al obtener menu_bebidas:', errorBebidas);
-  }
-  if (isLoadingInfo) {
-    console.log('Cargando info...');
-  } else if (errorInfo) {
-    console.error('Error al obtener info:', errorInfo);
-  }
-
-  const platosFiltrados = [];
-  const crearPlatosFiltrados = array => {
-    array.map(plato => {
-      if (
-        !plato.ingredientes.some(ingrediente =>
-          arrayIngredientes.includes(ingrediente),
-        )
-      ) {
-        platosFiltrados.push(plato);
-      }
-    });
+  const filtradoItems = array => {
+    const arrayIngredientes = crearArrayIngredientes(selectedFilters); 
+    return array.filter(plato => 
+      !plato.ingredientes.some(ingrediente => 
+        arrayIngredientes.includes(ingrediente)
+      )
+    );
   };
-  menuComidas && crearPlatosFiltrados(menuComidas);
 
-  const ordenarPorCategoria = productos => {
+  // ORDENAR PLATOS
+  function ordenarPorCategoria(productos) {
     if (!productos || !Array.isArray(productos)) {
       return [];
     }
@@ -113,63 +133,14 @@ export function MenuProvider({ children }) {
       }
       categorias[prod.categoria].push(prod);
     });
-
     return Object.entries(categorias).map(([categoria, productos]) => [
       categoria,
       productos,
     ]);
-  };
-  const platosOrdenados = ordenarPorCategoria(platosFiltrados);
-  const bebidasOrdenadas = ordenarPorCategoria(menuBebidas);
-  menuBebidas && bebidasOrdenadas;
-
-  const obtenerItem = async itemId => {
-    console.log('Obteniendo item con ID:', itemId); // Para depuración
-    try {
-      // Primero intenta obtener el item de menu_comidas
-      let { data, error } = await supabase
-        .from('menu_comidas')
-        .select('*')
-        .eq('id', itemId)
-        .single();
-
-      // Si no se encuentra, intenta obtenerlo de menu_bebidas
-      if (!data) {
-        ({ data, error } = await supabase
-          .from('menu_bebidas')
-          .select('*')
-          .eq('id', itemId)
-          .single());
-      }
-
-      if (error) {
-        console.error('Error al obtener el item:', error);
-        return;
-      }
-      setItem(data); // Guardar el item en el estado
-    } catch (error) {
-      console.error('Error al obtener el item:', error);
-    }
   }
 
-  useEffect(() => {}, [selectedFilters]);
   return (
-    <MenuContext.Provider
-      value={{
-        menu,
-        handleCheckboxChange,
-        selectedFilters,
-        setMenu,
-        platosOrdenados,
-        bebidasOrdenadas,
-        info,
-        item,
-        setItem,
-        obtenerItem,
-        menuComidas,
-        menuBebidas,
-      }}
-    >
+    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, info }}>
       {children}
     </MenuContext.Provider>
   );
