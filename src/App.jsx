@@ -14,9 +14,7 @@ export default function App() {
     <MenuProvider>
       <BrowserRouter>
         <Routes>
-          <Route element={<HomeLayout />}>
-            <Route path='/' element={<HomePage />} />
-          </Route>
+          <Route path='/' element={<HomePage />} />
           <Route element={<MenuLayout />}>
             <Route path='/menu' element={<MenuPage />} />
             <Route path='/menu/:itemId' element={<ItemPage />} />

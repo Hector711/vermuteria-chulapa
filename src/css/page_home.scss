@@ -9,22 +9,24 @@ hr {
   border: 0.5px solid $white-2;
 }
 section.home-page.novedades-section {
-  header {
+  header.novedades-section {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    h3 {
+    gap: 10px;
+    // border: 1px solid $white-0;
+    .icons {
+      width: 20px;
+      height: 20px;
+      stroke: $white-0;
+    }
+    h3.novedades-section {
       font-size: 1.4rem;
       color: $white-0;
-      text-align: center;
-    }
-    .icons {
-      width: 25px;
-      height: 25px;
-      fill: $white-0;
     }
   }
+  // border: 1px solid $white-0;
   div.novedades-container {
     display: flex;
     width: 100%;
@@ -33,19 +35,42 @@ section.home-page.novedades-section {
 
 footer.home-page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: auto;
-  a.profile-link-component {
+  .social-links-container {
     display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    a.profile-link-component {
+      display: flex;
+      align-items: center;
+      color: $white-0;
+      text-decoration: none;
+      gap: 10px;
+      .icons {
+        width: 25px;
+        height: 25px;
+        fill: $white-0;
+      }
+    }
+  }
+  .credits-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    color: $white-0;
-    text-decoration: none;
-    gap: 10px;
-    .icons {
-      width: 25px;
-      height: 25px;
-      fill: $white-0;
+    p {
+      font-size: 0.8rem;
+    }
+    a{
+      text-decoration: underline !important;
+      padding: 3px 8px;
+      border-radius: 3px;
+      text-decoration: none;
+      color: $white-0;
+      font-size: 0.9rem;
     }
   }
 }

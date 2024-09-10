@@ -1,4 +1,4 @@
-.filter-accordion{
+.filter-accordion {
   background-color: $black-2 !important;
   color: $font-color !important;
 }
@@ -6,8 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   span {
-    font-family: 
-    'Futura';
+    font-family: 'Futura';
     text-transform: uppercase;
     font-size: 0.85rem;
     font-weight: 600;
@@ -21,7 +20,7 @@ div.menu {
 nav.menu {
   display: flex;
   justify-content: center;
-  width: 100%; 
+  width: 100%;
   gap: 5px;
   button {
     width: 100%;
@@ -44,21 +43,22 @@ section.menu {
 }
 
 ul.section-menu {
-
   margin-block: 1rem;
   display: flex;
   flex-direction: column;
   gap: 6px;
- 
+
   .row {
     display: grid;
     grid-template-columns: minmax(30px, 400px) $width-col $width-col;
 
-    h6, p {
+    h6,
+    p {
       text-transform: uppercase;
       font-family: 'Futura';
     }
-    h6, h3 {
+    h6,
+    h3 {
       width: 100%;
     }
     p {
@@ -97,7 +97,7 @@ ul.section-menu {
     #buttons-container {
       display: flex;
       justify-content: flex-end;
-      padding: 1rem;;
+      padding: 1rem;
     }
   }
   .card-item {
@@ -106,13 +106,10 @@ ul.section-menu {
   }
 }
 
-h3.section-title {
+h3 {
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
   max-width: max-content;
-  // width: 100%;
-  background: linear-gradient(45deg, #e1c006, #ff0707);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include gradient-text;
 }
