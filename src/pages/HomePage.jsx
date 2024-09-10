@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import InstagramIcon from '../icons/InstagramIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 import WideButton from '@/components/WideButton';
@@ -36,8 +36,10 @@ const SLIDES_NOVEDADES = [
 
 export default function HomePage() {
   const { info } = useMenu();
-  const social = info && info[0].profiles_rrss;
-  const location = info && info[0].location;
+  // console.log(info);
+  const social = info && info.profiles_rrss;
+  const location = info && info.location;
+  
   return (
     <>
       <header className='animate-blink home-page'>
@@ -75,7 +77,7 @@ export default function HomePage() {
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>
-            {info && (
+            {social && (
               <>
                 <ProfileLink href={social.instagram}>
                   <InstagramIcon />

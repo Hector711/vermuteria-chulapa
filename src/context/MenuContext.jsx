@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { createContext, useContext, useState } from 'react';
 import { supabase } from '@/api/supabaseClient';
+
 const MenuContext = createContext();
 
 export const useMenu = () => {
@@ -14,6 +15,7 @@ export const useMenu = () => {
 export function MenuProvider({ children }) {
   const [menuBebidas, setMenuBebidas] = useState([]);
   const [menuComidas, setMenuComidas] = useState([]);
+  const [info, setInfo] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({
     Huevo: false,
     Mostaza: false,
@@ -28,6 +30,7 @@ export function MenuProvider({ children }) {
   useEffect(() => {
     comidasOrdenadoFiltrado();
     bebidasOrdenadoFiltrado();
+    getInfo();
   }, [selectedFilters]);
   
   // ORDENAR Y FILTRAR PLATOS
@@ -70,6 +73,23 @@ export function MenuProvider({ children }) {
       return data;
     } catch (error) {
       console.error('Error al obtener menu_bebidas:', error);
+      return [];
+    }
+  };
+
+  // OBTENENCIÓN DE INFORMACION PRINCIPAL
+  const getInfo = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('informacion_principal')
+        .select('*');
+      if (error) {
+        console.error('Error al obtener informacion_principal:', error);
+      }
+      // console.log(data);
+      return setInfo(data[0]);
+    } catch (error) {
+      console.error('Error al obtener informacion_principal:', error);
       return [];
     }
   };
@@ -120,7 +140,7 @@ export function MenuProvider({ children }) {
   }
 
   return (
-    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange }}>
+    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, info }}>
       {children}
     </MenuContext.Provider>
   );
