@@ -9,7 +9,7 @@ export default function Filter() {
   const { selectedFilters, handleCheckboxChange } = useMenu();
   const sx = {
     '&.Mui-checked': {
-      color: pink[600],
+      color: '#ff0000',
     },
   };
   return (
