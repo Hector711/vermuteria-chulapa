@@ -8,29 +8,30 @@ import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
 import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
+import Credits from '@/components/Credits';
 
 import logo from '@/assets/logo.png';
 
-const SLIDES_NOVEDADES = [
+const SLIDES_ITEMS = [
   {
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/menu',
+    to: '/lomejor',
   },
   {
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/menu',
+    to: '/lomejor',
   },
   {
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/menu',
+    to: '/lomejor',
   },
   {
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/menu',
+    to: '/lomejor',
   },
 ];
 
@@ -58,22 +59,22 @@ export default function HomePage() {
           {info.whatsapp_url && (
             <WideButton
               type='a'
-            title='Chatbot AI'
-            subtitle='Reservas, horarios, preguntas, etc.'
-            href={info.whatsapp_url}
-            target='_blank'
+              title='Chatbot AI'
+              subtitle='Reservas, horarios, preguntas, etc.'
+              href={info.whatsapp_url}
+              target='_blank'
               icon={<ChatbotIcon />}
             />
           )}
         </section>
         <hr />
-        <section className='home-page novedades-section'>
-          <header className='novedades-section'>
+        <section className='home-page special-items-section'>
+          <header className='lo-mejor-title'>
             <StarIcon />
-            <h3 className='novedades-section'>Lo mejor de Chulapa</h3>
+            <h3 className='special-title'>Lo mejor de Chulapa</h3>
           </header>
-          <div className='novedades-container'>
-            <CarouselNovedades images={SLIDES_NOVEDADES} />
+          <div className='special-items-container'>
+            <CarouselNovedades items={SLIDES_ITEMS} />
           </div>
         </section>
         <footer className='home-page'>
@@ -90,16 +91,7 @@ export default function HomePage() {
             )}
           </div>
 
-          <div className='credits-container'>
-            <p>Diseño y desarrollo por</p>
-            <a
-              href='https://hector-guerra.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Héctor Guerra
-            </a>
-          </div>
+          <Credits />
         </footer>
       </main>
     </>

@@ -20,11 +20,3 @@ $gap-s: 9px;
 
 $pad-s: 7px;
 
-@mixin gradient-text {
-  background: linear-gradient(45deg, #e1c006, #ff0707);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@mixin gradient-stroke {
-  stroke: url(#gradient);
-}

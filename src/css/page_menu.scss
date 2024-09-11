@@ -1,3 +1,17 @@
+header#layout {
+  display: flex;
+  justify-content: center;
+
+}
+
+main.menu-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+
 .filter-accordion {
   background-color: $black-2 !important;
   color: $font-color !important;
@@ -106,10 +120,4 @@ ul.section-menu {
   }
 }
 
-h3 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  max-width: max-content;
-  @include gradient-text;
-}
+
