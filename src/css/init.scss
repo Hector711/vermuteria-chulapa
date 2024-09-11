@@ -45,9 +45,9 @@ h2.page-title {
 // BUTTONS TITLES
 h3 {
   font-family: 'Josefin Sans Variable';
-  font-weight: 600 !important;
+  font-weight: 600;
   max-width: max-content;
-  font-size: 1rem !important;
+  font-size: 1rem;
   text-transform: uppercase;
   @include shadow;
 }
@@ -59,7 +59,7 @@ h4 {
   @include shadow;
   font-family: 'Futura';
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem ;
 }
 
 #hector-guerra {

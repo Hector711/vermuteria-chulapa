@@ -13,8 +13,6 @@
     "format": "prettier --write ./src"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.0",
-    "@emotion/styled": "^11.13.0",
     "@fontsource-variable/josefin-sans": "^5.0.21",
     "@fontsource-variable/noto-sans-jp": "^5.0.19",
     "@fontsource-variable/open-sans": "^5.0.29",

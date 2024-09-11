@@ -4,8 +4,8 @@ import App from './App.jsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // CSS
-import '@/css/init.scss';
 import '@/css/reset/reset.scss';
+import '@/css/init.scss';
 
 // PAGES
 import '@/css/page_menu.scss';
