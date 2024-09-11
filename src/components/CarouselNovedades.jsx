@@ -15,10 +15,10 @@ export default function CarouselNovedades({ items }) {
         clickable: true,
       }}
       loop={true}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction: true,
-      }}
+      // autoplay={{
+      //   delay: 4000,
+      //   disableOnInteraction: true,
+      // }}
       modules={[Autoplay, Navigation]}
       id='swiper-images'
     >

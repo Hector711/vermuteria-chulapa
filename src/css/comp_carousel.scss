@@ -4,7 +4,7 @@
   height: 100%;
   z-index: 99;
 }
-.special-item-button {
+.special-item-slide {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -20,9 +20,13 @@
     }
   }
   figure {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     img {
-      width: 250px;
-      height: 100%;
+      width: auto;
+      height: 130px;
+      // height: 100%;
       object-fit: cover;
       border-radius: $border-s;
     }

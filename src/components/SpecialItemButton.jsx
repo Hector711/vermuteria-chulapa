@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function SpecialItemButton(props) {
   return (
     <Link 
-    className='special-item-button shadoww' 
+    className='special-item-slide shadoww' 
     {...props} to={props.to}>
       <header>
         <h4>{props.title}</h4>
