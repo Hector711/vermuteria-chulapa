@@ -47,7 +47,7 @@ h3 {
   font-family: 'Josefin Sans Variable';
   font-weight: 600 !important;
   max-width: max-content;
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
   text-transform: uppercase;
   @include shadow;
 }
@@ -57,8 +57,9 @@ h3.special-title {
 // ITEMS TITLES
 h4 {
   @include shadow;
-  font-family: 'Josefin Sans Variable';
+  font-family: 'Futura';
   text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 #hector-guerra {
