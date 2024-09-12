@@ -37,8 +37,7 @@ const SLIDES_ITEMS = [
 
 export default function HomePage() {
   const { info } = useMenu();
-  const social = info && info.profiles_rrss;
-  const location = info && info.location;
+
 
   return (
     <>
@@ -46,7 +45,7 @@ export default function HomePage() {
         <figure>
           <img src={logo} alt='' className='shadoww' />
         </figure>
-        <p className='uppercase text-center text-[0.65rem]'>{location}</p>
+        <p className='uppercase text-center text-[0.65rem]'>{info.ubicacion}</p>
       </header>
       <main className='animate-blink home-page'>
         <section className='home-page main-buttons'>
@@ -79,12 +78,12 @@ export default function HomePage() {
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>
-            {social && (
+            {info && (
               <>
-                <ProfileLink href={social.instagram}>
+                <ProfileLink href={info.instagram_url}>
                   <InstagramIcon />
                 </ProfileLink>
-                <ProfileLink href={social.facebook}>
+                <ProfileLink href={info.facebook_url}>
                   <FacebookIcon />
                 </ProfileLink>
               </>
