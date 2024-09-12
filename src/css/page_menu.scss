@@ -1,3 +1,17 @@
+header#layout {
+  display: flex;
+  justify-content: center;
+
+}
+
+main.menu-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+
 .filter-accordion {
   background-color: $black-2 !important;
   color: $font-color !important;
@@ -6,10 +20,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   span {
-    font-family: 'Futura';
+    font-family: 'Open Sans Variable';
     text-transform: uppercase;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.85rem !important;
+    font-weight: 350 !important;
   }
 }
 
@@ -106,10 +120,4 @@ ul.section-menu {
   }
 }
 
-h3 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  max-width: max-content;
-  @include gradient-text;
-}
+

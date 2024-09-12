@@ -8,36 +8,36 @@ import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
 import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
+import Credits from '@/components/Credits';
 
 import logo from '@/assets/logo.png';
 
-const SLIDES_NOVEDADES = [
+const SLIDES_ITEMS = [
   {
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/menu',
+    to: '/lomejor',
   },
   {
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/menu',
+    to: '/lomejor',
   },
   {
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/menu',
+    to: '/lomejor',
   },
   {
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/menu',
+    to: '/lomejor',
   },
 ];
 
 export default function HomePage() {
   const { info } = useMenu();
-  const social = info && info.profiles_rrss;
-  const location = info && info.location;
+
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function HomePage() {
         <figure>
           <img src={logo} alt='' className='shadoww' />
         </figure>
-        <p className='uppercase text-center text-[0.65rem]'>{location}</p>
+        <p className='uppercase text-center text-[0.65rem]'>{info.ubicacion}</p>
       </header>
       <main className='animate-blink home-page'>
         <section className='home-page main-buttons'>
@@ -55,51 +55,42 @@ export default function HomePage() {
             title='Ver Toda La Carta'
             icon={<MenuIcon />}
           />
-          {info.whatsapp_url && (
+          {info &&info.whatsapp_url && (
             <WideButton
               type='a'
-            title='Chatbot AI'
-            subtitle='Reservas, horarios, preguntas, etc.'
-            href={info.whatsapp_url}
-            target='_blank'
+              title='Chatbot AI'
+              subtitle='Reservas, horarios, preguntas, etc.'
+              href={info.whatsapp_url}
+              target='_blank'
               icon={<ChatbotIcon />}
             />
           )}
         </section>
         <hr />
-        <section className='home-page novedades-section'>
-          {/* <header className='novedades-section'>
+        <section className='home-page special-items-section'>
+          <header className='lo-mejor-title'>
             <StarIcon />
-            <h3 className='novedades-section'>Lo mejor de Chulapa</h3>
+            <h3 className='special-title'>Lo mejor de Chulapa</h3>
           </header>
-          <div className='novedades-container'>
-            <CarouselNovedades images={SLIDES_NOVEDADES} />
-          </div> */}
+          <div className='special-items-container'>
+            <CarouselNovedades items={SLIDES_ITEMS} />
+          </div>
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>
-            {social && (
+            {info && (
               <>
-                <ProfileLink href={social.instagram}>
+                <ProfileLink href={info.instagram_url}>
                   <InstagramIcon />
                 </ProfileLink>
-                <ProfileLink href={social.facebook}>
+                <ProfileLink href={info.facebook_url}>
                   <FacebookIcon />
                 </ProfileLink>
               </>
             )}
           </div>
 
-          <div className='credits-container'>
-            <p>Diseño y desarrollo por</p>
-            <a
-              href='https://hector-guerra.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Héctor Guerra
-            </a>
-          </div>
+          <Credits />
         </footer>
       </main>
     </>

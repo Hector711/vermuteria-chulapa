@@ -20,7 +20,7 @@ export default function MenuPage() {
     <>
       <header id='layout' className='animate-blink'>
         <Link to='/'>
-          <h2 className='shadoww'>Menu Chulapa</h2>
+          <h2 className='page-title'>Menu Chulapa</h2>
         </Link>
       </header>
       <main className='animate-blink menu-page'>

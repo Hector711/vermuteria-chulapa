@@ -2,6 +2,14 @@
   background: $black-1;
   color: $font-color;
 }
+@mixin gradient-text {
+  background: linear-gradient(45deg, #e1c006, #ff0707);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin shadow {
+  filter: drop-shadow(2px 2px 2px #06060680);
+}
 html,
 body {
   min-height: max-content;
@@ -11,7 +19,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 div#root { 
@@ -21,38 +28,48 @@ div#root {
   width: 100%;
   max-width: $width;
   position: relative;
-
 }
 main {
   min-height: 70vh;
 }
 // 
-// 
-/* "Nuestra Carta" */
-h2 {
+/* TITULOS DE PAGINAS */
+h2.page-title {
   font-family: 'Antique Cherry', sans-serif;
+  font-size: 2.7rem;
+  text-align: center;
+  max-width: max-content;
+  @include gradient-text;
+  @include shadow;
 }
+// BUTTONS TITLES
 h3 {
   font-family: 'Josefin Sans Variable';
   font-weight: 600;
+  max-width: max-content;
+  font-size: 1rem;
+  text-transform: uppercase;
+  @include shadow;
 }
-/* 'Open Sans Variable' */
-.josefin {
-  font-family: 'Josefin Sans Variable';
-  font-weight: 600;
+h3.special-title {
+  @include gradient-text;
 }
-.futura {
+// ITEMS TITLES
+h4 {
+  @include shadow;
   font-family: 'Futura';
+  text-transform: uppercase;
+  font-size: 0.85
+  rem ;
 }
 
-.shadoww {
-  filter: drop-shadow(2px 2px 2px #06060680);
+#hector-guerra {
+  font-family: 'Black Crow Extra Light';
+  text-transform: uppercase;
+  // letter-spacing: 0.05rem !important;
+  font-size: 0.8rem;
 }
 
-#swiper-images{
-  // position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  // background-color: red;
+
+.MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
 }

@@ -50,7 +50,8 @@ export function MenuProvider({ children }) {
     try {
       const { data, error } = await supabase
         .from('menu_comidas')
-        .select('*');
+        .select('*')
+        .order('order_id', { ascending: true });
       if (error) {
         console.error('Error al obtener menu_comidas:', error);
       }
@@ -66,7 +67,8 @@ export function MenuProvider({ children }) {
     try {
       const { data, error } = await supabase
         .from('menu_bebidas')
-        .select('*');
+        .select('*')
+        .order('order_id', { ascending: true });
       if (error) {
         console.error('Error al obtener menu_bebidas:', error);
       }

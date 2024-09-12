@@ -1,3 +1,25 @@
+header.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  gap: 0.5rem;
+  figure {
+    width: 100%;
+    max-width: 110px;
+  }
+  p {
+    color: $white-0;
+  }
+}
+
+main.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
 section.home-page.main-buttons {
   display: flex;
   justify-content: center;
@@ -8,30 +30,7 @@ section.home-page.main-buttons {
 hr {
   border: 0.5px solid $white-2;
 }
-section.home-page.novedades-section {
-  header.novedades-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    // border: 1px solid $white-0;
-    .icons {
-      width: 20px;
-      height: 20px;
-      stroke: $white-0;
-    }
-    h3.novedades-section {
-      font-size: 1.4rem;
-      color: $white-0;
-    }
-  }
-  // border: 1px solid $white-0;
-  div.novedades-container {
-    display: flex;
-    width: 100%;
-  }
-}
+
 
 footer.home-page {
   display: flex;
@@ -43,7 +42,6 @@ footer.home-page {
     display: flex;
     justify-content: center;
     gap: 2rem;
-
     a.profile-link-component {
       display: flex;
       align-items: center;
@@ -59,18 +57,39 @@ footer.home-page {
   }
   .credits-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     p {
       font-size: 0.8rem;
     }
     a{
-      text-decoration: underline !important;
-      padding: 3px 8px;
-      border-radius: 3px;
-      text-decoration: none;
       color: $white-0;
-      font-size: 0.9rem;
     }
   }
 }
+
+section.special-items-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  header.lo-mejor-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: max-content;
+    .icons {
+      width: 22px;
+      height: 100%;
+      stroke: $white-0;
+      margin-bottom: 8px;
+    }
+  }
+  div.special-items-container {
+    display: flex;
+    width: 100%;
+  }
+}
+

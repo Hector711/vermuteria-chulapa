@@ -1,0 +1,19 @@
+header.lo-mejor-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.lo-mejor-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h3 {
+    padding-left: 20px;
+  }
+  p{
+    text-align: center;
+    font-size: 0.8rem;
+    color: $white-0;
+  }
+}
+

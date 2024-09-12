@@ -5,7 +5,7 @@ export default function MenuList({ menu }) {
   return menu.map((section, i) => (
     <ul className='section-menu' key={i}>
       <li className='row title-row'>
-        <h3 className='section-title'>{section[0]}</h3>
+        <h3 className='special-title'>{section[0]}</h3>
         <p>Terraza</p>
         <p>Salón</p>
       </li>
@@ -16,7 +16,7 @@ export default function MenuList({ menu }) {
           to='' 
           // to={`/menu/${item.id}`} 
           className='row item-menu'>
-            <h6>{item.nombre}</h6>
+            <h4>{item.nombre}</h4>
             <p>{item.precio_salon.toFixed(2)}€</p>
             <p>{item.precio_terraza.toFixed(2)}€</p>
           </Link>

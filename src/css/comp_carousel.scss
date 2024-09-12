@@ -1,0 +1,34 @@
+
+#swiper-images{
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.special-item-slide {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $black-2;
+  padding: 6px;
+  border-radius: $border-m;
+  gap: 5px;
+
+  header {
+    h4 {
+      font-size: 0.9rem !important;
+      text-align: center;
+    }
+  }
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    img {
+      width: auto;
+      height: 130px;
+      // height: 100%;
+      object-fit: cover;
+      border-radius: $border-s;
+    }
+  }
+}

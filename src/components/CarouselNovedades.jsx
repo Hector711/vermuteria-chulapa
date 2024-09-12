@@ -2,9 +2,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation } from 'swiper/modules';
-import NovedadButton from '@/components/NovedadButton';
+import SpecialItemButton from '@/components/SpecialItemButton';
 
-export default function CarouselNovedades({ images }) {
+export default function CarouselNovedades({ items }) {
   return (
     <Swiper
       slidesPerView={1.5}
@@ -15,16 +15,16 @@ export default function CarouselNovedades({ images }) {
         clickable: true,
       }}
       loop={true}
-      autoplay={{
-        delay: 1000,
-        disableOnInteraction: true,
-      }}
+      // autoplay={{
+      //   delay: 4000,
+      //   disableOnInteraction: true,
+      // }}
       modules={[Autoplay, Navigation]}
       id='swiper-images'
     >
-      {images.map(({ title, img, to }, index) => (
+      {items.map(({ title, img, to }, index) => (
         <SwiperSlide key={index}>
-          <NovedadButton title={title} img={img} to={to} />
+          <SpecialItemButton title={title} img={img} to={to} />
         </SwiperSlide>
       ))}
     </Swiper>
