@@ -56,7 +56,7 @@ export default function HomePage() {
             title='Ver Toda La Carta'
             icon={<MenuIcon />}
           />
-          {info.whatsapp_url && (
+          {info &&info.whatsapp_url && (
             <WideButton
               type='a'
               title='Chatbot AI'
