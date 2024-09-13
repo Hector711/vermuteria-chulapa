@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom';
 import CarouselNovedades from '@/components/CarouselNovedades';
+import { useMenu } from '@/context/MenuContext';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation } from 'swiper/modules';
+import SpecialItemButton from '@/components/SpecialItemButton';
 
 const SLIDES_ITEMS = [
   {
@@ -25,6 +32,7 @@ const SLIDES_ITEMS = [
 ];
 
 export default function LoMejorPage() {
+  const { specialItems } = useMenu();
   return (
     <>
       <header className='lo-mejor-page'>
@@ -37,7 +45,44 @@ export default function LoMejorPage() {
           Te presentamos los platos y bebidas que no solo son los favoritos de
           nuestros clientes, sino también nuestras recomendaciones especiales.
         </p>
-        <section className='special-items-section'>
+        {specialItems.map((section, i) => (
+          <ul className='section-menu' key={i}>
+            <h3 className='special-title'>{section[0]}</h3>
+            <hr />
+            <Swiper
+              slidesPerView={1.5}
+              spaceBetween={30}
+              speed={1000}
+              centeredSlides={true}
+              pagination={{
+                clickable: true,
+              }}
+              loop={true}
+              // autoplay={{
+              //   delay: 4000,
+              //   disableOnInteraction: true,
+              // }}
+              modules={[Autoplay, Navigation]}
+              id='swiper-images'
+            >
+            {section[1].map(({ nombre }, index) => (
+              <li key={i}>
+                <SwiperSlide key={index}>
+                  <SpecialItemButton title={nombre} />
+                </SwiperSlide>
+                {/* <Link
+                  to=''
+                  // to={`/menu/${item.id}`}
+                  className='row item-menu'
+                  >
+                </Link> */}
+              </li>
+            ))}
+            </Swiper>
+          </ul>
+        ))}
+
+        {/* <section className='special-items-section'>
           <h3 className='special-title'>Vermuts</h3>
           <CarouselNovedades items={SLIDES_ITEMS} />
         </section>
@@ -52,7 +97,7 @@ export default function LoMejorPage() {
         <section className='special-items-section'>
           <h3 className='special-title'>Otros platos estrella</h3>
           <CarouselNovedades items={SLIDES_ITEMS} />
-        </section>
+        </section> */}
       </main>
     </>
   );
