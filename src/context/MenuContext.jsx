@@ -60,6 +60,7 @@ export function MenuProvider({ children }) {
       const { data, error } = await supabase
         .from('menu_comidas')
         .select('*')
+        .eq('visible', true)
         .order('order_id', { ascending: true });
         // console.log(data);
       if (error) {
@@ -78,6 +79,7 @@ export function MenuProvider({ children }) {
       const { data, error } = await supabase
         .from('menu_bebidas')
         .select('*')
+        .eq('visible', true)
         .order('order_id', { ascending: true });
       if (error) {
         console.error('Error al obtener menu_bebidas:', error);
@@ -111,7 +113,6 @@ export function MenuProvider({ children }) {
     try {
       const { data, error } = await supabase.rpc('get_all_items')
       console.log('getSpecialItems:', data);
-
       if (error) {
         console.error('Error al obtener platos_especiales:', error);
       }

@@ -33,6 +33,8 @@ const SLIDES_ITEMS = [
 
 export default function LoMejorPage() {
   const { specialItems } = useMenu();
+  console.log(specialItems)
+
   return (
     <>
       <header className='lo-mejor-page'>
@@ -65,17 +67,12 @@ export default function LoMejorPage() {
               modules={[Autoplay, Navigation]}
               id='swiper-images'
             >
-            {section[1].map(({ nombre }, index) => (
+            {section[1].map(({ nombre, imagen_url, id }, index) => (
               <li key={i}>
                 <SwiperSlide key={index}>
-                  <SpecialItemButton title={nombre} />
+                  <SpecialItemButton title={nombre}  src={imagen_url} to={id}/>
                 </SwiperSlide>
-                {/* <Link
-                  to=''
-                  // to={`/menu/${item.id}`}
-                  className='row item-menu'
-                  >
-                </Link> */}
+                
               </li>
             ))}
             </Swiper>

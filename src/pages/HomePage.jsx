@@ -14,24 +14,24 @@ import logo from '@/assets/logo.png';
 
 const SLIDES_ITEMS = [
   {
-    title: 'Hamburguesa con guacamole',
-    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/lomejor',
+    nombre: 'Hamburguesa con guacamole',
+    imagen_url: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    id: '/lomejor',
   },
   {
-    title: 'Hamburguesa con guacamole',
-    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/lomejor',
+    nombre: 'Hamburguesa con guacamole',
+    imagen_url: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    id: '/lomejor',
   },
   {
-    title: 'Hamburguesa con guacamole',
-    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/lomejor',
+    nombre: 'Hamburguesa con guacamole',
+    imagen_url: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    id: '/lomejor',
   },
   {
-    title: 'Hamburguesa con guacamole',
-    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    to: '/lomejor',
+    nombre: 'Hamburguesa con guacamole',
+    imagen_url: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    id: '/lomejor',
   },
 ];
 
