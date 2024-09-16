@@ -15,6 +15,7 @@ export const useMenu = () => {
 export function MenuProvider({ children }) {
   const [menuBebidas, setMenuBebidas] = useState([]);
   const [menuComidas, setMenuComidas] = useState([]);
+  const [specialItems, setSpecialItems] = useState([]);
   const [info, setInfo] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({
     Huevo: false,
@@ -31,6 +32,8 @@ export function MenuProvider({ children }) {
     getInfo();
     comidasOrdenadoFiltrado();
     bebidasOrdenadoFiltrado();
+    specialItemsOrdenado();
+    console.log('specialItems:', specialItems);
   }, [selectedFilters]);
   
   // ORDENAR Y FILTRAR PLATOS
@@ -44,6 +47,12 @@ export function MenuProvider({ children }) {
     const itemsFiltrados = filtradoItems(data); 
     setMenuBebidas(ordenarPorCategoria(itemsFiltrados)); 
   };
+  // FILTRADO DE PLATOS ESPECIALES
+  const specialItemsOrdenado = async () => {
+    const data = await getSpecialItems();
+    // console.log('Datos obtenidos de getSpecialItems:', data);
+    setSpecialItems(ordenarPorCategoria(data));
+  };
 
   // OBTENCION DE COMIDAS
   const getMenuComidas = async () => {
@@ -51,7 +60,9 @@ export function MenuProvider({ children }) {
       const { data, error } = await supabase
         .from('menu_comidas')
         .select('*')
+        .eq('visible', true)
         .order('order_id', { ascending: true });
+        // console.log(data);
       if (error) {
         console.error('Error al obtener menu_comidas:', error);
       }
@@ -68,6 +79,7 @@ export function MenuProvider({ children }) {
       const { data, error } = await supabase
         .from('menu_bebidas')
         .select('*')
+        .eq('visible', true)
         .order('order_id', { ascending: true });
       if (error) {
         console.error('Error al obtener menu_bebidas:', error);
@@ -79,7 +91,7 @@ export function MenuProvider({ children }) {
     }
   };
 
-  // OBTENENCIÓN DE INFORMACION PRINCIPAL
+  // OBTENCIÓN DE INFORMACION PRINCIPAL
   const getInfo = async () => {
     try {
       const { data, error } = await supabase
@@ -92,6 +104,21 @@ export function MenuProvider({ children }) {
       return setInfo(data[0]);
     } catch (error) {
       console.error('Error al obtener informacion_principal:', error);
+      return [];
+    }
+  };
+
+  // OBTENCIÓN DE PLATOS ESPECIALES
+  const getSpecialItems = async () => {
+    try {
+      const { data, error } = await supabase.rpc('get_all_items')
+      console.log('getSpecialItems:', data);
+      if (error) {
+        console.error('Error al obtener platos_especiales:', error);
+      }
+      return data;
+    } catch (error) {
+      console.error('Error al obtener platos_especiales:', error);
       return [];
     }
   };
@@ -142,7 +169,7 @@ export function MenuProvider({ children }) {
   }
 
   return (
-    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, info }}>
+    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, specialItems, info }}>
       {children}
     </MenuContext.Provider>
   );

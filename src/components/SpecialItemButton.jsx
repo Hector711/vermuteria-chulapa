@@ -1,16 +1,14 @@
 import { Link } from 'react-router-dom';
 
-export default function SpecialItemButton(props) {
+export default function SpecialItemButton({ title, src, to }) {
   return (
-    <Link 
-    className='special-item-slide shadoww' 
-    {...props} to={props.to}>
+    <Link className='special-item-slide shadoww' to={`/lomejor/${to}`}>
       <header>
-        <h4>{props.title}</h4>
+        <h4>{title}</h4>
       </header>
       <figure>
-        <img src={props.img} className='shadoww' />
-        {props.subtitle && <p>{props.subtitle}</p>}
+        <img src={src} className='shadoww' />
+        {/* {props.subtitle && <p>{props.subtitle}</p>} */}
       </figure>
     </Link>
   );
