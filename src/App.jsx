@@ -6,7 +6,6 @@ import HomePage from '@/pages/HomePage';
 import MenuPage from '@/pages/MenuPage';
 import ItemPage from '@/pages/ItemPage';
 import LoMejorPage from '@/pages/LoMejorPage';
-import SpecialItemPage from '@/pages/SpecialItemPage';
 
 export default function App() {
   return (
@@ -17,7 +16,6 @@ export default function App() {
           <Route path='/menu' element={<MenuPage />} />
           <Route path='/menu/:itemId' element={<ItemPage />} />
           <Route path='/lomejor' element={<LoMejorPage />} />
-          <Route path='/lomejor/:itemId' element={<SpecialItemPage />} />
         </Routes>
       </BrowserRouter>
     </MenuProvider>

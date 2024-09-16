@@ -9,38 +9,35 @@ import MenuIcon from '@/icons/MenuIcon';
 import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
 import Credits from '@/components/Credits';
-import { Link } from 'react-router-dom';
+
 import logo from '@/assets/logo.png';
 
 const SLIDES_ITEMS = [
   {
-    nombre: 'Hamburguesa con guacamole',
-    imagen_url:
-      'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/lomejor',
+    title: 'Hamburguesa con guacamole',
+    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    to: '/lomejor',
   },
   {
-    nombre: 'Hamburguesa con guacamole',
-    imagen_url:
-      'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/lomejor',
+    title: 'Hamburguesa con guacamole',
+    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    to: '/lomejor',
   },
   {
-    nombre: 'Hamburguesa con guacamole',
-    imagen_url:
-      'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/lomejor',
+    title: 'Hamburguesa con guacamole',
+    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    to: '/lomejor',
   },
   {
-    nombre: 'Hamburguesa con guacamole',
-    imagen_url:
-      'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/lomejor',
+    title: 'Hamburguesa con guacamole',
+    img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+    to: '/lomejor',
   },
 ];
 
 export default function HomePage() {
   const { info } = useMenu();
+
 
   return (
     <>
@@ -58,7 +55,7 @@ export default function HomePage() {
             title='Ver Toda La Carta'
             icon={<MenuIcon />}
           />
-          {info && info.whatsapp_url && (
+          {info &&info.whatsapp_url && (
             <WideButton
               type='a'
               title='Chatbot AI'
@@ -71,12 +68,13 @@ export default function HomePage() {
         </section>
         <hr />
         <section className='home-page special-items-section'>
-
-          <header className='lo-mejor-title'>
-            <Link to='/lomejor'>
-              <StarIcon />
-              <h3 className='special-title'>Lo mejor de Chulapa</h3>
-            </Link>
+          {/* <header className='lo-mejor-title'>
+            <StarIcon />
+            <h3 className='special-title'>Lo mejor de Chulapa</h3>
+          </header>
+          <div className='special-items-container'>
+            <CarouselNovedades items={SLIDES_ITEMS} />
+          </div> */}
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>
