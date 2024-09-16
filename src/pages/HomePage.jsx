@@ -17,30 +17,31 @@ const SLIDES_ITEMS = [
     nombre: 'Hamburguesa con guacamole',
     imagen_url:
       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/lomejor',
+    id: '/',
   },
   {
     nombre: 'Hamburguesa con guacamole',
     imagen_url:
       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/lomejor',
+    id: '/',
   },
   {
     nombre: 'Hamburguesa con guacamole',
     imagen_url:
       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/lomejor',
+    id: '/',
   },
   {
     nombre: 'Hamburguesa con guacamole',
     imagen_url:
       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/lomejor',
+    id: '/',
   },
 ];
 
 export default function HomePage() {
   const { info } = useMenu();
+  // console.log(info.whatsapp_url)
 
   return (
     <>
@@ -71,12 +72,12 @@ export default function HomePage() {
         </section>
         <hr />
         <section className='home-page special-items-section'>
+            <Link to='/lomejor' className='lo-mejor-link wide-button-component shadoww'>
           <header className='lo-mejor-title'>
-            <Link to='/lomejor'>
               <StarIcon />
               <h3 className='special-title'>Lo mejor de Chulapa</h3>
-            </Link>
           </header>
+            </Link>
           <div className='special-items-container'>
             <CarouselNovedades items={SLIDES_ITEMS} />
           </div>

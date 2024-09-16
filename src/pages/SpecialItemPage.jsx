@@ -1,5 +1,9 @@
-import React from 'react'
+import { useEffect } from 'react'
 import LoMejorPage from '@/pages/LoMejorPage'
+import { useParams } from 'react-router-dom'
+import { useMenu } from '@/context/MenuContext'
+import ItemCard from '@/components/ItemCard';
+
 
 export default function SpecialItemPage() {
   const { obtenerItem, item } = useMenu();

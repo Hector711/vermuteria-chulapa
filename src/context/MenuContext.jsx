@@ -17,6 +17,7 @@ export function MenuProvider({ children }) {
   const [menuComidas, setMenuComidas] = useState([]);
   const [specialItems, setSpecialItems] = useState([]);
   const [info, setInfo] = useState([]);
+  const [item, setItem] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({
     Huevo: false,
     Mostaza: false,
@@ -150,6 +151,7 @@ export function MenuProvider({ children }) {
     );
   };
 
+  
   // ORDENAR PLATOS
   function ordenarPorCategoria(productos) {
     if (!productos || !Array.isArray(productos)) {
@@ -168,8 +170,53 @@ export function MenuProvider({ children }) {
     ]);
   }
 
+  const obtenerItem = async (itemId) => {
+    try {
+      // Buscar en la tabla menu_comidas
+      const { data: dataComidas, error: errorComidas } = await supabase
+        .from('menu_comidas')
+        .select('*')
+        .eq('id', itemId)
+        .single();
+
+      if (errorComidas) {
+        console.error('Error al obtener el item de menu_comidas:', errorComidas);
+      }
+
+      // Si se encuentra el item en menu_comidas, devolverlo
+      if (dataComidas) {
+        setItem(dataComidas);
+        return;
+      }
+
+      // Buscar en la tabla menu_bebidas
+      const { data: dataBebidas, error: errorBebidas } = await supabase
+        .from('menu_bebidas')
+        .select('*')
+        .eq('id', itemId)
+        .single();
+
+      if (errorBebidas) {
+        console.error('Error al obtener el item de menu_bebidas:', errorBebidas);
+      }
+
+      // Si se encuentra el item en menu_bebidas, devolverlo
+      if (dataBebidas) {
+        setItem(dataBebidas);
+        return;
+      }
+
+      // Si no se encuentra el item en ninguna tabla, manejar el caso
+      console.error('Item no encontrado en ninguna tabla');
+      setItem(null);
+    } catch (error) {
+      console.error('Error al obtener el item:', error);
+      setItem(null);
+    }
+  };
+
   return (
-    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, specialItems, info }}>
+    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, specialItems, info, obtenerItem, item }}>
       {children}
     </MenuContext.Provider>
   );
