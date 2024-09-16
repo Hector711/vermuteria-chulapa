@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
 
-export default function SpecialItemButton({title, src, to}) {
+export default function SpecialItemButton({ title, src, to }) {
   return (
-    <Link 
-    className='special-item-slide shadoww' 
-    to={to}>
+    <Link className='special-item-slide shadoww' to={`/lomejor/${to}`}>
       <header>
         <h4>{title}</h4>
       </header>

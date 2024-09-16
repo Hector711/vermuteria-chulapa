@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { useMenu } from '@/context/MenuContext';
-import MenuPage from '@/pages/MenuPage';
-import ItemCard from '@/components/ItemCard';
+import React from 'react'
+import LoMejorPage from '@/pages/LoMejorPage'
 
-export default function ItemPage() {
+export default function SpecialItemPage() {
   const { obtenerItem, item } = useMenu();
   const { itemId } = useParams();
 
@@ -14,11 +11,10 @@ export default function ItemPage() {
 
   return (
     <>
-      <MenuPage />
+      <LoMejorPage />
       <div id='item-background' className='animate-blink'>
         {item ? <ItemCard item={item} /> : <p>Cargando...</p>}
       </div>
     </>
   );
 }
-

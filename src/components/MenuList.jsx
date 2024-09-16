@@ -13,8 +13,8 @@ export default function MenuList({ menu }) {
       {section[1].map((item, i) => (
         <li key={i} >
           <Link 
-          to='' 
-          // to={`/menu/${item.id}`} 
+          // to='' 
+          to={`/menu/${item.id}`} 
           className='row item-menu'>
             <h4>{item.nombre}</h4>
             <p>{item.precio_salon.toFixed(2)}€</p>

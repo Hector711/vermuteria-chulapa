@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import CarouselNovedades from '@/components/CarouselNovedades';
 import { useMenu } from '@/context/MenuContext';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -28,7 +27,7 @@ const SLIDES_ITEMS = [
     title: 'Hamburguesa con guacamole',
     img: 'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
     to: '/lomejor',
-  },
+  }
 ];
 
 export default function LoMejorPage() {
@@ -72,29 +71,11 @@ export default function LoMejorPage() {
                 <SwiperSlide key={index}>
                   <SpecialItemButton title={nombre}  src={imagen_url} to={id}/>
                 </SwiperSlide>
-                
               </li>
             ))}
             </Swiper>
           </ul>
         ))}
-
-        {/* <section className='special-items-section'>
-          <h3 className='special-title'>Vermuts</h3>
-          <CarouselNovedades items={SLIDES_ITEMS} />
-        </section>
-        <section className='special-items-section'>
-          <h3 className='special-title'>Tortillas</h3>
-          <CarouselNovedades items={SLIDES_ITEMS} />
-        </section>
-        <section className='special-items-section'>
-          <h3 className='special-title'>Cócteles</h3>
-          <CarouselNovedades items={SLIDES_ITEMS} />
-        </section>
-        <section className='special-items-section'>
-          <h3 className='special-title'>Otros platos estrella</h3>
-          <CarouselNovedades items={SLIDES_ITEMS} />
-        </section> */}
       </main>
     </>
   );
