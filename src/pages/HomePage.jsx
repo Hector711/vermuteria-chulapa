@@ -9,35 +9,36 @@ import MenuIcon from '@/icons/MenuIcon';
 import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
 import Credits from '@/components/Credits';
+import { Link } from 'react-router-dom';
 
 import logo from '@/assets/logo.png';
 
-const SLIDES_ITEMS = [
-  {
-    nombre: 'Hamburguesa con guacamole',
-    imagen_url:
-      'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/',
-  },
-  {
-    nombre: 'Hamburguesa con guacamole',
-    imagen_url:
-      'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/',
-  },
-  {
-    nombre: 'Hamburguesa con guacamole',
-    imagen_url:
-      'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/',
-  },
-  {
-    nombre: 'Hamburguesa con guacamole',
-    imagen_url:
-      'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-    id: '/',
-  },
-];
+// const SLIDES_ITEMS = [
+//   {
+//     nombre: 'Hamburguesa con guacamole',
+//     imagen_url:
+//       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+//     id: '/',
+//   },
+//   {
+//     nombre: 'Hamburguesa con guacamole',
+//     imagen_url:
+//       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+//     id: '/',
+//   },
+//   {
+//     nombre: 'Hamburguesa con guacamole',
+//     imagen_url:
+//       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+//     id: '/',
+//   },
+//   {
+//     nombre: 'Hamburguesa con guacamole',
+//     imagen_url:
+//       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
+//     id: '/',
+//   },
+// ];
 
 export default function HomePage() {
   const { info } = useMenu();
@@ -79,7 +80,7 @@ export default function HomePage() {
           </header>
             </Link>
           <div className='special-items-container'>
-            <CarouselNovedades items={SLIDES_ITEMS} />
+            {/* <CarouselNovedades items={SLIDES_ITEMS} /> */}
           </div>
         </section>
         <footer className='home-page'>
