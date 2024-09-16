@@ -27,10 +27,11 @@ section.home-page.main-buttons {
   padding: 5px;
   flex-direction: column;
 }
+
 hr {
   border: 0.5px solid $white-2;
+  
 }
-
 
 footer.home-page {
   display: flex;
@@ -93,3 +94,6 @@ section.special-items-section {
   }
 }
 
+.lo-mejor-link {
+  background-color: $black-2;
+}

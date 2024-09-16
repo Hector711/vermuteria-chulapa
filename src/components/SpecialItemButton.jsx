@@ -2,9 +2,8 @@ import { Link } from 'react-router-dom';
 
 export default function SpecialItemButton(props) {
   return (
-    <Link 
-    className='special-item-slide shadoww' 
-    {...props} to={props.to}>
+    <Link className='special-item-slide shadoww' 
+    to={to ? `/lomejor/${to}` : '/lomejor'}>
       <header>
         <h4>{props.title}</h4>
       </header>
