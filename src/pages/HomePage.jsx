@@ -74,9 +74,9 @@ export default function HomePage() {
                 modules={[Autoplay, Navigation]}
                 id='swiper-images'
               >
-                {mainSpecialItems.map(({ nombre, imagen_url_notion }, i) => (
+                {mainSpecialItems.map(({ nombre, imagen_url }, i) => (
                   <SwiperSlide key={i}>
-                    <SpecialItem title={nombre} img={imagen_url_notion} />
+                    <SpecialItem title={nombre} img={imagen_url} />
                   </SwiperSlide>
                 ))}
               </Swiper>
