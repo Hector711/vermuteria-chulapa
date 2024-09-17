@@ -22,11 +22,14 @@ export default function CarouselNovedades({ items }) {
       modules={[Autoplay, Navigation]}
       id='swiper-images'
     >
-      {items.map(({ title, img, to }, index) => (
-        <SwiperSlide key={index}>
+      {items.map(({ title, img, to }, i) => (
+        <SwiperSlide key={i}>
+
           {/* <SpecialItemButton title={title} img={img} to={to} /> */}
+
         </SwiperSlide>
       ))}
     </Swiper>
   );
 }
+ 

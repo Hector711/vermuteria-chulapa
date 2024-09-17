@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { useNavigate } from 'react-router-dom';
 
-
 export default function ItemCard({ item }) {
   const navigate = useNavigate();
   return (
