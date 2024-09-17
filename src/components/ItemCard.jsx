@@ -2,13 +2,15 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function ItemCard({ item }) {
+  const navigate = useNavigate();
   return (
     <Card id='item-card'>
       <CardActions className='card-item' id='buttons-container'>
-        <Link to='/menu'>Cerrar</Link>
+      <button onClick={() => navigate(-1)}>Volver</button>
       </CardActions>
       <CardMedia
         component='img'
