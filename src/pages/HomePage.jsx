@@ -73,15 +73,15 @@ export default function HomePage() {
         </section>
         <hr />
         <section className='home-page special-items-section'>
-            <Link to='/lomejor' className='lo-mejor-link wide-button-component shadoww'>
+            {/* <Link to='/lomejor' className='lo-mejor-link wide-button-component shadoww'>
           <header className='lo-mejor-title'>
               <StarIcon />
               <h3 className='special-title'>Lo mejor de Chulapa</h3>
           </header>
             </Link>
           <div className='special-items-container'>
-            {/* <CarouselNovedades items={SLIDES_ITEMS} /> */}
-          </div>
+            <CarouselNovedades items={SLIDES_ITEMS} />
+          </div> */}
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>
