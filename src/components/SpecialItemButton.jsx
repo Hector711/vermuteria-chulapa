@@ -8,7 +8,7 @@ export default function SpecialItemButton(props) {
         <h4>{props.title}</h4>
       </header>
       <figure>
-        <img src={props.img} className='shadoww' />
+        <img src={props.src} className='shadoww' />
         {props.subtitle && <p>{props.subtitle}</p>}
       </figure>
     </Link>

@@ -12,9 +12,8 @@ export default function MenuList({ menu }) {
       <hr />
       {section[1].map((item, i) => (
         <li key={i} >
-          <Link 
-          to='' 
-          // to={`/menu/${item.id}`} 
+          <Link  
+          to={`/menu/${item.id}`} 
           className='row item-menu'>
             <h4>{item.nombre}</h4>
             <p>{item.precio_salon.toFixed(2)}€</p>
