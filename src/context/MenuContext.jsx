@@ -16,6 +16,7 @@ export function MenuProvider({ children }) {
   const [menuBebidas, setMenuBebidas] = useState([]);
   const [menuComidas, setMenuComidas] = useState([]);
   const [specialItems, setSpecialItems] = useState([]);
+  const [mainSpecialItems, setMainSpecialItems] = useState([]);
   const [info, setInfo] = useState([]);
   const [item, setItem] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({
@@ -34,7 +35,7 @@ export function MenuProvider({ children }) {
     comidasOrdenadoFiltrado();
     bebidasOrdenadoFiltrado();
     specialItemsOrdenado();
-    console.log('specialItems:', specialItems);
+
   }, [selectedFilters]);
   
   // ORDENAR Y FILTRAR PLATOS
@@ -51,7 +52,6 @@ export function MenuProvider({ children }) {
   // FILTRADO DE PLATOS ESPECIALES
   const specialItemsOrdenado = async () => {
     const data = await getSpecialItems();
-    // console.log('Datos obtenidos de getSpecialItems:', data);
     setSpecialItems(ordenarPorCategoria(data));
   };
 
@@ -63,7 +63,6 @@ export function MenuProvider({ children }) {
         .select('*')
         .eq('visible', true)
         .order('order_id', { ascending: true });
-        // console.log(data);
       if (error) {
         console.error('Error al obtener menu_comidas:', error);
       }
@@ -101,7 +100,6 @@ export function MenuProvider({ children }) {
       if (error) {
         console.error('Error al obtener informacion_principal:', error);
       }
-      // console.log(data);
       return setInfo(data[0]);
     } catch (error) {
       console.error('Error al obtener informacion_principal:', error);
@@ -113,10 +111,10 @@ export function MenuProvider({ children }) {
   const getSpecialItems = async () => {
     try {
       const { data, error } = await supabase.rpc('get_all_items')
-      console.log('getSpecialItems:', data);
       if (error) {
         console.error('Error al obtener platos_especiales:', error);
       }
+      setMainSpecialItems(data);
       return data;
     } catch (error) {
       console.error('Error al obtener platos_especiales:', error);
@@ -216,7 +214,7 @@ export function MenuProvider({ children }) {
   };
 
   return (
-    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, specialItems, info, obtenerItem, item }}>
+    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, specialItems, info, obtenerItem, item, mainSpecialItems }}>
       {children}
     </MenuContext.Provider>
   );

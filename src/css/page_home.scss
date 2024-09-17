@@ -73,27 +73,32 @@ footer.home-page {
 section.special-items-section {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  header.lo-mejor-title {
-    width: 100%;
+  padding: 5px;
+  a.lo-mejor-link {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    height: max-content;
-    .icons {
-      width: 22px;
-      height: 100%;
-      stroke: $white-0;
-      margin-bottom: 8px;
+    flex-direction: column;
+    gap:1rem;
+    background-color: transparent !important;
+    border: 0.5px solid $white-2;
+    padding-inline: 0 ;
+    header.lo-mejor-title {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      height: max-content;
+      .icons {
+        width: 22px;
+        height: 100%;
+        stroke: $white-0;
+        margin-bottom: 8px;
+      }
     }
-  }
-  div.special-items-container {
-    display: flex;
-    width: 100%;
+    div.special-items-container {
+      display: flex;
+      width: 100%;
+    }
   }
 }
 
-.lo-mejor-link {
-  background-color: $black-2;
-}
