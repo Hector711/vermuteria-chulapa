@@ -9,7 +9,7 @@ export default function ItemCard({ item }) {
   return (
     <Card id='item-card'>
       <CardActions className='card-item' id='buttons-container'>
-      <button onClick={() => navigate(-1)}>Volver</button>
+        <button onClick={() => navigate(-1)}>Volver</button>
       </CardActions>
       <CardMedia
         component='img'
@@ -17,14 +17,19 @@ export default function ItemCard({ item }) {
         image='https://picsum.photos/800/400'
         className='card-item'
       />
-      <CardContent className='card-item'>
+      <CardContent className='card-item card-content'>
         <h3 className='uppercase'>{item.nombre}</h3>
-        <p>{item.descripcion}</p>
-        <div className='flex gap-10'>
-          <p>Precio Terraza:</p>
-          <p>{item.precio_terraza}</p>
-          <p>Precio Salón:</p>
-          <p>{item.precio_salon}</p>
+        <p>Descripción: {item.descripcion}</p>
+        <p>Ingredientes: {item.ingredientes}</p>
+        <div className='prices-container'>
+          <div>
+            <p>Precio Terraza:</p>
+            <p>{item.precio_terraza ? item.precio_terraza.toFixed(2) : 'N/A'}€</p>
+          </div>
+          <div>
+            <p>Precio Salón:</p>
+            <p>{item.precio_salon ? item.precio_salon.toFixed(2) : 'N/A'}€</p>
+          </div>
         </div>
       </CardContent>
     </Card>

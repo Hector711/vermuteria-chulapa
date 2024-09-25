@@ -9,9 +9,15 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Link } from 'react-router-dom';
 
 export default function MenuPage() {
-  const [menu, setMenu] = useState('bebidas');
+  const [menu, setMenu] = useState(() => {
+    const savedMenu = localStorage.getItem('menu');
+    return savedMenu ? savedMenu : 'bebidas';
+  });
   const { selectedFilters, menuBebidas, menuComidas } = useMenu();
-  useEffect(() => {}, [selectedFilters, menu]);
+
+  useEffect(() => {
+    localStorage.setItem('menu', menu);
+  }, [selectedFilters, menu]);
 
   const isActiveBebidas = menu === 'bebidas' ? 'active' : '';
   const isActiveComidas = menu === 'comidas' ? 'active' : '';

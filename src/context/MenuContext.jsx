@@ -178,11 +178,12 @@ export function MenuProvider({ children }) {
         .single();
 
       if (errorComidas) {
-        console.error('Error al obtener el item de menu_comidas:', errorComidas);
+        console.error('No se encontro menu_comidas:', errorComidas);
       }
 
       // Si se encuentra el item en menu_comidas, devolverlo
       if (dataComidas) {
+        console.log("Se encontro en menu_comidas");
         setItem(dataComidas);
         return;
       }
@@ -195,11 +196,12 @@ export function MenuProvider({ children }) {
         .single();
 
       if (errorBebidas) {
-        console.error('Error al obtener el item de menu_bebidas:', errorBebidas);
+        console.error('No se encontro menu_bebidas:', errorBebidas);
       }
 
       // Si se encuentra el item en menu_bebidas, devolverlo
       if (dataBebidas) {
+        console.log("Se encontro en menu_bebidas");
         setItem(dataBebidas);
         return;
       }
