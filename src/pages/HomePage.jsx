@@ -51,7 +51,7 @@ export default function HomePage() {
         <section className='home-page special-items-section'>
           <Link
             to='/lomejor'
-            className='lo-mejor-link wide-button-component shadoww'
+            className='lo-mejor-link shadoww'
           >
             <header className='lo-mejor-title'>
               <StarIcon />
