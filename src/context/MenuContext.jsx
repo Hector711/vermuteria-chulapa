@@ -4,6 +4,8 @@ import { supabase } from '@/api/supabaseClient';
 
 const MenuContext = createContext();
 
+const { VITE_CLAVE_RESTAURANTE } = import.meta.env;
+
 export const useMenu = () => {
   const context = useContext(MenuContext);
   if (!context) {
