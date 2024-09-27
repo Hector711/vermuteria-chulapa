@@ -57,6 +57,7 @@ export default function HomePage() {
               <StarIcon />
               <h3 className='special-title'>Lo mejor de Chulapa</h3>
             </header>
+            </Link>
             <div className='special-items-container'>
               <Swiper
                 slidesPerView={1.5}
@@ -81,7 +82,7 @@ export default function HomePage() {
                 ))}
               </Swiper>
             </div>
-          </Link>
+          
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>
