@@ -5,12 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation } from 'swiper/modules';
-import SpecialItemButton from '@/components/SpecialItemButton';
+import SpecialItem from '@/components/SpecialItem';
 
 
 export default function LoMejorPage() {
   const { specialItems } = useMenu();
-  console.log(specialItems)
 
   return (
     <>
@@ -21,8 +20,7 @@ export default function LoMejorPage() {
       </header>
       <main className='animate-blink lo-mejor-page'>
         <p>
-          Te presentamos los platos y bebidas que no solo son los favoritos de
-          nuestros clientes, sino también nuestras recomendaciones especiales.
+          Te presentamos los platos y bebidas que no solo son los favoritos de nuestros clientes, sino también nuestras recomendaciones especiales.
         </p>
         {specialItems.map((section, i) => (
           <ul className='section-menu' key={i}>
@@ -44,10 +42,9 @@ export default function LoMejorPage() {
               modules={[Autoplay, Navigation]}
               id='swiper-images'
             >
-            {section[1].map(({ nombre, imagen_url_notion, id }, index) => (
-
+            {section[1].map(({ nombre, imagen_url, id }, index) => (
                 <SwiperSlide key={index}>
-                  <SpecialItemButton title={nombre}  src={imagen_url_notion} to={id}/>
+                  <SpecialItem title={nombre}  src={imagen_url} to={id}/>
                 </SwiperSlide>
               ))}
             </Swiper>

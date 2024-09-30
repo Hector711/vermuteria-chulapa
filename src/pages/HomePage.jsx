@@ -10,40 +10,16 @@ import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
 import Credits from '@/components/Credits';
 import { Link } from 'react-router-dom';
-
 import logo from '@/assets/logo.png';
+import SpecialItem from '@/components/SpecialItem';
 
-// const SLIDES_ITEMS = [
-//   {
-//     nombre: 'Hamburguesa con guacamole',
-//     imagen_url:
-//       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-//     id: '/',
-//   },
-//   {
-//     nombre: 'Hamburguesa con guacamole',
-//     imagen_url:
-//       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-//     id: '/',
-//   },
-//   {
-//     nombre: 'Hamburguesa con guacamole',
-//     imagen_url:
-//       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-//     id: '/',
-//   },
-//   {
-//     nombre: 'Hamburguesa con guacamole',
-//     imagen_url:
-//       'https://www.cnature.es/wp-content/uploads/2021/12/hamburguesa-con-guacamole.jpg',
-//     id: '/',
-//   },
-// ];
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 export default function HomePage() {
-  const { info } = useMenu();
-  // console.log(info.whatsapp_url)
-
+  const { info, specialItems, mainSpecialItems } = useMenu();
   return (
     <>
       <header className='animate-blink home-page'>
@@ -60,7 +36,7 @@ export default function HomePage() {
             title='Ver Toda La Carta'
             icon={<MenuIcon />}
           />
-          {info &&info.whatsapp_url && (
+          {info && info.whatsapp_url && (
             <WideButton
               type='a'
               title='Chatbot AI'
@@ -73,15 +49,40 @@ export default function HomePage() {
         </section>
         <hr />
         <section className='home-page special-items-section'>
-            {/* <Link to='/lomejor' className='lo-mejor-link wide-button-component shadoww'>
-          <header className='lo-mejor-title'>
+          <Link
+            to='/lomejor'
+            className='lo-mejor-link shadoww'
+          >
+            <header className='lo-mejor-title'>
               <StarIcon />
               <h3 className='special-title'>Lo mejor de Chulapa</h3>
-          </header>
+            </header>
             </Link>
-          <div className='special-items-container'>
-            <CarouselNovedades items={SLIDES_ITEMS} />
-          </div> */}
+            <div className='special-items-container'>
+              <Swiper
+                slidesPerView={1.5}
+                spaceBetween={30}
+                speed={2000}
+                centeredSlides={true}
+                pagination={{
+                  clickable: true,
+                }}
+                loop={true}
+                autoplay={{
+                  delay: 1000,
+                  disableOnInteraction: true,
+                }}
+                modules={[Autoplay, Navigation]}
+                id='swiper-images'
+              >
+                {mainSpecialItems.map(({ nombre, imagen_url }, i) => (
+                  <SwiperSlide key={i}>
+                    <SpecialItem title={nombre} img={imagen_url} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>

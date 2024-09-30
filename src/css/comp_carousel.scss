@@ -1,15 +1,15 @@
-
 #swiper-images{
   width: 100%;
   height: 100%;
   z-index: 99;
 }
+
 .special-item-slide {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  background-color: $black-2;
-  padding: 6px;
+  // background-color: $black-2;
+  padding-block: 6px;
   border-radius: $border-m;
   gap: 5px;
 
@@ -19,6 +19,7 @@
       text-align: center;
     }
   }
+
   figure {
     display: flex;
     justify-content: center;

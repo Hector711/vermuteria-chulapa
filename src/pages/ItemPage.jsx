@@ -8,6 +8,7 @@ export default function ItemPage() {
   const { obtenerItem, item } = useMenu();
   const { itemId } = useParams();
 
+
   useEffect(() => {
     obtenerItem(itemId);
   }, [itemId]);
@@ -16,6 +17,7 @@ export default function ItemPage() {
     <>
       <MenuPage />
       <div id='item-background' className='animate-blink'>
+      
         {item ? <ItemCard item={item} /> : <p>Cargando...</p>}
       </div>
     </>
