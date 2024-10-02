@@ -4,7 +4,9 @@ import { supabase } from '@/api/supabaseClient';
 
 const MenuContext = createContext();
 
-const { VITE_CLAVE_RESTAURANTE } = import.meta.env;
+const businessName = import.meta.env.VITE_BUSINESS_NAME;
+
+const functionName = `all_${businessName}_items`;
 
 export const useMenu = () => {
   const context = useContext(MenuContext);
@@ -61,16 +63,16 @@ export function MenuProvider({ children }) {
   const getMenuComidas = async () => {
     try {
       const { data, error } = await supabase
-        .from('menu_comidas')
+        .from(`${businessName}_comidas`)
         .select('*')
         .eq('visible', true)
         .order('order_id', { ascending: true });
       if (error) {
-        console.error('Error al obtener menu_comidas:', error);
+        console.error(`Error al obtener ${businessName}_comidas:`, error);
       }
       return data;
     } catch (error) {
-      console.error('Error al obtener menu_comidas:', error);
+      console.error(`Error al obtener ${businessName}_comidas:`, error);
       return [];
     }
   };
@@ -79,16 +81,16 @@ export function MenuProvider({ children }) {
   const getMenuBebidas = async () => {
     try {
       const { data, error } = await supabase
-        .from('menu_bebidas')
+        .from(`${businessName}_bebidas`)
         .select('*')
         .eq('visible', true)
         .order('order_id', { ascending: true });
       if (error) {
-        console.error('Error al obtener menu_bebidas:', error);
+        console.error(`Error al obtener ${businessName}_bebidas:`, error);
       }
       return data;
     } catch (error) {
-      console.error('Error al obtener menu_bebidas:', error);
+      console.error(`Error al obtener ${businessName}_bebidas:`, error);
       return [];
     }
   };
@@ -97,14 +99,15 @@ export function MenuProvider({ children }) {
   const getInfo = async () => {
     try {
       const { data, error } = await supabase
-        .from('informacion_principal')
+        .from(`${businessName}_info`)
         .select('*');
       if (error) {
-        console.error('Error al obtener informacion_principal:', error);
+        console.error(`Error al obtener ${businessName}_info:`, error);
       }
+      console.log(data[0]);
       return setInfo(data[0]);
     } catch (error) {
-      console.error('Error al obtener informacion_principal:', error);
+      console.error(`Error al obtener ${businessName}_info:`, error);
       return [];
     }
   };
@@ -112,10 +115,11 @@ export function MenuProvider({ children }) {
   // OBTENCIÓN DE PLATOS ESPECIALES
   const getSpecialItems = async () => {
     try {
-      const { data, error } = await supabase.rpc('get_all_items')
+      const { data, error } = await supabase.rpc(functionName)
       if (error) {
         console.error('Error al obtener platos_especiales:', error);
       }
+      console.log('all chulapa items',data);
       setMainSpecialItems(data);
       return data;
     } catch (error) {
@@ -172,38 +176,38 @@ export function MenuProvider({ children }) {
 
   const obtenerItem = async (itemId) => {
     try {
-      // Buscar en la tabla menu_comidas
+      // Buscar en la tabla _comidas
       const { data: dataComidas, error: errorComidas } = await supabase
-        .from('menu_comidas')
+        .from(`${businessName}_comidas`)
         .select('*')
         .eq('id', itemId)
         .single();
 
       if (errorComidas) {
-        console.error('No se encontro menu_comidas:', errorComidas);
+        console.error(`No se encontro ${businessName}_comidas:`, errorComidas);
       }
 
-      // Si se encuentra el item en menu_comidas, devolverlo
+      // Si se encuentra el item en _comidas, devolverlo
       if (dataComidas) {
-        console.log("Se encontro en menu_comidas");
+        console.log(`Se encontro en ${businessName}_comidas`);
         setItem(dataComidas);
         return;
       }
 
-      // Buscar en la tabla menu_bebidas
+      // Buscar en la tabla _bebidas
       const { data: dataBebidas, error: errorBebidas } = await supabase
-        .from('menu_bebidas')
+        .from(`${businessName}_bebidas`)
         .select('*')
         .eq('id', itemId)
         .single();
 
       if (errorBebidas) {
-        console.error('No se encontro menu_bebidas:', errorBebidas);
+        console.error(`No se encontro ${businessName}_bebidas:`, errorBebidas);
       }
 
-      // Si se encuentra el item en menu_bebidas, devolverlo
+      // Si se encuentra el item en _bebidas, devolverlo
       if (dataBebidas) {
-        console.log("Se encontro en menu_bebidas");
+        console.log(`Se encontro en ${businessName}_bebidas`);
         setItem(dataBebidas);
         return;
       }
