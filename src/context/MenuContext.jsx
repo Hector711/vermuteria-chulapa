@@ -3,9 +3,7 @@ import { createContext, useContext, useState } from 'react';
 import { supabase } from '@/api/supabaseClient';
 
 const MenuContext = createContext();
-
 const businessName = import.meta.env.VITE_BUSINESS_NAME;
-
 const functionName = `all_${businessName}_items`;
 
 export const useMenu = () => {
