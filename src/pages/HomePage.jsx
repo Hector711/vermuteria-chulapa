@@ -26,7 +26,7 @@ export default function HomePage() {
         <figure>
           <img src={logo} alt='' className='shadoww' />
         </figure>
-        <p className='uppercase text-center text-[0.65rem]'>{info.ubicacion}</p>
+        <p className='uppercase text-center text-[0.65rem]'>{info?.ubicacion}</p>
       </header>
       <main className='animate-blink home-page'>
         <section className='home-page main-buttons'>
@@ -36,12 +36,12 @@ export default function HomePage() {
             title='Ver Toda La Carta'
             icon={<MenuIcon />}
           />
-          {info && info.whatsapp_url && (
+          {info?.whatsapp_url && (
             <WideButton
               type='a'
               title='Chatbot AI'
               subtitle='Reservas, horarios, preguntas, etc.'
-              href={info.whatsapp_url}
+              href={info?.whatsapp_url}
               target='_blank'
               icon={<ChatbotIcon />}
             />
@@ -75,7 +75,7 @@ export default function HomePage() {
                 modules={[Autoplay, Navigation]}
                 id='swiper-images'
               >
-                {mainSpecialItems.map(({ nombre, imagen_url }, i) => (
+                {mainSpecialItems?.map(({ nombre, imagen_url }, i) => (
                   <SwiperSlide key={i}>
                     <SpecialItem title={nombre} img={imagen_url} />
                   </SwiperSlide>
