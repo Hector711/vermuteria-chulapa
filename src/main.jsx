@@ -16,6 +16,7 @@ import '@/css/page_lo-mejor.scss';
 import '@/css/comp_button.scss';
 import '@/css/comp_carousel.scss';
 import '@/css/comp_item-card.scss';
+import '@/css/comp_filter.scss';
 
 // TYPOGRAPHY
 // Supports weights 300-800 : 'Open Sans Variable'

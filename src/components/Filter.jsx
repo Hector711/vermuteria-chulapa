@@ -7,9 +7,10 @@ import { useMenu } from '@/context/MenuContext';
 export default function Filter() {
   const { selectedFilters, handleCheckboxChange } = useMenu();
   const sx = {
-    '&.Mui-checked': {
-      color: '#ff0000',
-    }
+    /**
+     * Estilado del checkbox
+     * En "comp_filter.scss" se encuentra el codigo de este estilo
+     * */ 
   };
   return (
     <>

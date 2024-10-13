@@ -12,10 +12,7 @@ main.menu-page {
   margin: 1rem 0;
 }
 
-.filter-accordion {
-  background-color: $black-2 !important;
-  color: $font-color !important;
-}
+
 #checkboxs-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -43,7 +40,7 @@ nav.menu {
     text-transform: uppercase;
     font-family: 'Josefin Sans Variable';
     font-weight: 600;
-    background-color: $black-1;
+    background-color: transparent;
     color: #5b5b5b;
   }
   button.active {
