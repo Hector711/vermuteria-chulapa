@@ -22,13 +22,13 @@ export default function HomePage() {
   const { info, specialItems, mainSpecialItems } = useMenu();
   return (
     <>
-      <header className='animate-blink home-page'>
+      <header className='animate-fade-in-down animate-delay-100 animate-duration-400 home-page'>
         <figure>
           <img src={logo} alt='' className='shadoww' />
         </figure>
         <p className='uppercase text-center text-[0.65rem]'>{info?.ubicacion}</p>
       </header>
-      <main className='animate-blink home-page'>
+      <main className='home-page animate-fade-in-up animate-delay-300 animate-duration-900'>
         <section className='home-page main-buttons'>
           <WideButton
             type='link'
@@ -98,7 +98,7 @@ export default function HomePage() {
             )}
           </div>
 
-          <Credits />
+          {/* <Credits /> */}
         </footer>
       </main>
     </>

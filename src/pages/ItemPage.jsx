@@ -8,7 +8,6 @@ export default function ItemPage() {
   const { obtenerItem, item } = useMenu();
   const { itemId } = useParams();
 
-
   useEffect(() => {
     obtenerItem(itemId);
   }, [itemId]);
