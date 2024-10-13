@@ -1,0 +1,75 @@
+#item-background {
+  position: fixed;
+  z-index: 9999;
+  backdrop-filter: blur(1px);
+  background-color: #000000d8;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#item-card {
+  * {
+    // border: 1px solid white;
+  }
+  box-shadow: 0px 1px 3px 0px black;
+  background-color: $black-1 !important;
+  background-color: #0000006c !important;
+  color: $font-color;
+  width: 90%;
+  #buttons-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: $black-1 !important;
+    border-radius: $border-s !important;
+    padding: 1rem;
+    * {
+      // border: 1px solid white;
+    }
+    h3.item-title {
+      font-family: 'Josefin Sans Variable';
+      border-bottom: 1px solid $white-2;
+      max-width: 100%;
+      padding-block: 5px;
+    }
+    hr {
+
+    }
+    div#ingredientes-section {
+      display: flex;
+      flex-direction: column;
+      * {
+        // border: 1px solid white;
+      }
+      ul#ingredientes-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        // background-color: $black-2 ;
+      }
+    }
+    div.prices-section {
+      * {
+        // border: 1px solid white;
+      }
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+.icons-stroke {
+  stroke: #a92424;
+  width: 30px;
+  height: 30px;
+}

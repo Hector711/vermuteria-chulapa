@@ -11,13 +11,13 @@ import '@/css/init.scss';
 import '@/css/page_menu.scss';
 import '@/css/page_home.scss';
 import '@/css/page_lo-mejor.scss';
+import '@/css/page_item-page.scss';
 
 // COMPONENTS
 import '@/css/comp_button.scss';
 import '@/css/comp_carousel.scss';
-import '@/css/comp_item-card.scss';
 import '@/css/comp_filter.scss';
-
+import '@/css/comp_spinner.scss';
 // TYPOGRAPHY
 // Supports weights 300-800 : 'Open Sans Variable'
 import '@fontsource-variable/open-sans';
