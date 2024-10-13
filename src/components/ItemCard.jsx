@@ -11,20 +11,33 @@ export default function ItemCard({ item }) {
       <CardActions className='card-item' id='buttons-container'>
         <button onClick={() => navigate(-1)}>Volver</button>
       </CardActions>
-      <CardMedia
-        component='img'
+      {item.imagen && (
+        <CardMedia
+          component='img'
         alt='green iguana'
         image='https://picsum.photos/800/400'
         className='card-item'
-      />
+        />
+      )}
       <CardContent className='card-item card-content'>
         <h3 className='uppercase'>{item.nombre}</h3>
-        <p>Descripción: {item.descripcion}</p>
-        <p>Ingredientes: {item.ingredientes}</p>
+        <hr />
+        {console.log(item)}
+        <p>{item.descripcion}</p>
+        <div className='ingredientes-section'>
+          <p>Ingredientes:</p>
+          <ul id='ingredientes-container'>
+            {item.ingredientes?.map(ingrediente => (
+              <li key={ingrediente}>&bull; {ingrediente}</li>
+            ))}
+          </ul>
+        </div>
         <div className='prices-container'>
           <div>
             <p>Precio Terraza:</p>
-            <p>{item.precio_terraza ? item.precio_terraza.toFixed(2) : 'N/A'}€</p>
+            <p>
+              {item.precio_terraza ? item.precio_terraza.toFixed(2) : 'N/A'}€
+            </p>
           </div>
           <div>
             <p>Precio Salón:</p>

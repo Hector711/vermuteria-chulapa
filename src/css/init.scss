@@ -1,6 +1,8 @@
 :root {
-  background: $black-1;
-  color: $font-color;
+  // background: linear-gradient(45grad, #030303, $black-0);
+  background: $black-0;
+  color: $white-0;
+  min-height: 100vh;
 }
 @mixin gradient-text {
   background: linear-gradient(45deg, #e1c006, #ff0707);
