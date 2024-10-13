@@ -219,8 +219,12 @@ export function MenuProvider({ children }) {
     }
   };
 
+  const deleteItem = () => {
+    setItem(null);
+  }
+
   return (
-    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, specialItems, info, obtenerItem, item, mainSpecialItems }}>
+    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, specialItems, info, obtenerItem, item, mainSpecialItems, deleteItem }}>
       {children}
     </MenuContext.Provider>
   );

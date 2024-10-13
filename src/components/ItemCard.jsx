@@ -5,31 +5,29 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { useNavigate } from 'react-router-dom';
 import CloseIcon from '@/icons/CloseIcon';
-import Spinner from '@/components/Spinner';
+import { useMenu } from '@/context/MenuContext';
 
 export default function ItemCard({ item }) {
-  const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
+  const { deleteItem } = useMenu();
 
-  useEffect(() => {
-    if (item) {
-      setIsLoaded(true);
-    }
-  }, [item]);
-
-  if (!isLoaded) {
-    return <Spinner />;
-  }
+  const handleBack = () => {
+    navigate(-1);
+    deleteItem();
+  };
 
   return (
-    <Card id='item-card' className='animate-fade-in-up animate-delay-200 animate-duration-800'>
+    <Card
+      id='item-card'
+      className='animate-fade-in-up animate-delay-200 animate-duration-800'
+    >
       <CardActions id='buttons-container'>
-        <button onClick={() => navigate(-1)}>
+        <button onClick={handleBack}>
           <CloseIcon />
         </button>
       </CardActions>
       <CardContent id='card-content'>
-        {!item.imagen && (
+        {item.imagen && (
           <CardMedia
             component='img'
             alt='green iguana'
