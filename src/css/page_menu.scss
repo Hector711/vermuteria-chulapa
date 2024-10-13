@@ -88,32 +88,3 @@ ul.section-menu {
   background-color: $black-2;
   padding: 3px 5px;
 }
-
-#item-background {
-  position: fixed;
-  z-index: 9999;
-  backdrop-filter: blur(1px);
-  background-color: #000000d8;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  #item-card {
-    width: 80%;
-    max-width: $width;
-    #buttons-container {
-      display: flex;
-      justify-content: flex-end;
-      padding: 1rem;
-    }
-  }
-  .card-item {
-    background-color: $black-2;
-    color: $font-color;
-  }
-}
-
-
