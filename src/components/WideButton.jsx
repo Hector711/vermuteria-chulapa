@@ -18,8 +18,8 @@ export default function WideButton(props) {
           {props.icon && props.icon}
           <h3>{props.title}</h3>
         </header>
-        <footer>{props.subtitle && <p>{props.subtitle}</p>}</footer>
+        {props.subtitle && <p>{props.subtitle}</p>}
       </Link>
     );
-  } 
+  }
 }

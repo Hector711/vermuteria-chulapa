@@ -26,7 +26,9 @@ export default function HomePage() {
         <figure>
           <img src={logo} alt='' className='shadoww' />
         </figure>
-        <p className='uppercase text-center text-[0.65rem]'>{info?.ubicacion}</p>
+        <p className='uppercase text-center text-[0.65rem]'>
+          {info?.ubicacion}
+        </p>
       </header>
       <main className='home-page animate-fade-in-up animate-delay-300 animate-duration-900'>
         <section className='home-page main-buttons'>
@@ -49,40 +51,40 @@ export default function HomePage() {
         </section>
         <hr />
         <section className='home-page special-items-section'>
-          <Link
-            to='/lomejor'
-            className='lo-mejor-link shadoww'
-          >
-            <header className='lo-mejor-title'>
-              <StarIcon />
-              <h3 className='special-title'>Lo mejor de Chulapa</h3>
-            </header>
-            </Link>
-            <div className='special-items-container'>
-              <Swiper
-                slidesPerView={1.5}
-                spaceBetween={30}
-                speed={2000}
-                centeredSlides={true}
-                pagination={{
-                  clickable: true,
-                }}
-                loop={true}
-                autoplay={{
-                  delay: 1000,
-                  disableOnInteraction: true,
-                }}
-                modules={[Autoplay, Navigation]}
-                id='swiper-images'
-              >
-                {mainSpecialItems?.map(({ nombre, imagen_url }, i) => (
-                  <SwiperSlide key={i}>
-                    <SpecialItem title={nombre} img={imagen_url} />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          
+          {mainSpecialItems?.length > 0 && (
+            <>
+              <Link to='/lomejor' className='lo-mejor-link shadoww'>
+                <header className='lo-mejor-title'>
+                  <StarIcon />
+                  <h3 className='special-title'>Lo mejor de Chulapa</h3>
+                </header>
+              </Link>
+              <div className='special-items-container'>
+                <Swiper
+                  slidesPerView={1.5}
+                  spaceBetween={30}
+                  speed={2000}
+                  centeredSlides={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  loop={true}
+                  autoplay={{
+                    delay: 1000,
+                    disableOnInteraction: true,
+                  }}
+                  modules={[Autoplay, Navigation]}
+                  id='swiper-images'
+                >
+                  {mainSpecialItems?.map(({ nombre, imagen_url }, i) => (
+                    <SwiperSlide key={i}>
+                      <SpecialItem title={nombre} img={imagen_url} />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            </>
+          )}
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>
