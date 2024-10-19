@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useMenu } from '@/context/MenuContext';
 import MenuList from '@/components/MenuList';
 import Filter from '@/components/Filter';

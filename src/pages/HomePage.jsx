@@ -1,4 +1,3 @@
-import React from 'react';
 import InstagramIcon from '../icons/InstagramIcon';
 import FacebookIcon from '../icons/FacebookIcon';
 import WideButton from '@/components/WideButton';
@@ -6,9 +5,9 @@ import { useMenu } from '@/context/MenuContext';
 import ProfileLink from '@/components/ProfileLink';
 import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
-import CarouselNovedades from '@/components/CarouselNovedades';
+// import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
-import Credits from '@/components/Credits';
+// import Credits from '@/components/Credits';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 import SpecialItem from '@/components/SpecialItem';
@@ -19,7 +18,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Navigation } from 'swiper/modules';
 
 export default function HomePage() {
-  const { info, specialItems, mainSpecialItems } = useMenu();
+  const { info, mainSpecialItems } = useMenu();
   return (
     <>
       <header className='animate-fade-in-down animate-delay-100 animate-duration-400 home-page'>

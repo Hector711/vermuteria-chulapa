@@ -198,7 +198,6 @@ export function MenuProvider({ children }) {
         .select('*')
         .eq('id', itemId)
         .single();
-
       if (errorBebidas) {
         console.error(`No se encontro ${businessName}_bebidas:`, errorBebidas);
       }
