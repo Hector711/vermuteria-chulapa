@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export default function MenuList({ menu }) {
+  console.log({menu});
   return menu.map((section, i) => (
     <ul className='section-menu' key={i}>
       <li className='row title-row'>
@@ -15,8 +16,8 @@ export default function MenuList({ menu }) {
           to={`/menu/${item.id}`} 
           className='row item-menu'>
             <h4>{item.nombre}</h4>
-            <p>{item.precio_salon ? item.precio_salon.toFixed(2) : '--'}€</p>
             <p>{item.precio_terraza ? item.precio_terraza.toFixed(2) : '--'}€</p>
+            <p>{item.precio_salon ? item.precio_salon.toFixed(2) : '--'}€</p>
           </Link>
         </li>
       ))}
