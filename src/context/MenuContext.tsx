@@ -3,17 +3,45 @@ import { createContext, useContext, useState } from 'react';
 import { supabase } from '@/api/supabaseClient';
 import { MenuProviderProps } from '@/types';
 
+type Item = {
+  id: string;
+  categoria: string;
+  descripcion: string;
+  estrella: boolean;
+  imagen_url: string | null;
+  ingredientes: string[];
+  nombre: string;
+  order_id: number;
+  precio_salon: number;
+  precio_terraza: number;
+  visible: boolean;
+};
+
+type InfoItem = {
+  id: string;
+  descripcion: string;
+  horarios: any[];
+  facebook_url: string | null;
+  instagram_url: string | null;
+  menu_url: string | null;
+  nombre: string;
+  order_id: number;
+  telefono: string | null;
+  ubicacion: string;
+  whatsapp_url: string | null;
+};
+
 const MenuContext = createContext({
   menuBebidas: [],
   menuComidas: [],
   selectedFilters: {},
-  handleCheckboxChange: () => {},
   specialItems: [],
-  info: [],
-  obtenerItem: () => {},
   item: null,
   mainSpecialItems: [],
-  deleteItem: () => {}
+  info: [],
+  handleCheckboxChange: () => {},
+  obtenerItem: () => {},
+  deleteItem: () => {},
 });
 
 const businessName = import.meta.env.VITE_BUSINESS_NAME;
@@ -28,12 +56,15 @@ export const useMenu = () => {
 };
 
 export function MenuProvider({ children }: MenuProviderProps) {
-  const [menuBebidas, setMenuBebidas] = useState([]);
-  const [menuComidas, setMenuComidas] = useState([]);
+  const [menuBebidas, setMenuBebidas] = useState<[string, Item[]][]>([]);
+  // console.log('menuBebidas', menuBebidas);
+  const [menuComidas, setMenuComidas] = useState<[string, Item[]][]>([]);
   const [specialItems, setSpecialItems] = useState([]);
+  // console.log('specialItems', specialItems);
   const [mainSpecialItems, setMainSpecialItems] = useState([]);
-  const [info, setInfo] = useState([]);
-  const [item, setItem] = useState([]);
+  const [info, setInfo] = useState<InfoItem | null>(null);
+  const [item, setItem] = useState<Item | null>(null);
+  // console.log('item', item);
   const [selectedFilters, setSelectedFilters] = useState({
     Huevo: false,
     Mostaza: false,
@@ -50,19 +81,19 @@ export function MenuProvider({ children }: MenuProviderProps) {
     comidasOrdenadoFiltrado();
     bebidasOrdenadoFiltrado();
     specialItemsOrdenado();
-
   }, [selectedFilters]);
-  
+
   // ORDENAR Y FILTRAR PLATOS
   const comidasOrdenadoFiltrado = async () => {
     const data = await getMenuComidas();
     const itemsFiltrados = filtradoItems(data);
+    // console.log('itemsFiltrados', itemsFiltrados);
     setMenuComidas(ordenarPorCategoria(itemsFiltrados));
   };
   const bebidasOrdenadoFiltrado = async () => {
     const data = await getMenuBebidas();
-    const itemsFiltrados = filtradoItems(data); 
-    setMenuBebidas(ordenarPorCategoria(itemsFiltrados)); 
+    const itemsFiltrados = filtradoItems(data);
+    setMenuBebidas(ordenarPorCategoria(itemsFiltrados));
   };
   // FILTRADO DE PLATOS ESPECIALES
   const specialItemsOrdenado = async () => {
@@ -115,22 +146,24 @@ export function MenuProvider({ children }: MenuProviderProps) {
       if (error) {
         console.error(`Error al obtener ${businessName}_info:`, error);
       }
-      console.log(data[0]);
-      return setInfo(data[0]);
+      // console.log('info', data);
+
+      // Asegúrate de que data[0] sea del tipo InfoItem
+      return setInfo(data ? data[0] : null);
     } catch (error) {
       console.error(`Error al obtener ${businessName}_info:`, error);
-      return [];
+      return null;
     }
   };
 
   // OBTENCIÓN DE PLATOS ESPECIALES
   const getSpecialItems = async () => {
     try {
-      const { data, error } = await supabase.rpc(functionName)
+      const { data, error } = await supabase.rpc(functionName);
       if (error) {
         console.error('Error al obtener platos_especiales:', error);
       }
-      console.log('all chulapa items',data);
+      // console.log('all chulapa items',data);
       setMainSpecialItems(data);
       return data;
     } catch (error) {
@@ -140,7 +173,7 @@ export function MenuProvider({ children }: MenuProviderProps) {
   };
 
   // FILTRACION DE PLATOS
-  const handleCheckboxChange = event => {
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedFilters({
       ...selectedFilters,
       [event.target.name]: event.target.checked,
@@ -154,19 +187,19 @@ export function MenuProvider({ children }: MenuProviderProps) {
         arrayIngredientes.push(ingrediente);
       }
     }
-    return arrayIngredientes; 
+    return arrayIngredientes;
   };
 
   const filtradoItems = array => {
-    const arrayIngredientes = crearArrayIngredientes(selectedFilters); 
-    return array.filter(plato => 
-      !plato.ingredientes.some(ingrediente => 
-        arrayIngredientes.includes(ingrediente)
-      )
+    const arrayIngredientes = crearArrayIngredientes(selectedFilters);
+    return array.filter(
+      plato =>
+        !plato.ingredientes.some(ingrediente =>
+          arrayIngredientes.includes(ingrediente),
+        ),
     );
   };
 
-  
   // ORDENAR PLATOS
   function ordenarPorCategoria(productos) {
     if (!productos || !Array.isArray(productos)) {
@@ -185,7 +218,7 @@ export function MenuProvider({ children }: MenuProviderProps) {
     ]);
   }
 
-  const obtenerItem = async (itemId) => {
+  const obtenerItem = async (itemId: string) => {
     try {
       // Buscar en la tabla _comidas
       const { data: dataComidas, error: errorComidas } = await supabase
@@ -233,10 +266,23 @@ export function MenuProvider({ children }: MenuProviderProps) {
 
   const deleteItem = () => {
     setItem(null);
-  }
+  };
 
   return (
-    <MenuContext.Provider value={{ menuBebidas, menuComidas, selectedFilters, handleCheckboxChange, specialItems, info, obtenerItem, item, mainSpecialItems, deleteItem }}>
+    <MenuContext.Provider
+      value={{
+        menuBebidas,
+        menuComidas,
+        selectedFilters,
+        handleCheckboxChange,
+        specialItems,
+        info,
+        obtenerItem,
+        item,
+        mainSpecialItems,
+        deleteItem,
+      }}
+    >
       {children}
     </MenuContext.Provider>
   );
