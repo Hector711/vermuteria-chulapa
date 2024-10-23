@@ -7,7 +7,7 @@ import MenuPage from '@/pages/MenuPage';
 import ItemPage from '@/pages/ItemPage';
 import LoMejorPage from '@/pages/LoMejorPage';
 import SpecialItemPage from '@/pages/SpecialItemPage';
-export default function App() {
+function App() {
   return (
     <MenuProvider>
       <BrowserRouter>
@@ -22,3 +22,5 @@ export default function App() {
     </MenuProvider>
   );
 }
+
+export default App;

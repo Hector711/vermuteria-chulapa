@@ -1,0 +1,9 @@
+@import "./_variables.scss";
+
+body {
+  background-color: $black-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white-1;
+}

@@ -1,7 +1,8 @@
-import * as React from 'react';
+import { IconProps } from "@/types";
+
 const gradientSVG = false;
 
-export default function StarIcon(props) {
+export default function StarIcon(props: IconProps) {
   if (gradientSVG) {
     return (
       <svg
@@ -11,6 +12,7 @@ export default function StarIcon(props) {
         strokeLinecap='round'
         strokeLinejoin='round'
         className='icons'
+        id='star-icon'
         {...props}
       >
         <defs>

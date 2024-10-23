@@ -1,8 +1,21 @@
 import { useEffect } from 'react';
 import { createContext, useContext, useState } from 'react';
 import { supabase } from '@/api/supabaseClient';
+import { MenuProviderProps } from '@/types';
 
-const MenuContext = createContext();
+const MenuContext = createContext({
+  menuBebidas: [],
+  menuComidas: [],
+  selectedFilters: {},
+  handleCheckboxChange: () => {},
+  specialItems: [],
+  info: [],
+  obtenerItem: () => {},
+  item: null,
+  mainSpecialItems: [],
+  deleteItem: () => {}
+});
+
 const businessName = import.meta.env.VITE_BUSINESS_NAME;
 const functionName = `all_${businessName}_items`;
 
@@ -14,7 +27,7 @@ export const useMenu = () => {
   return context;
 };
 
-export function MenuProvider({ children }) {
+export function MenuProvider({ children }: MenuProviderProps) {
   const [menuBebidas, setMenuBebidas] = useState([]);
   const [menuComidas, setMenuComidas] = useState([]);
   const [specialItems, setSpecialItems] = useState([]);

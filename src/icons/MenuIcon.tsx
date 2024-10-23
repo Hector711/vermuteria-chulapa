@@ -1,4 +1,6 @@
-export default function ChatbotIcon(props) {
+import { IconProps } from "@/types";
+
+export default function MenuIcon(props: IconProps) {
   return (
     <svg
       width={24}
@@ -10,11 +12,11 @@ export default function ChatbotIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
       className="icons"
+      id="menu-icon"
       {...props}
     >
       <path d="M0 0h24v24H0z" stroke="none" />
-      <path d="M18 4a3 3 0 013 3v8a3 3 0 01-3 3h-5l-5 3v-3H6a3 3 0 01-3-3V7a3 3 0 013-3h12zM9.5 9h.01M14.5 9h.01M9.5 13a3.5 3.5 0 005 0" />
+      <path d="M19 3v12h-5c-.023-3.681.184-7.406 5-12zm0 12v6h-1v-3M8 4v17M5 4v3a3 3 0 106 0V4" />
     </svg>
-  );
+  )
 }
-
