@@ -10,11 +10,11 @@ import StarIcon from '@/icons/StarIcon';
 import HalloweenIcon from '@/icons/HalloweenIcon';
 import { Link } from 'react-router-dom';  
 import logo from '@/assets/logo.png';
-import SpecialItem from '@/components/SpecialItem';
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import SpecialItem from '@/components/SpecialItem';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Autoplay, Navigation } from 'swiper/modules';
+// import { Autoplay, Navigation } from 'swiper/modules';
 // import Credits from '@/components/Credits';
 
 export default function HomePage() {
@@ -39,13 +39,13 @@ export default function HomePage() {
           />
           {mainSpecialItems?.length > 0 && (
             <>
-              <Link to='/lomejor' className='lo-mejor-link shadoww'>
+              <Link to='/lomejor' className='wide-button-component'>
                 <header className='lo-mejor-title'>
                   <StarIcon />
                   <h3 className='special-title'>Lo mejor de Chulapa</h3>
                 </header>
               </Link>
-              <div className='special-items-container'>
+              {/* <div className='special-items-container'>
                 <Swiper
                   slidesPerView={1.5}
                   spaceBetween={30}
@@ -68,7 +68,7 @@ export default function HomePage() {
                     </SwiperSlide>
                   ))}
                 </Swiper>
-              </div>
+              </div> */}
             </>
           )}
         </section>
