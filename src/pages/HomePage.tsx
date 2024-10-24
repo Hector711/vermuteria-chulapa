@@ -7,8 +7,8 @@ import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
 // import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
-import BookIcon from '@/icons/BookIcon';
-import { Link } from 'react-router-dom';
+import HalloweenIcon from '@/icons/HalloweenIcon';
+import { Link } from 'react-router-dom';  
 import logo from '@/assets/logo.png';
 import SpecialItem from '@/components/SpecialItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -77,16 +77,17 @@ export default function HomePage() {
           <WideButton
             type='a'
             href={'https://www.privateaser.es/local/51297-vermuteria-chulapa'}
-            title='Reservas'
-            icon={<BookIcon />}
+            title='Reservas para Halloween'
+            icon={<HalloweenIcon />}
           />
-          <WideButton
-            type='a'
-            title='Chatbot AI (Beta)'
-            subtitle='Preguntas, dudas, etc.'
-            // href={info?.whatsapp_url}
-            icon={<ChatbotIcon />}
-          />
+          {info?.whatsapp_url && (
+            <WideButton
+              type='a'
+              title='Chatbot AI (Beta)'
+              subtitle='Preguntas, dudas, etc.'
+              href={info?.whatsapp_url}
+              icon={<ChatbotIcon />}
+          />)}
         </section>
         <footer className='home-page'>
           <div className='social-links-container'>
