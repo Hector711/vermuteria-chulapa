@@ -37,8 +37,7 @@ export default function MenuPage() {
             aria-controls='panel2-content'
             className='filter-accordion'
           >
-            {/* Filtro de intolerancias */}
-            <h4 className='josefin text-center uppercase'>
+            <h4 className='josefin'>
               Filtro de intolerancias
             </h4>
           </AccordionSummary>

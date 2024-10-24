@@ -7,6 +7,7 @@ import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
 // import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
+import BookIcon from '@/icons/BookIcon';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 import SpecialItem from '@/components/SpecialItem';
@@ -77,12 +78,12 @@ export default function HomePage() {
             type='a'
             href={'https://www.privateaser.es/local/51297-vermuteria-chulapa'}
             title='Reservas'
-            icon={<MenuIcon />}
+            icon={<BookIcon />}
           />
           <WideButton
             type='a'
             title='Chatbot AI (Beta)'
-            // subtitle='Reservas, horarios, preguntas, etc.'
+            subtitle='Preguntas, dudas, etc.'
             // href={info?.whatsapp_url}
             icon={<ChatbotIcon />}
           />

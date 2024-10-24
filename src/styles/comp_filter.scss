@@ -1,17 +1,35 @@
 .MuiPaper-root.MuiPaper-elevation {
   border-radius: $border-m !important;
   background-color: $black-2 !important;
+  h4 {
+    padding: 0 5px !important;
+    text-align: center !important;
+  }
 }
 
 .filter-accordion {
   color: $font-color !important;
   border-radius: $border-s !important;
+  
+}
+
+#checkboxs-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  span {
+    font-family: 'Open Sans Variable';
+    text-transform: uppercase;
+    font-size: 0.85rem !important;
+    font-weight: 350 !important;
+  }
 }
 
 .PrivateSwitchBase-input.css-1m9pwf3 {
   color: $font-color !important;
+  
 }
 
 .Mui-checked {
   color: $font-color !important;
+  
 }
