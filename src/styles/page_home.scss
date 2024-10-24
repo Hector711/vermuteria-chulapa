@@ -20,7 +20,7 @@ main.home-page {
   justify-content: flex-start;
 }
 
-section.home-page.main-buttons {
+section.home-page {
   display: flex;
   justify-content: center;
   gap: 14px;
@@ -51,7 +51,6 @@ footer.home-page {
       .icons {
         width: 25px;
         height: 25px;
-        fill: $white-0;
       }
     }
   }
@@ -69,38 +68,33 @@ footer.home-page {
   }
 }
 
-section.special-items-section {
+a.lo-mejor-link {
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  a.lo-mejor-link {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    border-radius: $border-m;
-    padding: 15px 0;
-    font-family: 'Josefin Sans Variable';
-    box-shadow: 0px 1px 3px 0px black;
-    background-color: $black-2;
+  gap: 1rem;
+  width: 100%;
+  border-radius: $border-m;
+  padding: 15px 0;
+  font-family: 'Josefin Sans Variable';
+  box-shadow: 0px 1px 3px 0px black;
+  background-color: $black-2;
 
-    header.lo-mejor-title {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      height: max-content;
-      .icons {
-        width: 22px;
-        height: 100%;
-        stroke: $white-0;
-        margin-bottom: 8px;
-      }
+  header.lo-mejor-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: max-content;
+    .icons {
+      width: 22px;
+      height: 100%;
+
+      margin-bottom: 8px;
     }
-    div.special-items-container {
-      display: flex;
-      width: 100%;
-    }
+  }
+  div.special-items-container {
+    display: flex;
+    width: 100%;
   }
 }

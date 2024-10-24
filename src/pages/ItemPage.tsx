@@ -10,7 +10,7 @@ export default function ItemPage() {
   const { itemId } = useParams();
 
   useEffect(() => {
-    obtenerItem(itemId);
+    obtenerItem(itemId ?? '');
   }, [itemId]);
 
   return (

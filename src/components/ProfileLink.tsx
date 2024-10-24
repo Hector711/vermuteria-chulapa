@@ -1,7 +1,7 @@
-export default function ProfileLink(props) {
+export default function ProfileLink({ href, children }: { href: string, children: React.ReactNode }) {
   return (
-    <a href={props.href} target='_blank' className='profile-link-component shadoww'>
-      {props.children}
+    <a href={href} target='_blank' className='profile-link-component shadoww'>
+      {children}
     </a>
   );
 }

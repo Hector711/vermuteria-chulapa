@@ -7,15 +7,14 @@ import ChatbotIcon from '@/icons/ChatbotIcon';
 import MenuIcon from '@/icons/MenuIcon';
 // import CarouselNovedades from '@/components/CarouselNovedades';
 import StarIcon from '@/icons/StarIcon';
-// import Credits from '@/components/Credits';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 import SpecialItem from '@/components/SpecialItem';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation } from 'swiper/modules';
+// import Credits from '@/components/Credits';
 
 export default function HomePage() {
   const { info, mainSpecialItems } = useMenu();
@@ -37,19 +36,6 @@ export default function HomePage() {
             title='Ver Toda La Carta'
             icon={<MenuIcon />}
           />
-          {info?.whatsapp_url && (
-            <WideButton
-              type='a'
-              title='Chatbot AI'
-              subtitle='Reservas, horarios, preguntas, etc.'
-              href={info?.whatsapp_url}
-              target='_blank'
-              icon={<ChatbotIcon />}
-            />
-          )}
-        </section>
-        <hr />
-        <section className='home-page special-items-section'>
           {mainSpecialItems?.length > 0 && (
             <>
               <Link to='/lomejor' className='lo-mejor-link shadoww'>
@@ -85,14 +71,30 @@ export default function HomePage() {
             </>
           )}
         </section>
+        <hr />
+        <section className='home-page special-items-section'>
+          <WideButton
+            type='a'
+            href={'https://www.privateaser.es/local/51297-vermuteria-chulapa'}
+            title='Reservas'
+            icon={<MenuIcon />}
+          />
+          <WideButton
+            type='a'
+            title='Chatbot AI (Beta)'
+            // subtitle='Reservas, horarios, preguntas, etc.'
+            // href={info?.whatsapp_url}
+            icon={<ChatbotIcon />}
+          />
+        </section>
         <footer className='home-page'>
           <div className='social-links-container'>
             {info && (
               <>
-                <ProfileLink href={info.instagram_url}>
+                <ProfileLink href={info.instagram_url ?? ''}>
                   <InstagramIcon />
                 </ProfileLink>
-                <ProfileLink href={info.facebook_url}>
+                <ProfileLink href={info.facebook_url ?? ''}>
                   <FacebookIcon />
                 </ProfileLink>
               </>

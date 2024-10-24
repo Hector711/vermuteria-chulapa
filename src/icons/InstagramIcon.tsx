@@ -4,7 +4,7 @@ export default function InstagramIcon(props: IconProps) {
   return (
     <svg
     viewBox="0 0 24 24"
-      className="icons"
+      className="icons icons-fill"
       id="instagram-icon"
       {...props}
     >

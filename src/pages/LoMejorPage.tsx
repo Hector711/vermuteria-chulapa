@@ -44,7 +44,7 @@ export default function LoMejorPage() {
             >
             {section[1].map(({ nombre, imagen_url, id }, index) => (
                 <SwiperSlide key={index}>
-                  <SpecialItem title={nombre}  src={imagen_url} to={id}/>
+                  <SpecialItem title={nombre}  img={imagen_url ?? ''} to={id}/>
                 </SwiperSlide>
               ))}
             </Swiper>

@@ -4,7 +4,7 @@ export default function FacebookIcon(props: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="icons"
+      className="icons icons-fill"
       id="facebook-icon"
       {...props}
     >

@@ -5,8 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import { useNavigate } from 'react-router-dom';
 import CloseIcon from '@/icons/CloseIcon';
 import { useMenu } from '@/context/MenuContext';
+import { Item } from '@/types';
 
-export default function ItemCard({ item }) {
+export default function ItemCard({ item }: { item: Item }) {
   const navigate = useNavigate();
   const { deleteItem } = useMenu();
 
@@ -26,7 +27,7 @@ export default function ItemCard({ item }) {
         </button>
       </CardActions>
       <CardContent id='card-content'>
-        {item.imagen && (
+        {item.imagen_url && (
           <CardMedia
             component='img'
             alt='green iguana'

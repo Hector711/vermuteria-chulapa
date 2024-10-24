@@ -1,48 +1,9 @@
 import { useEffect } from 'react';
 import { createContext, useContext, useState } from 'react';
 import { supabase } from '@/api/supabaseClient';
-import { MenuProviderProps } from '@/types';
+import { MenuProviderProps, Item, InfoItem, MenuContextType, MenuItems } from '@/types';
 
-type Item = {
-  id: string;
-  categoria: string;
-  descripcion: string;
-  estrella: boolean;
-  imagen_url: string | null;
-  ingredientes: string[];
-  nombre: string;
-  order_id: number;
-  precio_salon: number;
-  precio_terraza: number;
-  visible: boolean;
-};
-
-type InfoItem = {
-  id: string;
-  descripcion: string;
-  horarios: any[];
-  facebook_url: string | null;
-  instagram_url: string | null;
-  menu_url: string | null;
-  nombre: string;
-  order_id: number;
-  telefono: string | null;
-  ubicacion: string;
-  whatsapp_url: string | null;
-};
-
-const MenuContext = createContext({
-  menuBebidas: [],
-  menuComidas: [],
-  selectedFilters: {},
-  specialItems: [],
-  item: null,
-  mainSpecialItems: [],
-  info: [],
-  handleCheckboxChange: () => {},
-  obtenerItem: () => {},
-  deleteItem: () => {},
-});
+const MenuContext = createContext<MenuContextType | undefined>(undefined);
 
 const businessName = import.meta.env.VITE_BUSINESS_NAME;
 const functionName = `all_${businessName}_items`;
@@ -56,15 +17,12 @@ export const useMenu = () => {
 };
 
 export function MenuProvider({ children }: MenuProviderProps) {
-  const [menuBebidas, setMenuBebidas] = useState<[string, Item[]][]>([]);
-  // console.log('menuBebidas', menuBebidas);
-  const [menuComidas, setMenuComidas] = useState<[string, Item[]][]>([]);
-  const [specialItems, setSpecialItems] = useState([]);
-  // console.log('specialItems', specialItems);
+  const [menuBebidas, setMenuBebidas] = useState<MenuItems>([]);
+  const [menuComidas, setMenuComidas] = useState<MenuItems>([]);
+  const [specialItems, setSpecialItems] = useState<MenuItems>([]);
   const [mainSpecialItems, setMainSpecialItems] = useState([]);
   const [info, setInfo] = useState<InfoItem | null>(null);
   const [item, setItem] = useState<Item | null>(null);
-  // console.log('item', item);
   const [selectedFilters, setSelectedFilters] = useState({
     Huevo: false,
     Mostaza: false,
@@ -85,24 +43,26 @@ export function MenuProvider({ children }: MenuProviderProps) {
 
   // ORDENAR Y FILTRAR PLATOS
   const comidasOrdenadoFiltrado = async () => {
-    const data = await getMenuComidas();
+    const data : Array<Item> | null = await getMenuComidas();
     const itemsFiltrados = filtradoItems(data);
-    // console.log('itemsFiltrados', itemsFiltrados);
-    setMenuComidas(ordenarPorCategoria(itemsFiltrados));
+    const itemsFiltradosOrdenados = ordenarPorCategoria(itemsFiltrados)
+    setMenuComidas(itemsFiltradosOrdenados);
   };
   const bebidasOrdenadoFiltrado = async () => {
     const data = await getMenuBebidas();
     const itemsFiltrados = filtradoItems(data);
-    setMenuBebidas(ordenarPorCategoria(itemsFiltrados));
+    const itemsFiltradosOrdenados = ordenarPorCategoria(itemsFiltrados)
+    setMenuBebidas(itemsFiltradosOrdenados);
   };
   // FILTRADO DE PLATOS ESPECIALES
   const specialItemsOrdenado = async () => {
     const data = await getSpecialItems();
-    setSpecialItems(ordenarPorCategoria(data));
+    const itemsFiltradosOrdenados = ordenarPorCategoria(data)
+    setSpecialItems(itemsFiltradosOrdenados);
   };
 
   // OBTENCION DE COMIDAS
-  const getMenuComidas = async () => {
+  const getMenuComidas = async (): Promise<Item[]> => {
     try {
       const { data, error } = await supabase
         .from(`${businessName}_comidas`)
@@ -112,7 +72,7 @@ export function MenuProvider({ children }: MenuProviderProps) {
       if (error) {
         console.error(`Error al obtener ${businessName}_comidas:`, error);
       }
-      return data;
+      return data || [];
     } catch (error) {
       console.error(`Error al obtener ${businessName}_comidas:`, error);
       return [];
@@ -120,7 +80,7 @@ export function MenuProvider({ children }: MenuProviderProps) {
   };
 
   // OBTENCION DE BEBIDAS
-  const getMenuBebidas = async () => {
+  const getMenuBebidas = async (): Promise<Item[]> => {
     try {
       const { data, error } = await supabase
         .from(`${businessName}_bebidas`)
@@ -130,7 +90,7 @@ export function MenuProvider({ children }: MenuProviderProps) {
       if (error) {
         console.error(`Error al obtener ${businessName}_bebidas:`, error);
       }
-      return data;
+      return data || [];
     } catch (error) {
       console.error(`Error al obtener ${businessName}_bebidas:`, error);
       return [];
@@ -157,13 +117,12 @@ export function MenuProvider({ children }: MenuProviderProps) {
   };
 
   // OBTENCIÓN DE PLATOS ESPECIALES
-  const getSpecialItems = async () => {
+  const getSpecialItems = async (): Promise<Item[]> => {
     try {
       const { data, error } = await supabase.rpc(functionName);
       if (error) {
         console.error('Error al obtener platos_especiales:', error);
       }
-      // console.log('all chulapa items',data);
       setMainSpecialItems(data);
       return data;
     } catch (error) {
@@ -180,7 +139,7 @@ export function MenuProvider({ children }: MenuProviderProps) {
     });
   };
 
-  const crearArrayIngredientes = objeto => {
+  const crearArrayIngredientes = (objeto: Record<string, boolean>) => {
     const arrayIngredientes = [];
     for (const ingrediente in objeto) {
       if (objeto[ingrediente]) {
@@ -190,7 +149,8 @@ export function MenuProvider({ children }: MenuProviderProps) {
     return arrayIngredientes;
   };
 
-  const filtradoItems = array => {
+  const filtradoItems = (array: Item[]): Item[] => {
+    // console.log({array});
     const arrayIngredientes = crearArrayIngredientes(selectedFilters);
     return array.filter(
       plato =>
@@ -201,17 +161,19 @@ export function MenuProvider({ children }: MenuProviderProps) {
   };
 
   // ORDENAR PLATOS
-  function ordenarPorCategoria(productos) {
+  function ordenarPorCategoria(productos: Item[]): MenuItems {
     if (!productos || !Array.isArray(productos)) {
       return [];
     }
-    const categorias = {};
+
+    const categorias: Record<string, Item[]> = {};
     productos.forEach(prod => {
       if (!categorias[prod.categoria]) {
         categorias[prod.categoria] = [];
       }
       categorias[prod.categoria].push(prod);
     });
+
     return Object.entries(categorias).map(([categoria, productos]) => [
       categoria,
       productos,

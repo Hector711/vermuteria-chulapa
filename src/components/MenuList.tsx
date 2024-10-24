@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
+import { MenuItems } from '@/types';
 
-export default function MenuList({ menu }) {
-  console.log({menu});
+export default function MenuList({ menu }: { menu: MenuItems }) {
   return menu.map((section, i) => (
     <ul className='section-menu' key={i}>
       <li className='row title-row'>

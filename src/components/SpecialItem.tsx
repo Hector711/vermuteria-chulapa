@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom';
 
-export default function SpecialItem(props) {
+export default function SpecialItem(props: {
+  title: string;
+  img: string ;
+  subtitle?: string;
+  to?: any;
+}) {
   const content = (
     <>
       <header>
         <h4>{props.title}</h4>
       </header>
       <figure>
-        <img src={props.src} className='shadoww ' />
+        <img src={props.img ?? ''} className='shadoww ' />
         {props.subtitle && <p>{props.subtitle}</p>}
       </figure>
     </>

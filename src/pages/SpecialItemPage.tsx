@@ -10,7 +10,7 @@ export default function SpecialItemPage() {
   const { itemId } = useParams();
 
   useEffect(() => {
-    obtenerItem(itemId);
+    obtenerItem(itemId ?? '');
   }, [itemId]);
 
   return (

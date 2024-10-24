@@ -11,7 +11,7 @@ export default function ChatbotIcon(props: IconProps) {
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="icons"
+      className="icons icons-stroke"
       id="chatbot-icon"
       {...props}
     >
